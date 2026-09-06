@@ -68,7 +68,7 @@ const config: Config = {
         "h3": ["1.2rem", { lineHeight: "1.3", letterSpacing: "-0.01em" }],
       },
       maxWidth: {
-        content: "72rem",
+        content: "76rem",
         prose: "44rem",
       },
       boxShadow: {

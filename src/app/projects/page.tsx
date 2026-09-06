@@ -14,23 +14,22 @@ export default function ProjectsPage() {
   return (
     <>
       <div className="border-b border-line-soft bg-tech">
-        <div className="container-page py-16 sm:py-20">
+        <div className="container-page py-12 sm:py-16">
           <SectionHeading
             as="h1"
             eyebrow="Portfolio"
             title="Security projects"
-            description="Real implementations over claims. Each project includes the security controls, how they were tested, and an honest account of limitations. Order reflects depth and security focus, starting with Chokepoint."
+            description="Real implementations over claims. Each project includes the controls, how they were tested, and an honest account of limitations — ordered by depth, starting with Chokepoint."
           />
         </div>
       </div>
 
-      <div className="container-page py-14">
+      <div className="container-page py-10 sm:py-12">
         <Callout variant="info" title="How to read these">
-          Every project links to its source. Status labels are honest:
-          &ldquo;Live demo&rdquo; runs, &ldquo;Simulation / lab&rdquo; models a
-          scenario without touching real systems, and &ldquo;Experimental /
-          WIP&rdquo; did not fully achieve its original vision. Where something is
-          incomplete, I say so — and what it taught.
+          Status labels are honest: <strong className="text-ink-high">Live demo</strong> runs,{" "}
+          <strong className="text-ink-high">Simulation / lab</strong> models a scenario without
+          touching real systems, and <strong className="text-ink-high">Experimental / WIP</strong>{" "}
+          didn't fully achieve its vision. Where something is incomplete, I say so — and what it taught.
         </Callout>
         <div className="mt-8">
           <ProjectsGrid />

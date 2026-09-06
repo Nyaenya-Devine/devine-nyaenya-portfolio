@@ -6,7 +6,7 @@ import { TagList } from "@/components/TagList";
 export function CaseHero({ project }: { project: Project }) {
   return (
     <div className="border-b border-line-soft bg-tech">
-      <div className="container-page py-14 sm:py-20">
+      <div className="container-page py-10 sm:py-14">
         <p className="eyebrow animate-fade-up">{project.kicker} · Case study</p>
         <div className="mt-3 flex flex-wrap items-center gap-4 animate-fade-up" style={{ animationDelay: "80ms" }}>
           <h1 className="text-h1 text-ink-high">{project.name}</h1>

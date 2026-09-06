@@ -12,7 +12,7 @@ export function CaseSection({
   children: ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-24 border-t border-line-soft py-12 first:border-t-0">
+    <section id={id} className="scroll-mt-24 border-t border-line-soft py-9 first:border-t-0">
       <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
         <div className="lg:sticky lg:top-24 lg:self-start">
           {eyebrow && <p className="eyebrow mb-2">{eyebrow}</p>}

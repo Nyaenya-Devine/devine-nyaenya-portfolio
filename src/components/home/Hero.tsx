@@ -8,8 +8,8 @@ export function Hero() {
   const linkedInHref = linkedin?.configured ? linkedin.href : null;
   return (
     <section className="relative overflow-hidden">
-      <div className="container-page py-16 sm:py-24 lg:py-28">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="container-page py-10 sm:py-14 lg:py-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.02fr_0.98fr]">
           {/* Left: copy */}
           <div className="max-w-xl">
             <div className="flex items-center gap-2.5 animate-fade-up">
@@ -37,7 +37,7 @@ export function Hero() {
             </p>
 
             <p
-              className="mt-6 text-lg leading-relaxed text-ink-med text-pretty animate-fade-up"
+              className="mt-5 text-lg leading-relaxed text-ink-med text-pretty animate-fade-up"
               style={{ animationDelay: "180ms" }}
             >
               I build security-focused software, investigate vulnerabilities in
@@ -48,7 +48,7 @@ export function Hero() {
             </p>
 
             <div
-              className="mt-9 flex flex-wrap items-center gap-3 animate-fade-up"
+              className="mt-7 flex flex-wrap items-center gap-3 animate-fade-up"
               style={{ animationDelay: "240ms" }}
             >
               <Link href="/projects" className="btn-primary">
@@ -70,7 +70,7 @@ export function Hero() {
 
             {/* Mini stat chips (illustrative, honest) */}
             <div
-              className="mt-10 flex flex-wrap gap-x-6 gap-y-3 animate-fade-up"
+              className="mt-7 flex flex-wrap gap-x-6 gap-y-3 animate-fade-up"
               style={{ animationDelay: "320ms" }}
             >
               {[
