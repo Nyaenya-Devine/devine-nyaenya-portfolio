@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Instrument_Serif } from "next/font/google";
 import { site } from "@/data/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -10,6 +10,13 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
+});
+
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -40,6 +47,9 @@ export const metadata: Metadata = {
     "Python",
     "Next.js",
     "Kenya",
+    "Argon2id",
+    "HMAC",
+    "TOTP",
   ],
   alternates: { canonical: "/" },
   openGraph: {
@@ -64,7 +74,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0A0B0D",
+  themeColor: "#050507",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
@@ -85,6 +95,9 @@ const jsonLd = {
     "RBAC",
     "Python",
     "Linux",
+    "Argon2id",
+    "HMAC",
+    "TOTP",
   ],
   address: { "@type": "PostalAddress", addressCountry: "KE" },
 };
@@ -95,8 +108,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="min-h-screen bg-base font-sans">
+    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}>
+      <body className="min-h-screen bg-base font-sans antialiased">
         <AmbientBackground />
         <a href="#main" className="skip-link">
           Skip to content
@@ -106,7 +119,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Header />
-        <main id="main">{children}</main>
+        <main id="main" className="relative">{children}</main>
         <Footer />
       </body>
     </html>

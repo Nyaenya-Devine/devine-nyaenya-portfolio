@@ -1,128 +1,141 @@
 /**
- * HeroConsole — a stylized, animated "control plane" dashboard. Pure CSS/SVG
- * (no client JS, no data), used as illustrative UI chrome: it conveys the
- * product feel without implying real metrics. All labels are clearly
- * illustrative.
+ * HeroConsole v2 — Obsidian Aurora Editorial
+ * Premium glass console with amber/violet accents, border beam, grain
  */
 
-const gates = ["Auth", "RBAC", "Approve", "Ledger"];
-
-const feed = [
-  { code: "AUTH_OK", msg: "identity verified · PBKDF2", tone: "ok" },
-  { code: "POLICY", msg: "can(reset) = deny → approve", tone: "accent" },
-  { code: "DUAL", msg: "approver ≠ requester ✓", tone: "ok" },
-  { code: "LEDGER", msg: "chain verified · HMAC intact", tone: "accent" },
+const gates = [
+  { name: "Auth", sub: "PBKDF2/Argon2id", status: "pass" },
+  { name: "RBAC", sub: "default-deny", status: "pass" },
+  { name: "Approve", sub: "four-eyes", status: "pass" },
+  { name: "Ledger", sub: "HMAC intact", status: "pass" },
 ];
 
-const integritySegments = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+const feed = [
+  { code: "AUTH_OK", msg: "identity verified · Argon2id", tone: "ok" },
+  { code: "POLICY", msg: "can(reset) = deny → approve", tone: "amber" },
+  { code: "MFA", msg: "TOTP verified · 6-digit", tone: "violet" },
+  { code: "LEDGER", msg: "chain verified · HMAC intact", tone: "amber" },
+];
 
 export function HeroConsole() {
   return (
-    <div className="relative animate-rise-in" style={{ animationDelay: "260ms" }}>
-      {/* Halo behind the console */}
-      <div
-        aria-hidden="true"
-        className="absolute -inset-6 rounded-[28px] opacity-80 blur-2xl"
-        style={{
-          background:
-            "radial-gradient(60% 60% at 50% 30%, rgba(56,225,196,0.18), transparent 70%)",
-        }}
-      />
-
-      <div className="card relative overflow-hidden p-0">
-        {/* Scanline sweep */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-accent/[0.06] to-transparent animate-scan"
-        />
-
-        {/* Title bar */}
-        <div className="flex items-center justify-between border-b border-line-soft px-4 py-3">
-          <div className="flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-danger/70" />
-            <span className="h-2.5 w-2.5 rounded-full bg-warn/70" />
-            <span className="h-2.5 w-2.5 rounded-full bg-ok/70" />
-          </div>
-          <p className="font-mono text-[11px] tracking-widest text-ink-faint">
-            chokepoint · control plane
-          </p>
-          <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase text-ok">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-ok animate-ring-ping" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-ok" />
+    <div className="relative">
+      {/* Glass card with border beam */}
+      <div className="card border-beam relative overflow-hidden rounded-[20px] bg-surface/90 backdrop-blur-2xl">
+        {/* Amber beam top */}
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
+        
+        {/* Title bar - premium */}
+        <div className="flex items-center justify-between border-b border-white/[0.06] px-5 py-4">
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F56]" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#FFBD2E]" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#27C93F]" />
+            </div>
+            <span className="ml-3 font-mono text-[11px] tracking-[0.14em] text-ink-faint">
+              chokepoint · control plane
             </span>
+          </div>
+          <span className="flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-emerald-400 border border-emerald-500/20">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse-dot" />
             live
           </span>
         </div>
 
-        <div className="grid gap-4 p-4 sm:grid-cols-[1.15fr_1fr]">
-          {/* Left: request path with traveling packet */}
-          <div className="panel relative overflow-hidden p-4">
-            <p className="key-label mb-3">request path · high-impact op</p>
+        <div className="grid gap-4 p-5 sm:grid-cols-[1.1fr_1fr]">
+          {/* Left: request path */}
+          <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4 backdrop-blur">
+            <div className="flex items-center justify-between mb-4">
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">
+                request path · high-impact op
+              </p>
+              <span className="font-mono text-[10px] text-ink-faint">4 gates</span>
+            </div>
+            
             <div className="relative">
-              {/* travelling packet */}
-              <span
-                aria-hidden="true"
-                className="absolute left-1/2 z-10 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-accent shadow-[0_0_12px_2px_rgba(56,225,196,0.7)] animate-pack"
-              />
-              <ol className="relative space-y-2.5">
+              <div className="absolute left-[15px] top-2 bottom-2 w-px bg-gradient-to-b from-accent/30 via-violet/20 to-transparent" />
+              <ol className="relative space-y-3">
                 {gates.map((g, i) => (
                   <li
-                    key={g}
-                    className="flex items-center gap-3 animate-rise-in"
-                    style={{ animationDelay: `${320 + i * 140}ms` }}
+                    key={g.name}
+                    className="group flex items-center gap-3 animate-fade-up"
+                    style={{ animationDelay: `${300 + i * 100}ms` }}
                   >
-                    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-md border border-accent/30 bg-accent/10 font-mono text-[11px] text-accent">
-                      {i + 1}
+                    <span className="relative grid h-8 w-8 shrink-0 place-items-center rounded-full bg-white text-[11px] font-medium text-black group-hover:scale-110 transition-transform duration-300">
+                      <span className="absolute inset-0 rounded-full bg-gradient-to-br from-accent to-violet opacity-0 group-hover:opacity-20 transition-opacity" />
+                      <span className="relative">{i + 1}</span>
                     </span>
-                    <span className="flex-1 rounded-md border border-line bg-base/60 px-3 py-1.5 font-mono text-[12px] text-ink-med">
-                      {g}
-                    </span>
-                    <span className="font-mono text-[11px] text-ok">pass</span>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono text-[13px] font-medium text-ink-high">{g.name}</span>
+                        <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 font-mono text-[10px] text-emerald-400 border border-emerald-500/20">
+                          {g.status}
+                        </span>
+                      </div>
+                      <span className="font-mono text-[11px] text-ink-low">{g.sub}</span>
+                    </div>
                   </li>
                 ))}
               </ol>
             </div>
           </div>
 
-          {/* Right: integrity gauge + feed */}
+          {/* Right: integrity + feed */}
           <div className="flex flex-col gap-4">
-            <div className="panel p-4">
-              <p className="key-label mb-2">ledger integrity</p>
-              <div className="flex items-end gap-3">
-                <span className="text-3xl font-bold text-ok">100<span className="text-base text-ink-low">%</span></span>
-                <span className="mb-1 font-mono text-[11px] uppercase text-ok">chain intact</span>
+            <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+              <div className="flex items-center justify-between mb-3">
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">
+                  ledger integrity
+                </p>
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse-dot" />
               </div>
-              <div className="mt-3 flex gap-1">
-                {integritySegments.map((_, i) => (
+              <div className="flex items-baseline gap-2">
+                <span className="font-display text-[32px] leading-none tracking-[-0.03em] text-white">100</span>
+                <span className="font-mono text-[14px] text-ink-low">%</span>
+                <span className="ml-2 rounded-full bg-emerald-500/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.1em] text-emerald-400">
+                  chain intact
+                </span>
+              </div>
+              <div className="mt-4 flex gap-1">
+                {Array.from({ length: 12 }).map((_, i) => (
                   <span
                     key={i}
-                    className="h-6 flex-1 rounded-sm bg-ok/70 animate-rise-in"
-                    style={{ animationDelay: `${500 + i * 45}ms`, opacity: 0.55 + (i / integritySegments.length) * 0.45 }}
+                    className="h-1.5 flex-1 rounded-full bg-gradient-to-r from-accent to-violet animate-fade-up"
+                    style={{ 
+                      animationDelay: `${500 + i * 40}ms`,
+                      opacity: 0.3 + (i / 12) * 0.7,
+                    }}
                   />
                 ))}
               </div>
             </div>
 
-            <div className="panel flex-1 p-4">
-              <p className="key-label mb-2">live audit feed</p>
-              <ul className="space-y-2">
+            <div className="flex-1 rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint mb-3">
+                live audit feed
+              </p>
+              <ul className="space-y-3">
                 {feed.map((f, i) => (
                   <li
                     key={f.code}
-                    className="flex items-start gap-2 animate-rise-in"
-                    style={{ animationDelay: `${650 + i * 220}ms` }}
+                    className="group flex items-start gap-2.5 animate-fade-up"
+                    style={{ animationDelay: `${600 + i * 150}ms` }}
                   >
-                    <span
-                      className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${
-                        f.tone === "ok" ? "bg-ok" : "bg-accent"
-                      }`}
-                    />
-                    <div className="min-w-0">
-                      <p className={`font-mono text-[11px] ${f.tone === "ok" ? "text-ok" : "text-accent"}`}>
+                    <span className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${
+                      f.tone === "ok" ? "bg-emerald-400" : 
+                      f.tone === "amber" ? "bg-accent" : "bg-violet"
+                    } group-hover:scale-125 transition-transform`} />
+                    <div className="min-w-0 flex-1">
+                      <p className={`font-mono text-[11px] font-medium tracking-[0.05em] ${
+                        f.tone === "ok" ? "text-emerald-400" : 
+                        f.tone === "amber" ? "text-accent" : "text-violet-soft"
+                      }`}>
                         {f.code}
                       </p>
-                      <p className="truncate text-[11px] text-ink-low">{f.msg}</p>
+                      <p className="mt-0.5 font-mono text-[11px] leading-[1.4] text-ink-low truncate">
+                        {f.msg}
+                      </p>
                     </div>
                   </li>
                 ))}
@@ -131,10 +144,19 @@ export function HeroConsole() {
           </div>
         </div>
 
-        <p className="border-t border-line-soft px-4 py-2 text-center font-mono text-[10px] uppercase tracking-widest text-ink-faint">
-          illustrative console · not live data
-        </p>
+        <div className="flex items-center justify-between border-t border-white/[0.04] px-5 py-3">
+          <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink-faint">
+            illustrative console · not live data
+          </span>
+          <span className="flex items-center gap-1.5 font-mono text-[10px] text-ink-faint">
+            <span className="h-1 w-1 rounded-full bg-accent" />
+            52 tests · 6/6 detection
+          </span>
+        </div>
       </div>
+
+      {/* Glow behind */}
+      <div className="absolute -inset-4 -z-10 bg-gradient-to-br from-accent/10 via-violet/5 to-transparent blur-2xl rounded-[24px] opacity-60" />
     </div>
   );
 }

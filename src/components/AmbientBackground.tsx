@@ -1,8 +1,7 @@
 /**
- * Fixed ambient background: a faint technical grid, soft accent glows, and a
- * grain/noise overlay. Purely decorative (aria-hidden), pointer-events-none,
- * and GPU-cheap (static gradients + SVG data-URI noise). Sits behind all
- * content and adds depth without distracting from it.
+ * Ambient Background v2 — Obsidian Aurora Editorial
+ * Stunning, not basic: deep obsidian with aurora amber+vilet+cyan gradients,
+ * subtle grid, grain noise, and vignette. Purely decorative, GPU-cheap.
  */
 export function AmbientBackground() {
   return (
@@ -10,48 +9,80 @@ export function AmbientBackground() {
       aria-hidden="true"
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-base"
     >
-      {/* Base grid */}
+      {/* Deep obsidian base */}
+      <div className="absolute inset-0 bg-base" />
+
+      {/* Aurora — amber + violet + cyan, animated */}
       <div
-        className="absolute inset-0 opacity-[0.55]"
+        className="absolute -top-[30%] left-1/2 h-[120%] w-[140%] -translate-x-1/2 animate-aurora opacity-[0.6]"
+        style={{
+          background: `
+            radial-gradient(ellipse 50% 40% at 20% 20%, rgba(255,178,36,0.15), transparent 60%),
+            radial-gradient(ellipse 40% 50% at 80% 25%, rgba(139,92,246,0.14), transparent 60%),
+            radial-gradient(ellipse 60% 40% at 50% 80%, rgba(6,182,214,0.08), transparent 60%),
+            radial-gradient(ellipse 30% 30% at 10% 80%, rgba(255,178,36,0.06), transparent 60%)
+          `,
+          filter: "blur(40px)",
+        }}
+      />
+
+      {/* Secondary aurora layer for depth */}
+      <div
+        className="absolute inset-0 opacity-40"
+        style={{
+          background: `
+            radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255,178,36,0.08), transparent 70%),
+            radial-gradient(ellipse 50% 50% at 0% 50%, rgba(139,92,246,0.06), transparent 70%),
+            radial-gradient(ellipse 50% 50% at 100% 50%, rgba(6,182,214,0.04), transparent 70%)
+          `,
+        }}
+      />
+
+      {/* Grid — subtle, editorial */}
+      <div
+        className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
-            "linear-gradient(to right, rgba(255,255,255,0.028) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.028) 1px, transparent 1px)",
-          backgroundSize: "52px 52px",
+            "linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
           maskImage:
-            "radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 100%)",
+            "radial-gradient(ellipse 90% 70% at 50% 0%, black 20%, transparent 80%)",
           WebkitMaskImage:
-            "radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 100%)",
+            "radial-gradient(ellipse 90% 70% at 50% 0%, black 20%, transparent 80%)",
         }}
       />
 
-      {/* Soft accent glows */}
+      {/* Fine grid overlay */}
       <div
-        className="absolute -top-40 left-1/2 h-[560px] w-[900px] -translate-x-1/2 rounded-full opacity-70 blur-[120px] animate-float-y"
+        className="absolute inset-0 opacity-[0.015]"
         style={{
-          background:
-            "radial-gradient(closest-side, rgba(56,225,196,0.12), transparent)",
-        }}
-      />
-      <div
-        className="absolute top-[38%] -left-40 h-[420px] w-[420px] rounded-full opacity-50 blur-[120px]"
-        style={{
-          background:
-            "radial-gradient(closest-side, rgba(64,120,220,0.07), transparent)",
-        }}
-      />
-      <div
-        className="absolute bottom-[-10%] -right-32 h-[460px] w-[460px] rounded-full opacity-50 blur-[120px]"
-        style={{
-          background:
-            "radial-gradient(closest-side, rgba(56,225,196,0.07), transparent)",
+          backgroundImage:
+            "linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px)",
+          backgroundSize: "16px 16px",
         }}
       />
 
-      {/* Grain */}
-      <div className="noise-overlay absolute inset-0 opacity-[0.025] mix-blend-overlay" />
+      {/* Grain texture — premium feel */}
+      <div 
+        className="absolute inset-0 opacity-[0.03] mix-blend-soft-light"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+        }}
+      />
 
-      {/* Top vignette to seat the header */}
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-base/80 to-transparent" />
+      {/* Top vignette */}
+      <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-base via-base/60 to-transparent" />
+      
+      {/* Bottom vignette */}
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-base to-transparent" />
+
+      {/* Center spotlight */}
+      <div
+        className="absolute left-1/2 top-0 h-[800px] w-[1200px] -translate-x-1/2 opacity-20"
+        style={{
+          background: "radial-gradient(ellipse at center, rgba(255,178,36,0.08), transparent 70%)",
+        }}
+      />
     </div>
   );
 }

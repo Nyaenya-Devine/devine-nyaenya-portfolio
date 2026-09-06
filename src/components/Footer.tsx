@@ -4,29 +4,54 @@ import { site, socialLinks } from "@/data/site";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-line-soft bg-surface/40">
-      <div className="container-page py-12">
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <div className="max-w-sm">
-            <p className="text-sm font-semibold text-ink-high">{site.name}</p>
-            <p className="mt-2 text-sm leading-relaxed text-ink-low">
-              {site.role} · {site.location}
+    <footer className="relative border-t border-white/[0.06] bg-base">
+      <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
+      
+      <div className="container-page relative py-16">
+        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
+          <div>
+            <div className="flex items-center gap-3">
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-white text-[11px] font-bold text-black font-display">
+                D
+              </span>
+              <span className="font-display text-[18px] font-medium tracking-[-0.01em] text-ink-high">
+                Devine Nyaenya
+              </span>
+            </div>
+            <p className="mt-4 max-w-sm font-sans text-[15px] leading-[1.6] tracking-[-0.01em] text-ink-med">
+              Security engineer who proves it. Building security systems that don't just look secure — they prove it with tests, audit logs, and detection rules.
             </p>
-            <p className="mt-3 font-mono text-xs text-ink-faint">
+            <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-faint">
               build → test → break → learn → secure
             </p>
+            <div className="mt-6 flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse-dot" />
+              <span className="font-mono text-[11px] text-ink-low">52 tests passing · 6/6 detection · 0 CVEs</span>
+            </div>
           </div>
 
-          <nav className="flex flex-col gap-2" aria-label="Footer">
-            <p className="key-label mb-1">Navigate</p>
-            <Link href="/projects" className="text-sm text-ink-med hover:text-accent">Projects</Link>
-            <Link href="/security-lab" className="text-sm text-ink-med hover:text-accent">Security Lab</Link>
-            <Link href="/about" className="text-sm text-ink-med hover:text-accent">About</Link>
-            <Link href="/contact" className="text-sm text-ink-med hover:text-accent">Contact</Link>
+          <nav className="flex flex-col gap-3" aria-label="Footer">
+            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-faint mb-2">Navigate</p>
+            <Link href="/projects" className="group flex items-center gap-2 font-sans text-[14px] text-ink-med hover:text-ink-high transition-colors">
+              <span className="h-px w-0 bg-accent transition-all duration-300 group-hover:w-4" />
+              Projects
+            </Link>
+            <Link href="/security-lab" className="group flex items-center gap-2 font-sans text-[14px] text-ink-med hover:text-ink-high transition-colors">
+              <span className="h-px w-0 bg-accent transition-all duration-300 group-hover:w-4" />
+              Security Lab
+            </Link>
+            <Link href="/about" className="group flex items-center gap-2 font-sans text-[14px] text-ink-med hover:text-ink-high transition-colors">
+              <span className="h-px w-0 bg-accent transition-all duration-300 group-hover:w-4" />
+              About
+            </Link>
+            <Link href="/contact" className="group flex items-center gap-2 font-sans text-[14px] text-ink-med hover:text-ink-high transition-colors">
+              <span className="h-px w-0 bg-accent transition-all duration-300 group-hover:w-4" />
+              Contact
+            </Link>
           </nav>
 
-          <div className="flex flex-col gap-2">
-            <p className="key-label mb-1">Connect</p>
+          <div className="flex flex-col gap-3">
+            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-faint mb-2">Connect</p>
             {socialLinks.map((link) =>
               link.configured ? (
                 <a
@@ -35,23 +60,28 @@ export function Footer() {
                   {...(link.external
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
-                  className="text-sm text-ink-med hover:text-accent"
+                  className="group flex items-center gap-2 font-sans text-[14px] text-ink-med hover:text-ink-high transition-colors"
                 >
+                  <span className="h-px w-0 bg-violet transition-all duration-300 group-hover:w-4" />
                   {link.label}
-                  {link.external ? " ↗" : ""}
+                  {link.external ? <span className="text-[11px] opacity-50 group-hover:opacity-100 transition-opacity">↗</span> : ""}
                 </a>
               ) : (
-                <span key={link.label} className="text-sm text-ink-faint" title="Not configured yet">
-                  {link.label} <span className="text-[10px] uppercase">(add in .env)</span>
+                <span key={link.label} className="font-sans text-[14px] text-ink-faint" title="Not configured yet">
+                  {link.label} <span className="font-mono text-[10px] uppercase">(add in .env)</span>
                 </span>
               )
             )}
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-line-soft pt-6 text-xs text-ink-faint sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} {site.name}. All lab exercises were performed in authorized, isolated environments.</p>
-          <p className="font-mono">Built with Next.js, TypeScript &amp; Tailwind CSS. CSP-enabled, no trackers.</p>
+        <div className="mt-16 flex flex-col gap-4 border-t border-white/[0.06] pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p className="font-mono text-[11px] tracking-[0.02em] text-ink-faint">
+            © {year} {site.name}. All lab exercises in authorized, isolated environments.
+          </p>
+          <p className="font-mono text-[11px] tracking-[0.02em] text-ink-faint">
+            Next.js 16 · TypeScript · Tailwind · CSP · No trackers · <span className="text-accent">P3 hardened</span>
+          </p>
         </div>
       </div>
     </footer>
