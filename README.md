@@ -1,12 +1,27 @@
 # Devine Nyaenya — Cybersecurity & Security Engineering Portfolio
 
-A professional, recruiter-facing portfolio for **Devine Nyaenya**, a Kenya-based
-cybersecurity / security-engineering builder. The site presents real, verifiable
-security work — not fabricated achievements — with the flagship **Chokepoint**
-case study front and center.
+[![CI](https://github.com/Nyaenya-Devine/devine-nyaenya-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/Nyaenya-Devine/devine-nyaenya-portfolio/actions/workflows/ci.yml)
+![Next.js](https://img.shields.io/badge/Next.js_16-App_Router-black?logo=nextdotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6?logo=typescript)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38bdf8?logo=tailwindcss)
+![Security](https://img.shields.io/badge/CSP-nonce%20%2B%20strict--dynamic-38E1C4)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNyaenya-Devine%2Fdevine-nyaenya-portfolio)
+
+Live portfolio for **Devine Nyaenya**, a Kenya-based cybersecurity /
+security-engineering builder. It presents real, verifiable security work — not
+fabricated achievements — with the flagship **Chokepoint** case study front and
+center.
 
 > **Positioning:** *Building security systems that don't just look secure — they prove it.*
 > Method: **Build → Test → Break → Learn → Secure.**
+
+**Related security projects (case studies in this site):**
+
+| Project | What it is | Repository |
+| --- | --- | --- |
+| **Chokepoint** (flagship) | Least-privilege access control & tamper-evident audit for humans + AI agents | [`Nyaenya-Devine-chokepoint`](https://github.com/Nyaenya-Devine/Nyaenya-Devine-chokepoint) |
+| **Android Reset Lab** | Simulation-only MDM reset lab: RBAC, four-eyes, hash-chained logs, 6/6 attacks detected | [`android-reset-lab`](https://github.com/Nyaenya-Devine/android-reset-lab) |
+| **Android Device Management Tool** | Experimental full-stack Android Enterprise app (honest WIP) | [`android-device-management-tool`](https://github.com/Nyaenya-Devine/android-device-management-tool) |
 
 ---
 

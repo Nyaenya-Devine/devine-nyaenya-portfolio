@@ -6,6 +6,11 @@ cleanly to **Vercel** (recommended) or any Node host.
 
 ## Option A — Vercel (recommended)
 
+**Fastest path:** click **Deploy with Vercel** from the README (or visit
+<https://vercel.com/new> and import
+`Nyaenya-Devine/devine-nyaenya-portfolio`), then add the environment variables
+below. Vercel auto-detects Next.js and runs `npm run build`.
+
 1. **Push to GitHub**
    ```bash
    git init && git add -A && git commit -m "Cybersecurity portfolio"
