@@ -5,7 +5,7 @@ import { ProjectsGrid } from "@/components/ProjectsGrid";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Security engineering projects by Devine Nyaenya — Chokepoint (least-privilege access control & tamper-evident audit), Android Reset Lab (52 tests, P3 hardened), and experimental Android device-management tool. Built, tested, documented honestly.",
+    "5 projects by Devine Nyaenya — Chokepoint (least-privilege access control & tamper-evident audit, live demo), Android Reset Lab (52 tests, P3 hardened), Android Device Management Tool (experimental, Obsidian Aurora), EndoPima Kenya (bilingual community-first health-tech), and this Portfolio itself (Obsidian Aurora redesign). Built, tested, documented honestly.",
   alternates: { canonical: "/projects" },
 };
 
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-dot" />
-              3 documented builds
+              5 projects · no blanks
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
               <span className="h-1.5 w-1.5 rounded-full bg-violet" />
@@ -36,7 +36,7 @@ export default function ProjectsPage() {
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              0 CVEs
+              0 CVEs · Obsidian Aurora
             </span>
           </div>
         </div>
