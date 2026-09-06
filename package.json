@@ -1,0 +1,32 @@
+{
+  "name": "devine-nyaenya-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Professional cybersecurity & security-engineering portfolio for Devine Nyaenya.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "next": "^16.3.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.7",
+    "@types/node": "20.14.10",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "autoprefixer": "10.4.19",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.4",
+    "postcss": "^8.5.28",
+    "tailwindcss": "3.4.17",
+    "typescript": "5.5.3"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

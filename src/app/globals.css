@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+    /* Freeze SMIL/SVG diagram motion for reduced-motion users. */
+    svg * {
+      animation: none !important;
+    }
+    svg animate {
+      display: none;
+    }
+  }
+
+  @keyframes svg-node-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  body {
+    @apply bg-base text-ink-med antialiased;
+    font-feature-settings: "cv11", "ss01";
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: rgba(56, 225, 196, 0.22);
+    color: #f4f6f8;
+  }
+
+  h1, h2, h3, h4 {
+    @apply text-ink-high font-semibold;
+    text-wrap: balance;
+  }
+
+  /* Accessible focus ring for keyboard users */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid #38e1c4;
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  /* Skip link */
+  .skip-link {
+    @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-base transition-transform;
+  }
+  .skip-link:focus {
+    @apply translate-y-0;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  .card {
+    @apply rounded-xl border border-line bg-surface shadow-card;
+    position: relative;
+    transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+      border-color 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  /* Cards lift subtly on hover (interactive elements only opt in). */
+  .card-lift {
+    @apply will-change-transform;
+  }
+  .card-lift:hover {
+    transform: translateY(-4px);
+    border-color: rgba(56, 225, 196, 0.3);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
+      0 24px 48px -24px rgba(0, 0, 0, 0.8),
+      0 0 0 1px rgba(56, 225, 196, 0.12);
+  }
+
+  /* Gradient display text for the hero. */
+  .text-gradient {
+    background: linear-gradient(
+      100deg,
+      #f4f6f8 0%,
+      #f4f6f8 42%,
+      #7ff3e2 72%,
+      #38e1c4 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    @apply animate-gradient-x;
+  }
+
+  /* Eyebrow with a small animated dash. */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.22em] text-accent/90;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-1.5 w-1.5 rounded-[2px] bg-accent;
+    box-shadow: 0 0 10px rgba(56, 225, 196, 0.8);
+    @apply animate-glow-pulse;
+  }
+
+  /* Technical hairline panel */
+  .panel {
+    @apply rounded-lg border border-line bg-raised/60;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.22em] text-accent/90;
+  }
+
+  /* Small monospace label like a dashboard key */
+  .key-label {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-faint;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-raised px-2.5 py-1 font-mono text-[11px] text-ink-med;
+  }
+
+  .chip-accent {
+    @apply border-accent/30 bg-accent/10 text-accent;
+  }
+
+  /* Status dot */
+  .dot {
+    @apply inline-block h-1.5 w-1.5 rounded-full;
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-base transition-all duration-200 hover:bg-accent-soft focus-visible:outline-2;
+    box-shadow: 0 8px 24px -10px rgba(56, 225, 196, 0.5);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 10px 32px -8px rgba(56, 225, 196, 0.65);
+    transform: translateY(-1px);
+  }
+  /* Sheen sweep on the primary button */
+  .btn-primary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    background: linear-gradient(
+      100deg,
+      transparent,
+      rgba(255, 255, 255, 0.45),
+      transparent
+    );
+    transform: translateX(-120%) skewX(-18deg);
+    @apply animate-sheen;
+    pointer-events: none;
+  }
+
+  .btn-ghost {
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-lg border border-line bg-raised/40 px-5 py-2.5 text-sm font-semibold text-ink-high transition-all duration-200 hover:border-accent/40 hover:text-white;
+  }
+  .btn-ghost:hover {
+    transform: translateY(-1px);
+    background-color: rgba(56, 225, 196, 0.08);
+  }
+
+  /* Subtle grid background for hero / sections */
+  .bg-tech {
+    background-image:
+      radial-gradient(60% 55% at 50% 0%, rgba(56, 225, 196, 0.07), transparent 70%),
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 44px 44px, 44px 44px;
+  }
+
+  .link-underline {
+    @apply relative text-ink-high transition-colors hover:text-accent;
+  }
+
+  /* Code blocks */
+  pre.codeblock {
+    @apply overflow-x-auto rounded-lg border border-line bg-[#0c0e12] p-4 font-mono text-[13px] leading-relaxed text-ink-med;
+  }
+  code.inline-code {
+    @apply rounded border border-line bg-raised px-1.5 py-0.5 font-mono text-[0.85em] text-accent-soft;
+  }
+
+  /* Prose-ish styles for case study body */
+  .prose-secure p {
+    @apply text-ink-med leading-relaxed;
+  }
+  .prose-secure p + p {
+    @apply mt-4;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Fine SVG noise texture layered over backgrounds for depth. */
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Edge fade mask for marquees. */
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 12%,
+      #000 88%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 12%,
+      #000 88%,
+      transparent
+    );
+  }
+
+  /* Scroll-reveal: hidden until IntersectionObserver adds .is-visible. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+      transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
