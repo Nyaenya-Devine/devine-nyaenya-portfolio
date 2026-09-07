@@ -17,7 +17,7 @@ export function Hero() {
           {/* Left: editorial copy */}
           <div className="relative">
             {/* Location pill */}
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 backdrop-blur animate-fade-up">
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-white/[0.08] bg-surface/[0.03] px-4 py-2 backdrop-blur animate-fade-up">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 animate-ping opacity-40" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
@@ -108,9 +108,9 @@ export function Hero() {
             <div className="relative animate-scale-in" style={{ animationDelay: "200ms" }}>
               <HeroConsole />
               {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 hidden sm:flex items-center gap-2.5 rounded-full bg-white px-4 py-2.5 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.3)] animate-float-y">
+              <div className="absolute -bottom-4 -left-4 hidden sm:flex items-center gap-2.5 rounded-full bg-surface px-4 py-2.5 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.3)] animate-float-y">
                 <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse-dot" />
-                <span className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-black">
+                <span className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-ink-high">
                   Live audit · 100% chain intact
                 </span>
               </div>

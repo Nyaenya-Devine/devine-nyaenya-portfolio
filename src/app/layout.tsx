@@ -4,6 +4,7 @@ import { site } from "@/data/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AmbientBackground } from "@/components/AmbientBackground";
+import { ScrollChrome } from "@/components/ScrollChrome";
 import "./globals.css";
 
 const inter = Inter({
@@ -74,7 +75,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050507",
+  themeColor: "#070C09",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
@@ -111,6 +112,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}>
       <body className="min-h-screen bg-base font-sans antialiased">
         <AmbientBackground />
+        <ScrollChrome />
         <a href="#main" className="skip-link">
           Skip to content
         </a>

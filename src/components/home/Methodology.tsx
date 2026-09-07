@@ -9,7 +9,7 @@ export function Methodology() {
         className="absolute inset-x-0 top-0 h-px opacity-60"
         style={{
           background:
-            "linear-gradient(90deg, transparent, rgba(56,225,196,0.6), transparent)",
+            "linear-gradient(90deg, transparent, rgba(52,217,107,0.6), transparent)",
           backgroundSize: "200% 100%",
         }}
       />

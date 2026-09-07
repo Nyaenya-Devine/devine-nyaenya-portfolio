@@ -31,16 +31,16 @@ const timeline = [
 ];
 
 const toneStyles = {
-  amber: "border-amber-500/30 bg-amber-500/10 text-amber-400",
-  neutral: "border-white/10 bg-white/[0.04] text-ink-low",
-  violet: "border-violet-500/30 bg-violet-500/10 text-violet-soft",
+  amber: "border-green-500/30 bg-green-500/10 text-green-400",
+  neutral: "border-white/10 bg-surface/[0.04] text-ink-low",
+  violet: "border-emerald-500/30 bg-emerald-500/10 text-violet-soft",
 };
 
 export function BuildTimeline() {
   return (
     <ol className="relative grid gap-6 lg:grid-cols-3">
       {/* connecting line */}
-      <span aria-hidden="true" className="absolute left-[16%] right-[16%] top-7 hidden h-px bg-gradient-to-r from-amber-500/30 via-white/10 to-violet-500/40 lg:block" />
+      <span aria-hidden="true" className="absolute left-[16%] right-[16%] top-7 hidden h-px bg-gradient-to-r from-green-500/30 via-white/10 to-emerald-500/40 lg:block" />
 
       {timeline.map((t, i) => (
         <li key={t.slug} className="relative">
@@ -67,13 +67,13 @@ export function BuildTimeline() {
 
             <div className="mt-5 flex flex-wrap gap-2">
               {t.metrics.map((m) => (
-                <span key={m} className="inline-flex items-center rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 font-mono text-[10px] text-ink-low">
+                <span key={m} className="inline-flex items-center rounded-full border border-white/[0.06] bg-surface/[0.03] px-2.5 py-1 font-mono text-[10px] text-ink-low">
                   {m}
                 </span>
               ))}
             </div>
 
-            <span className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 text-[13px] font-medium text-black group-hover:bg-ink-high transition-colors">
+            <span className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-surface px-4 py-2 text-[13px] font-medium text-ink-high group-hover:bg-ink-high transition-colors">
               View case study
               <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">→</span>
             </span>

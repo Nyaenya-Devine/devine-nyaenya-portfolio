@@ -26,15 +26,15 @@ export default function ProjectsPage() {
           
           {/* Trust line */}
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-surface/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-dot" />
               5 projects · no blanks
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-surface/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
               <span className="h-1.5 w-1.5 rounded-full bg-violet" />
               52 + 26 tests
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-surface/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
               0 CVEs · Obsidian Aurora
             </span>
@@ -70,7 +70,7 @@ export default function ProjectsPage() {
               <p className="font-display text-[22px] tracking-[-0.02em] text-ink-high">Want the full story?</p>
               <p className="mt-2 font-sans text-[15px] text-ink-med">How I fixed 15 bugs and cut false positives 14→9, now 52 tests with Argon2id, HMAC, TOTP, SIEM</p>
             </div>
-            <a href="https://github.com/Nyaenya-Devine/android-reset-lab/blob/main/ARTICLE.md" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-[13px] font-medium text-black hover:bg-ink-high transition-colors">
+            <a href="https://github.com/Nyaenya-Devine/android-reset-lab/blob/main/ARTICLE.md" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-surface px-5 py-2.5 text-[13px] font-medium text-ink-high hover:bg-ink-high transition-colors">
               Read article →
             </a>
           </div>

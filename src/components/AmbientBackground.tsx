@@ -1,7 +1,9 @@
+import { NetworkBackground } from "./NetworkBackground";
+
 /**
- * Ambient Background v2 — Obsidian Aurora Editorial
- * Stunning, not basic: deep obsidian with aurora amber+vilet+cyan gradients,
- * subtle grid, grain noise, and vignette. Purely decorative, GPU-cheap.
+ * Ambient background — dark-green obsidian with animated aurora glows, a live
+ * network-mesh canvas, subtle grid, grain, and vignette. Purely decorative,
+ * GPU-cheap.
  */
 export function AmbientBackground() {
   return (
@@ -9,18 +11,21 @@ export function AmbientBackground() {
       aria-hidden="true"
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-base"
     >
+      {/* Live network mesh canvas */}
+      <NetworkBackground />
+
       {/* Deep obsidian base */}
-      <div className="absolute inset-0 bg-base" />
+      <div className="absolute inset-0 bg-base/40" />
 
       {/* Aurora — amber + violet + cyan, animated */}
       <div
         className="absolute -top-[30%] left-1/2 h-[120%] w-[140%] -translate-x-1/2 animate-aurora opacity-[0.6]"
         style={{
           background: `
-            radial-gradient(ellipse 50% 40% at 20% 20%, rgba(255,178,36,0.15), transparent 60%),
-            radial-gradient(ellipse 40% 50% at 80% 25%, rgba(139,92,246,0.14), transparent 60%),
-            radial-gradient(ellipse 60% 40% at 50% 80%, rgba(6,182,214,0.08), transparent 60%),
-            radial-gradient(ellipse 30% 30% at 10% 80%, rgba(255,178,36,0.06), transparent 60%)
+            radial-gradient(ellipse 50% 40% at 20% 20%, rgba(52,217,107,0.15), transparent 60%),
+            radial-gradient(ellipse 40% 50% at 80% 25%, rgba(16,185,129,0.14), transparent 60%),
+            radial-gradient(ellipse 60% 40% at 50% 80%, rgba(45,212,167,0.08), transparent 60%),
+            radial-gradient(ellipse 30% 30% at 10% 80%, rgba(52,217,107,0.06), transparent 60%)
           `,
           filter: "blur(40px)",
         }}
@@ -31,9 +36,9 @@ export function AmbientBackground() {
         className="absolute inset-0 opacity-40"
         style={{
           background: `
-            radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255,178,36,0.08), transparent 70%),
-            radial-gradient(ellipse 50% 50% at 0% 50%, rgba(139,92,246,0.06), transparent 70%),
-            radial-gradient(ellipse 50% 50% at 100% 50%, rgba(6,182,214,0.04), transparent 70%)
+            radial-gradient(ellipse 70% 50% at 50% 0%, rgba(52,217,107,0.08), transparent 70%),
+            radial-gradient(ellipse 50% 50% at 0% 50%, rgba(16,185,129,0.06), transparent 70%),
+            radial-gradient(ellipse 50% 50% at 100% 50%, rgba(45,212,167,0.04), transparent 70%)
           `,
         }}
       />
@@ -80,7 +85,7 @@ export function AmbientBackground() {
       <div
         className="absolute left-1/2 top-0 h-[800px] w-[1200px] -translate-x-1/2 opacity-20"
         style={{
-          background: "radial-gradient(ellipse at center, rgba(255,178,36,0.08), transparent 70%)",
+          background: "radial-gradient(ellipse at center, rgba(52,217,107,0.08), transparent 70%)",
         }}
       />
     </div>

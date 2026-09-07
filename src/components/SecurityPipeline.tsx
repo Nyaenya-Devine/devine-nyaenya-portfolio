@@ -152,7 +152,7 @@ export function SecurityPipeline({
           className="absolute inset-x-0 top-0 h-px"
           style={{
             background:
-              "linear-gradient(90deg, transparent, rgba(56,225,196,0.9), transparent)",
+              "linear-gradient(90deg, transparent, rgba(52,217,107,0.9), transparent)",
           }}
         />
         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">

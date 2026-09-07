@@ -17,7 +17,7 @@ export function StatsBar() {
     <section className="relative border-y border-white/[0.06] bg-surface/50 backdrop-blur-xl">
       <div className="absolute inset-0 bg-gradient-to-r from-accent/[0.03] via-transparent to-violet/[0.03]" />
       <div className="container-page relative py-0">
-        <dl className="grid grid-cols-2 gap-px bg-white/[0.06] sm:grid-cols-3 lg:grid-cols-5">
+        <dl className="grid grid-cols-2 gap-px bg-surface/[0.06] sm:grid-cols-3 lg:grid-cols-5">
           {stats.map((s) => (
             <div
               key={s.label}

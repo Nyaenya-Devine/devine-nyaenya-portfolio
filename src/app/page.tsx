@@ -33,7 +33,7 @@ export default function HomePage() {
               />
               <Link
                 href="/projects"
-                className="group hidden items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-5 py-2.5 text-[13px] font-medium text-ink-high backdrop-blur transition-all hover:bg-white hover:text-black sm:inline-flex"
+                className="group hidden items-center gap-2 rounded-full border border-white/[0.08] bg-surface/[0.04] px-5 py-2.5 text-[13px] font-medium text-ink-high backdrop-blur transition-all hover:bg-surface hover:text-ink-high sm:inline-flex"
               >
                 All projects
                 <span className="transition-transform group-hover:translate-x-0.5">→</span>
@@ -68,9 +68,9 @@ export default function HomePage() {
       </section>
 
       {/* Control matrix - light paper editorial for contrast */}
-      <section className="relative overflow-hidden bg-paper text-ink-light-high">
+      <section className="relative overflow-hidden bg-surface text-ink-high">
         <div className="absolute inset-0 bg-grid-light opacity-[0.04]" />
-        <div className="absolute inset-0 bg-paper-texture" />
+        <div className="absolute inset-0 bg-surface" />
         <div className="container-page relative py-16 sm:py-24">
           <Reveal>
             <SectionHeading
@@ -81,7 +81,7 @@ export default function HomePage() {
             />
           </Reveal>
           <Reveal className="mt-10" delay={100}>
-            <div className="rounded-[20px] border border-black/[0.06] bg-white p-2 shadow-paper">
+            <div className="rounded-[20px] border border-black/[0.06] bg-surface p-2 shadow-paper">
               <ControlMatrix />
             </div>
           </Reveal>
@@ -118,7 +118,7 @@ export default function HomePage() {
               />
               <Link
                 href="/security-lab"
-                className="group hidden items-center gap-2 rounded-full bg-white px-5 py-2.5 text-[13px] font-medium text-black transition-all hover:bg-ink-high sm:inline-flex"
+                className="group hidden items-center gap-2 rounded-full bg-surface px-5 py-2.5 text-[13px] font-medium text-ink-high transition-all hover:bg-ink-high sm:inline-flex"
               >
                 Open the lab
                 <span className="transition-transform group-hover:translate-x-0.5">→</span>
@@ -132,7 +132,7 @@ export default function HomePage() {
       </section>
 
       {/* Skills - light paper for editorial contrast, cleaner */}
-      <section className="relative overflow-hidden border-t border-black/[0.06] bg-paper-2">
+      <section className="relative overflow-hidden border-t border-black/[0.06] bg-surface-2">
         <div className="absolute inset-0 bg-grid-light opacity-[0.03]" />
         <div className="container-page relative py-16 sm:py-24">
           <Reveal>

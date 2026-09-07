@@ -88,7 +88,7 @@ export function FlowDiagram({
                     <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.2s" repeatCount="indefinite" />
                   </line>
                   {/* flowing packet down the connector */}
-                  <circle r="2.5" cx={width / 2} cy={y + boxH + 4} className="fill-accent" style={{ filter: "drop-shadow(0 0 3px rgba(56,225,196,0.9))" }}>
+                  <circle r="2.5" cx={width / 2} cy={y + boxH + 4} className="fill-accent" style={{ filter: "drop-shadow(0 0 3px rgba(52,217,107,0.9))" }}>
                     <animate attributeName="cy" from={`${y + boxH + 4}`} to={`${y + boxH + gap - 8}`} dur="1.6s" begin={`${i * 0.3}s`} repeatCount="indefinite" />
                     <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="1.6s" begin={`${i * 0.3}s`} repeatCount="indefinite" />
                   </circle>

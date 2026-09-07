@@ -17,7 +17,7 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           background:
-            "linear-gradient(180deg, #0A0B0D 0%, #0d1014 55%, #0A0B0D 100%)",
+            "linear-gradient(180deg, #070C09 0%, #0d1014 55%, #070C09 100%)",
           padding: "72px",
           fontFamily: "sans-serif",
           position: "relative",
@@ -42,7 +42,7 @@ export default function OpenGraphImage() {
             height: 360,
             borderRadius: "9999px",
             background:
-              "radial-gradient(closest-side, rgba(56,225,196,0.22), transparent)",
+              "radial-gradient(closest-side, rgba(52,217,107,0.22), transparent)",
           }}
         />
 
@@ -52,8 +52,8 @@ export default function OpenGraphImage() {
               width: 18,
               height: 18,
               borderRadius: 9999,
-              background: "#38E1C4",
-              boxShadow: "0 0 24px rgba(56,225,196,0.9)",
+              background: "#34D96B",
+              boxShadow: "0 0 24px rgba(52,217,107,0.9)",
             }}
           />
           <div
@@ -70,10 +70,10 @@ export default function OpenGraphImage() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-          <div style={{ color: "#F4F6F8", fontSize: 88, fontWeight: 800, lineHeight: 1.02 }}>
+          <div style={{ color: "#EEF5EF", fontSize: 88, fontWeight: 800, lineHeight: 1.02 }}>
             {site.name}
           </div>
-          <div style={{ color: "#38E1C4", fontSize: 40, fontWeight: 600 }}>
+          <div style={{ color: "#34D96B", fontSize: 40, fontWeight: 600 }}>
             {site.role}
           </div>
         </div>
@@ -90,8 +90,8 @@ export default function OpenGraphImage() {
           </div>
           <div
             style={{
-              color: "#0A0B0D",
-              background: "#38E1C4",
+              color: "#070C09",
+              background: "#34D96B",
               borderRadius: 12,
               padding: "14px 26px",
               fontSize: 26,

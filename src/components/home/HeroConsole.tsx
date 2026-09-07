@@ -45,7 +45,7 @@ export function HeroConsole() {
 
         <div className="grid gap-4 p-5 sm:grid-cols-[1.1fr_1fr]">
           {/* Left: request path */}
-          <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4 backdrop-blur">
+          <div className="rounded-xl border border-white/[0.06] bg-surface/[0.02] p-4 backdrop-blur">
             <div className="flex items-center justify-between mb-4">
               <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">
                 request path · high-impact op
@@ -62,7 +62,7 @@ export function HeroConsole() {
                     className="group flex items-center gap-3 animate-fade-up"
                     style={{ animationDelay: `${300 + i * 100}ms` }}
                   >
-                    <span className="relative grid h-8 w-8 shrink-0 place-items-center rounded-full bg-white text-[11px] font-medium text-black group-hover:scale-110 transition-transform duration-300">
+                    <span className="relative grid h-8 w-8 shrink-0 place-items-center rounded-full bg-surface text-[11px] font-medium text-ink-high group-hover:scale-110 transition-transform duration-300">
                       <span className="absolute inset-0 rounded-full bg-gradient-to-br from-accent to-violet opacity-0 group-hover:opacity-20 transition-opacity" />
                       <span className="relative">{i + 1}</span>
                     </span>
@@ -83,7 +83,7 @@ export function HeroConsole() {
 
           {/* Right: integrity + feed */}
           <div className="flex flex-col gap-4">
-            <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div className="rounded-xl border border-white/[0.06] bg-surface/[0.02] p-4">
               <div className="flex items-center justify-between mb-3">
                 <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">
                   ledger integrity
@@ -111,7 +111,7 @@ export function HeroConsole() {
               </div>
             </div>
 
-            <div className="flex-1 rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div className="flex-1 rounded-xl border border-white/[0.06] bg-surface/[0.02] p-4">
               <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint mb-3">
                 live audit feed
               </p>

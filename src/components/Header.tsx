@@ -70,8 +70,8 @@ export function Header() {
               aria-current={isActive(item.href) ? "page" : undefined}
               className={`relative rounded-full px-4 py-2 text-[13px] font-medium tracking-[-0.01em] transition-all duration-300 ${
                 isActive(item.href)
-                  ? "bg-white text-black"
-                  : "text-ink-med hover:text-ink-high hover:bg-white/[0.06]"
+                  ? "bg-surface text-ink-high"
+                  : "text-ink-med hover:text-ink-high hover:bg-surface/[0.06]"
               }`}
             >
               {item.label}
@@ -82,7 +82,7 @@ export function Header() {
             href={site.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-3 inline-flex items-center gap-2 rounded-full bg-ink-high px-4 py-2 text-[13px] font-medium text-base transition-all duration-300 hover:bg-white hover:scale-[1.02]"
+            className="ml-3 inline-flex items-center gap-2 rounded-full bg-ink-high px-4 py-2 text-[13px] font-medium text-base transition-all duration-300 hover:bg-surface hover:scale-[1.02]"
           >
             <span className="h-2 w-2 rounded-full bg-ok animate-pulse-dot" />
             GitHub
@@ -92,7 +92,7 @@ export function Header() {
         {/* Mobile toggle */}
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.06] text-ink-high backdrop-blur md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-surface/[0.06] text-ink-high backdrop-blur md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -122,8 +122,8 @@ export function Header() {
                 aria-current={isActive(item.href) ? "page" : undefined}
                 className={`rounded-2xl px-5 py-4 text-[17px] font-medium tracking-[-0.01em] transition-colors ${
                   isActive(item.href)
-                    ? "bg-white text-black"
-                    : "text-ink-med hover:bg-white/[0.06] hover:text-ink-high"
+                    ? "bg-surface text-ink-high"
+                    : "text-ink-med hover:bg-surface/[0.06] hover:text-ink-high"
                 }`}
               >
                 {item.label}
@@ -133,7 +133,7 @@ export function Header() {
               href={site.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-white px-5 py-4 text-[15px] font-medium text-black"
+              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-surface px-5 py-4 text-[15px] font-medium text-ink-high"
             >
               <span className="h-2 w-2 rounded-full bg-ok animate-pulse-dot" />
               GitHub — 52 tests, 6/6 detection

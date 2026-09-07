@@ -18,7 +18,7 @@ function CodeBlock({ code }: { code: { language: string; snippet: string; captio
           {code.caption}
         </figcaption>
       )}
-      <pre className="overflow-x-auto rounded-xl border border-white/[0.06] bg-[#08080A] p-5 font-mono text-[13px] leading-relaxed text-ink-med">
+      <pre className="overflow-x-auto rounded-xl border border-white/[0.06] bg-[#0A110B] p-5 font-mono text-[13px] leading-relaxed text-ink-med">
         <code>{code.snippet}</code>
       </pre>
     </figure>
@@ -40,11 +40,11 @@ export default function SecurityLabPage() {
             accent="cyan"
           />
           <div className="mt-8 flex flex-wrap gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-surface/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse-dot" />
               Authorized labs only
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-surface/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
               TryHackMe · HackTheBox · Cisco
             </span>
           </div>
@@ -69,22 +69,22 @@ export default function SecurityLabPage() {
                   <span className="inline-flex items-center rounded-full bg-accent/10 border border-accent/20 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-accent">
                     {lab.category}
                   </span>
-                  <span className="inline-flex items-center rounded-full bg-white/[0.04] border border-white/[0.06] px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-low">
+                  <span className="inline-flex items-center rounded-full bg-surface/[0.04] border border-white/[0.06] px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-low">
                     {lab.difficulty}
                   </span>
                 </div>
                 <h2 className="font-display text-[28px] leading-[1.1] tracking-[-0.02em] text-ink-high">{lab.title}</h2>
                 <p className="mt-4 font-sans text-[17px] leading-[1.6] text-ink-med text-pretty">{lab.summary}</p>
 
-                <div className="mt-6 rounded-[12px] border border-amber-500/20 bg-amber-500/5 p-4">
-                  <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-amber-400 mb-2">Environment & authorization</p>
+                <div className="mt-6 rounded-[12px] border border-green-500/20 bg-green-500/5 p-4">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-green-400 mb-2">Environment & authorization</p>
                   <p className="font-sans text-[14px] leading-[1.5] text-ink-med">{lab.environment}</p>
                 </div>
 
                 <div className="mt-6 flex flex-wrap gap-2">
                   <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-faint self-center">Tools:</span>
                   {lab.tools.map((t) => (
-                    <span key={t} className="inline-flex items-center rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] text-ink-med">{t}</span>
+                    <span key={t} className="inline-flex items-center rounded-full border border-white/[0.06] bg-surface/[0.03] px-2.5 py-1 font-mono text-[11px] text-ink-med">{t}</span>
                   ))}
                 </div>
 

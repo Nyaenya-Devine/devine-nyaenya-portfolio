@@ -4,73 +4,74 @@ import type { Config } from "tailwindcss";
  * Design System v2 — Obsidian Aurora Editorial
  * 
  * Aesthetic: Premium security editorial, not basic dark+teal.
- * - Canvas: true obsidian #050507 (not charcoal) with subtle noise
- * - Paper: warm paper #FFFDFA for light sections (editorial contrast)
- * - Accent: Amber #FFB224 (signal, alert) + Violet #8B5CF6 (AI/security depth) gradient
+ * - Canvas: true obsidian #070C09 (not charcoal) with subtle noise
+ * - Paper: warm paper #0D1410 for light sections (editorial contrast)
+ * - Accent: Amber #34D96B (signal, alert) + Violet #10B981 (AI/security depth) gradient
  * - No more common teal — amber is unique, conveys security alert + warmth
  * - Typography: Instrument Serif (display) + Geist Sans (body) + Geist Mono (technical)
  * - Effects: glass blur, border beams, aurora gradients, grain, grid
  * 
  * Reference:
- *   obsidian  #050507  true black, editorial
- *   surface   #0E0E11  elevated glass
- *   paper     #FFFDFA  warm paper (light sections)
- *   amber     #FFB224  signal amber (primary accent)
- *   violet    #8B5CF6  AI depth
- *   cyan      #06B6D4  technical
+ *   obsidian  #070C09  true black, editorial
+ *   surface   #0D1410  elevated glass
+ *   paper     #0D1410  warm paper (light sections)
+ *   amber     #34D96B  signal amber (primary accent)
+ *   violet    #10B981  AI depth
+ *   cyan      #2DD4A7  technical
  */
 const config: Config = {
   content: ["./src/**/*.{ts,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
-        // New obsidian system
-        base: "#050507",
-        surface: "#0E0E11",
-        "surface-2": "#15151A",
-        raised: "#1A1A1F",
-        line: "#1F1F23",
-        "line-soft": "#18181B",
-        "line-light": "#E8E6E1",
-        
-        // Paper system for light sections (editorial)
-        paper: "#FFFDFA",
-        "paper-2": "#F8F5F0",
-        "paper-3": "#F1EDE8",
-        
-        // New accent system - amber + violet, not teal
+        // Dark-green obsidian system
+        base: "#070C09",
+        surface: "#0D1410",
+        "surface-2": "#121A14",
+        raised: "#16201A",
+        line: "#20301F",
+        "line-soft": "#182416",
+        "line-light": "#2A3B2B",
+
+        // "Paper" tokens are now deep-green panels (kept dark; no light editorial blocks)
+        paper: "#0D1410",
+        "paper-2": "#121A14",
+        "paper-3": "#16201A",
+
+        // Green accent system
         accent: {
-          DEFAULT: "#FFB224",
-          soft: "#FFC96B",
-          dim: "#B87A0A",
-          deep: "#FF8A00",
+          DEFAULT: "#34D96B",
+          soft: "#74EC9D",
+          dim: "#1F9D4F",
+          deep: "#22B857",
         },
+        // Secondary green family (used like the old violet)
         violet: {
-          DEFAULT: "#8B5CF6",
-          soft: "#A78BFA",
-          dim: "#6D28D9",
-          deep: "#5B21B6",
+          DEFAULT: "#10B981",
+          soft: "#34D399",
+          dim: "#047857",
+          deep: "#065F46",
         },
         cyan: {
-          DEFAULT: "#06B6D4",
-          soft: "#22D3EE",
-          dim: "#0891B2",
+          DEFAULT: "#2DD4A7",
+          soft: "#5EEAD4",
+          dim: "#0D9488",
         },
-        // Ink for both dark and light
+        // Ink for dark UI
         ink: {
-          high: "#F5F3EF",
-          med: "#A8A6A1",
-          low: "#6B6A67",
-          faint: "#3F3F3E",
-          // Light mode inks
-          "light-high": "#0A0A0B",
-          "light-med": "#52525B",
-          "light-low": "#71717A",
-          "light-faint": "#A1A1AA",
+          high: "#EEF5EF",
+          med: "#A9BBAE",
+          low: "#76887A",
+          faint: "#536257",
+          // Light-mode inks retuned to dark (no light sections)
+          "light-high": "#EEF5EF",
+          "light-med": "#A9BBAE",
+          "light-low": "#76887A",
+          "light-faint": "#536257",
         },
-        danger: "#F2756A",
-        warn: "#FFB224",
-        ok: "#10B981",
+        danger: "#F2784F",
+        warn: "#E8C25A",
+        ok: "#46D97A",
       },
       fontFamily: {
         sans: [
@@ -117,9 +118,9 @@ const config: Config = {
       },
       boxShadow: {
         card: "0 1px 0 0 rgba(255,255,255,0.04) inset, 0 20px 60px -20px rgba(0,0,0,0.7)",
-        "card-hover": "0 1px 0 0 rgba(255,255,255,0.06) inset, 0 30px 80px -20px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,178,36,0.15)",
-        glow: "0 0 0 1px rgba(255,178,36,0.2), 0 10px 40px -10px rgba(255,178,36,0.3)",
-        "glow-violet": "0 0 0 1px rgba(139,92,246,0.2), 0 10px 40px -10px rgba(139,92,246,0.3)",
+        "card-hover": "0 1px 0 0 rgba(255,255,255,0.06) inset, 0 30px 80px -20px rgba(0,0,0,0.8), 0 0 0 1px rgba(52,217,107,0.15)",
+        glow: "0 0 0 1px rgba(52,217,107,0.2), 0 10px 40px -10px rgba(52,217,107,0.3)",
+        "glow-violet": "0 0 0 1px rgba(16,185,129,0.2), 0 10px 40px -10px rgba(16,185,129,0.3)",
         "paper": "0 1px 0 0 rgba(0,0,0,0.02) inset, 0 20px 60px -20px rgba(0,0,0,0.08)",
       },
       keyframes: {
@@ -203,8 +204,8 @@ const config: Config = {
       backgroundImage: {
         "grid-dark": "linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)",
         "grid-light": "linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px)",
-        "aurora-amber": "radial-gradient(60% 60% at 20% 20%, rgba(255,178,36,0.15), transparent 50%), radial-gradient(50% 50% at 80% 30%, rgba(139,92,246,0.12), transparent 50%), radial-gradient(40% 40% at 50% 80%, rgba(6,182,214,0.08), transparent 50%)",
-        "paper-texture": "radial-gradient(at 20% 30%, rgba(255,178,36,0.03), transparent 40%), radial-gradient(at 80% 70%, rgba(139,92,246,0.02), transparent 40%)",
+        "aurora-amber": "radial-gradient(60% 60% at 20% 20%, rgba(52,217,107,0.15), transparent 50%), radial-gradient(50% 50% at 80% 30%, rgba(16,185,129,0.12), transparent 50%), radial-gradient(40% 40% at 50% 80%, rgba(45,212,167,0.08), transparent 50%)",
+        "paper-texture": "radial-gradient(at 20% 30%, rgba(52,217,107,0.03), transparent 40%), radial-gradient(at 80% 70%, rgba(16,185,129,0.02), transparent 40%)",
       },
     },
   },

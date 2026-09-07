@@ -34,11 +34,11 @@ export default function AboutPage() {
             title="I learn security by building, testing, and breaking things."
           />
           <div className="mt-8 flex flex-wrap gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-[13px] font-medium text-black">
+            <span className="inline-flex items-center gap-2 rounded-full bg-surface px-4 py-2 text-[13px] font-medium text-ink-high">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse-dot" />
               Open to roles — Nairobi / Remote
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-surface/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
               52 tests · P3 hardened · 0 CVEs
             </span>
           </div>
@@ -139,7 +139,7 @@ export default function AboutPage() {
             <div className="rounded-[16px] bg-gradient-to-br from-accent/[0.08] to-violet/[0.06] border border-accent/10 p-6">
               <p className="font-display text-[18px] text-ink-high">Open to roles</p>
               <p className="mt-2 font-sans text-[14px] leading-[1.5] text-ink-med">SOC Analyst, Detection Engineer, AppSec Engineer, Security Engineer (Junior) — Nairobi / Remote</p>
-              <Link href="/contact" className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-[13px] font-medium text-black hover:bg-ink-high transition-colors">
+              <Link href="/contact" className="mt-4 inline-flex items-center gap-2 rounded-full bg-surface px-4 py-2 text-[13px] font-medium text-ink-high hover:bg-ink-high transition-colors">
                 Get in touch →
               </Link>
             </div>
@@ -170,7 +170,7 @@ export default function AboutPage() {
                   m.color === "violet" ? "bg-violet/15 text-violet-soft border border-violet/20" :
                   m.color === "cyan" ? "bg-cyan/15 text-cyan-soft border border-cyan/20" :
                   m.color === "emerald" ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" :
-                  "bg-amber-500/10 text-amber-400 border border-amber-500/20"
+                  "bg-green-500/10 text-green-400 border border-green-500/20"
                 }`}>
                   {i+1}
                 </div>

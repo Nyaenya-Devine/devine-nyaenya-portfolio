@@ -164,10 +164,10 @@ export const projects: Project[] = [
     status: "Live demo",
     featured: false,
     summary:
-      "Professional cybersecurity & security-engineering portfolio — build, test, break, learn, secure. Next.js 16 + TypeScript + Tailwind, completely redesigned from basic dark+teal to stunning Obsidian Aurora editorial (amber #FFB224 + violet #8B5CF6, Instrument Serif, glass + noise + aurora). 14/14 static pages, 0 CVEs, no blank spaces.",
+      "Professional cybersecurity & security-engineering portfolio — build, test, break, learn, secure. Next.js 16 + TypeScript + Tailwind, completely redesigned from basic dark+teal to stunning Obsidian Aurora editorial (amber #34D96B + violet #10B981, Instrument Serif, glass + noise + aurora). 14/14 static pages, 0 CVEs, no blank spaces.",
     overview:
       "This portfolio itself is a project: originally dark charcoal + teal (common), now completely redesigned " +
-      "to Obsidian Aurora editorial — obsidian #050507 + warm paper #FFFDFA contrast, amber signal + violet depth, " +
+      "to Obsidian Aurora editorial — obsidian #070C09 + warm paper #0D1410 contrast, amber signal + violet depth, " +
       "Instrument Serif display + Geist Sans body + Geist Mono technical, glass blur cards with border beams, aurora " +
       "gradients, noise texture, rounded-full pills, editorial whitespace. All inner pages polished (no blank spaces), " +
       "projects added (4 builds), resume + github.io matching theme. Built to be stunning, not basic, and to prove " +

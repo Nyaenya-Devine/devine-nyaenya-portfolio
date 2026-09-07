@@ -63,7 +63,7 @@ export function ProjectCard({ project }: { project: Project }) {
               </span>
             ))}
             {project.concepts.length > 5 && (
-              <span className="inline-flex items-center rounded-full border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 font-mono text-[10px] text-ink-low">
+              <span className="inline-flex items-center rounded-full border border-white/[0.08] bg-surface/[0.03] px-2.5 py-1 font-mono text-[10px] text-ink-low">
                 +{project.concepts.length - 5}
               </span>
             )}
@@ -76,7 +76,7 @@ export function ProjectCard({ project }: { project: Project }) {
           </p>
           <div className="flex flex-wrap gap-2">
             {project.tech.slice(0, 5).map((t) => (
-              <span key={t} className="inline-flex items-center rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 font-mono text-[10px] text-ink-med">
+              <span key={t} className="inline-flex items-center rounded-full border border-white/[0.06] bg-surface/[0.03] px-2.5 py-1 font-mono text-[10px] text-ink-med">
                 {t}
               </span>
             ))}
@@ -90,8 +90,8 @@ export function ProjectCard({ project }: { project: Project }) {
               href={`/projects/${project.slug}`}
               className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[13px] font-medium tracking-[-0.01em] transition-all duration-300 hover:gap-2 ${
                 isChokepoint
-                  ? "bg-white text-black hover:bg-ink-high"
-                  : "bg-white/[0.08] text-ink-high hover:bg-white hover:text-black border border-white/[0.08]"
+                  ? "bg-surface text-ink-high hover:bg-ink-high"
+                  : "bg-surface/[0.08] text-ink-high hover:bg-surface hover:text-ink-high border border-white/[0.08]"
               }`}
             >
               Case study

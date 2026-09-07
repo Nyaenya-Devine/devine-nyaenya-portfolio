@@ -34,7 +34,7 @@ export function ConceptMarquee() {
         {row.map((c, i) => (
           <span
             key={`${c}-${i}`}
-            className="group inline-flex items-center gap-2.5 whitespace-nowrap rounded-full border border-white/[0.06] bg-white/[0.03] px-5 py-2 font-mono text-[13px] tracking-[-0.01em] text-ink-med backdrop-blur transition-all duration-300 hover:bg-white hover:text-black hover:border-white"
+            className="group inline-flex items-center gap-2.5 whitespace-nowrap rounded-full border border-white/[0.06] bg-surface/[0.03] px-5 py-2 font-mono text-[13px] tracking-[-0.01em] text-ink-med backdrop-blur transition-all duration-300 hover:bg-surface hover:text-ink-high hover:border-white"
           >
             <span className={`h-1.5 w-1.5 rounded-full transition-colors ${
               i % 3 === 0 ? "bg-accent group-hover:bg-black" :

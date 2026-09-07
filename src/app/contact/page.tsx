@@ -43,11 +43,11 @@ export default function ContactPage() {
                       <p className="font-mono text-[12px] text-ink-low">{link.handle}</p>
                     </div>
                     {link.external ? (
-                      <ExternalLink href={link.href} className="inline-flex items-center gap-1 rounded-full border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-[12px] font-medium text-ink-high hover:bg-white hover:text-black transition-all">
+                      <ExternalLink href={link.href} className="inline-flex items-center gap-1 rounded-full border border-white/[0.08] bg-surface/[0.04] px-3 py-1.5 text-[12px] font-medium text-ink-high hover:bg-surface hover:text-ink-high transition-all">
                         Open ↗
                       </ExternalLink>
                     ) : (
-                      <a href={link.href} className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-[12px] font-medium text-black hover:bg-ink-high transition-colors">
+                      <a href={link.href} className="inline-flex items-center gap-1 rounded-full bg-surface px-3 py-1.5 text-[12px] font-medium text-ink-high hover:bg-ink-high transition-colors">
                         Email
                       </a>
                     )}
@@ -100,7 +100,7 @@ export default function ContactPage() {
                 <ContactForm />
                 {!site.email && (
                   <p className="mt-4 text-center font-mono text-[11px] text-ink-faint">
-                    Tip: set <code className="rounded bg-white/[0.06] px-1.5 py-0.5">NEXT_PUBLIC_CONTACT_EMAIL</code> in <code className="rounded bg-white/[0.06] px-1.5 py-0.5">.env.local</code> to enable direct email.
+                    Tip: set <code className="rounded bg-surface/[0.06] px-1.5 py-0.5">NEXT_PUBLIC_CONTACT_EMAIL</code> in <code className="rounded bg-surface/[0.06] px-1.5 py-0.5">.env.local</code> to enable direct email.
                   </p>
                 )}
               </div>
