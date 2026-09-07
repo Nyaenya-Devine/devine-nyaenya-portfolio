@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 
 /**
  * Subtle scroll-reveal. Wraps content in a div that fades/rises into view once.
@@ -21,6 +21,16 @@ export function Reveal({
 }) {
   const ref = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
+
+  // Arm the hidden state only when JS is live and motion is allowed. Runs
+  // before paint so there is no flash, but SSR/no-JS content stays visible.
+  useLayoutEffect(() => {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduce) document.documentElement.classList.add("reveal-on");
+    return () => {
+      /* class can remain once added; it only styles .reveal nodes */
+    };
+  }, []);
 
   useEffect(() => {
     const el = ref.current;

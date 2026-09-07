@@ -309,13 +309,16 @@
     mask-image: linear-gradient(to bottom, #000 80%, transparent);
   }
 
-  .reveal {
+  /* Progressive enhancement: content is visible by default. The hidden state is
+     only armed when JS adds `.reveal-on` to <html> (see Reveal.tsx), so a
+     blocked/failed script can never leave the page blank. */
+  .reveal-on .reveal {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1);
     will-change: opacity, transform;
   }
-  .reveal.is-visible {
+  .reveal-on .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
   }
