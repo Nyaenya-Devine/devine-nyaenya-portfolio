@@ -23,8 +23,9 @@ below. Vercel auto-detects Next.js and runs `npm run build`.
 
 3. **Set environment variables** (Vercel → Project → Settings → Environment
    Variables). At minimum:
-   - `NEXT_PUBLIC_SITE_URL` = `https://<your-domain>` (e.g.
-     `https://devinenyaenya.dev`)
+   - `NEXT_PUBLIC_SITE_URL` = `https://devine-nyaenya-portfolio.vercel.app`
+     (the working deployment URL — no env var needed unless you move to a
+     custom domain later)
    - Optional but recommended: `NEXT_PUBLIC_CONTACT_EMAIL`,
      `NEXT_PUBLIC_LINKEDIN_URL`, `NEXT_PUBLIC_GITHUB_URL`
    - Optional: `CONTACT_FORM_ENDPOINT` if using a form provider.

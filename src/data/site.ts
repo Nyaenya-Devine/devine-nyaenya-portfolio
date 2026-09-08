@@ -24,10 +24,11 @@ export const site = {
     "ship defensive controls that are implemented and tested — not just described. Self-taught, " +
     "hands-on, and focused on application security, access control, and security engineering.",
 
-  // Canonical origin. Defaults to the real custom domain; override via env.
+  // Canonical origin. The live, working domain is the Vercel deployment URL
+  // (no custom domain registered). Override via env if that ever changes.
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-    "https://devinenyaenya.com",
+    "https://devine-nyaenya-portfolio.vercel.app",
 
   // Contact / social. Env vars win; empty string => treated as "not configured".
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "",
