@@ -32,7 +32,7 @@ export const projects: Project[] = [
     status: "Live demo",
     featured: true,
     summary:
-      "A least-privilege access-control and tamper-evident audit platform for high-impact operations — for both humans and AI agents. Real role-based auth, a two-person approval workflow, a hash-chained HMAC audit log, and explainable anomaly detection, with 26 tests that prove the security properties. P3 redesign: Obsidian Aurora editorial.",
+      "A least-privilege access-control and tamper-evident audit platform for high-impact operations — for both humans and AI agents. Real role-based auth, a two-person approval workflow, a hash-chained HMAC audit log, and explainable anomaly detection, with 26 tests that prove the security properties.",
     overview:
       "Chokepoint answers a specific question: how do you let people — and increasingly, AI agents — " +
       "perform high-impact actions without giving any single actor enough authority to abuse it? It is a " +
@@ -41,7 +41,7 @@ export const projects: Project[] = [
       "explainable anomaly detection. It is framed around the OWASP Agentic AI failure class " +
       "ASI03 — Identity & Privilege Abuse. The security logic lives in reviewed library modules and is " +
       "backed by a Vitest suite that tests the controls themselves. P3: 52 tests in reset-lab inform this productized version.",
-    tech: ["Next.js 16 (App Router)", "TypeScript", "React", "Vitest 26 tests", "Web Crypto / PBKDF2", "HMAC-SHA256", "Obsidian Aurora theme", "Vercel", "PWA"],
+    tech: ["Next.js 16 (App Router)", "TypeScript", "React", "Vitest 26 tests", "Web Crypto / PBKDF2", "HMAC-SHA256", "Vercel", "PWA"],
     concepts: [
       "Least privilege",
       "RBAC",
@@ -103,17 +103,18 @@ export const projects: Project[] = [
     status: "Experimental / WIP",
     featured: true,
     summary:
-      "An honest attempt to evolve the reset-lab concept into a realistic Android Enterprise device-management web app using Next.js and TypeScript. Does not remotely factory-reset real devices — incomplete, experimental, but taught full-stack and integration lessons. Now redesigned with Obsidian Aurora theme.",
+      "Evolving the reset-lab into a dual-mode Android Enterprise console: a local simulator plus live Google Android Management API integration (OAuth2 service account, CloudDPC QR enrollment, policies, WIPE/LOCK/REBOOT commands, deprovision). Experimental — the live path is implemented and documented with a go-live runbook, but not yet exercised on real hardware.",
     overview:
-      "After the reset lab proved the security controls in isolation, this project tried to carry them " +
-      "into a more realistic product surface: a modern web application for Android Enterprise device " +
-      "management, built with Next.js and TypeScript and backed by a database. The original vision — a " +
-      "fully functional remote enterprise-management system — was not achieved, and it does not remotely " +
-      "factory-reset or control arbitrary Android devices. It is presented as an experimental, " +
-      "work-in-progress effort that demonstrates full-stack development, API design, security-focused " +
-      "architecture, and — importantly — the integration challenges and realistic scope decisions that " +
-      "separate a controlled simulation from a production product. Now redesigned with Obsidian Aurora editorial to match portfolio.",
-    tech: ["Next.js 16", "TypeScript", "React", "REST APIs", "PostgreSQL + Drizzle", "Obsidian Aurora theme", "Full-stack web"],
+      "The reset lab proved the controls in isolation; this project carries them into a product "
+      + "surface: a Next.js/TypeScript console (PostgreSQL + Drizzle) for Android Enterprise device "
+      + "management with two modes. Simulator manages synthetic devices locally; live mode calls the "
+      + "real Android Management API — service-account JWT auth, encrypted keys at rest, CloudDPC QR "
+      + "provisioning bundles, policies, enrollment tokens, issueCommand (LOCK / WIPE / REBOOT / "
+      + "RELINQUISH_OWNERSHIP / lost mode / RESET_PASSWORD) and enterprises.devices.delete deprovision. "
+      + "Wipe semantics follow the real API: the device must acknowledge before it wipes. Honest status: "
+      + "experimental / WIP — the live path is not yet proven on a real enrolled device; a precise "
+      + "go-live runbook and web+Python CI live in the repo.",
+    tech: ["Next.js 16", "TypeScript", "React", "PostgreSQL + Drizzle", "Android Management API", "OAuth2 service-account JWT", "CloudDPC QR provisioning", "CI: web + Python"],
     concepts: [
       "Full-stack development",
       "Android Enterprise concepts",
@@ -159,28 +160,28 @@ export const projects: Project[] = [
   },
   {
     slug: "portfolio",
-    name: "Portfolio — Obsidian Aurora",
-    kicker: "This site · P3 redesign",
+    name: "Portfolio",
+    kicker: "This site · Design + build",
     status: "Live demo",
     featured: false,
     summary:
-      "Professional cybersecurity & security-engineering portfolio — build, test, break, learn, secure. Next.js 16 + TypeScript + Tailwind, completely redesigned from basic dark+teal to stunning Obsidian Aurora editorial (amber #34D96B + violet #10B981, Instrument Serif, glass + noise + aurora). 14/14 static pages, 0 CVEs, no blank spaces.",
+      "Professional cybersecurity & security-engineering portfolio — build, test, break, learn, secure. Next.js 16 + TypeScript + Tailwind. Accessibility-driven dark-green design (green #34D96B on green-black), mixed fonts (Fraunces + Inter + JetBrains Mono), luminous gradient text, subtle falling-code background, clickable project windows. Strict CSP, 16 routes, 0 CVEs.",
     overview:
-      "This portfolio itself is a project: originally dark charcoal + teal (common), now completely redesigned " +
-      "to Obsidian Aurora editorial — obsidian #070C09 + warm paper #0D1410 contrast, amber signal + violet depth, " +
-      "Instrument Serif display + Geist Sans body + Geist Mono technical, glass blur cards with border beams, aurora " +
-      "gradients, noise texture, rounded-full pills, editorial whitespace. All inner pages polished (no blank spaces), " +
-      "projects added (4 builds), resume + github.io matching theme. Built to be stunning, not basic, and to prove " +
-      "design discipline alongside security engineering.",
-    tech: ["Next.js 16", "TypeScript", "Tailwind CSS", "Instrument Serif", "Obsidian Aurora theme", "Vercel", "14 static pages"],
+      "This portfolio is a security engineer's public face, so it is treated like a security "
+      + "product: content visible without JavaScript, strict CSP headers, no fabricated claims, honest "
+      + "status labels on every project. Design evolved in passes — a green-accent rebuild of the "
+      + "five-project catalogue, then an accessibility pass: luminous gradient text (no dark anchors), "
+      + "mixed fonts (Fraunces display, Inter body, JetBrains Mono technical), a sparse animated "
+      + "falling-code canvas kept behind content, and large clickable project windows that lead "
+      + "straight into each case study.",
+    tech: ["Next.js 16", "TypeScript", "Tailwind CSS", "Fraunces + Inter + JetBrains Mono", "Strict CSP", "Vercel", "16 routes"],
     concepts: [
-      "Editorial design",
-      "Obsidian Aurora theme",
-      "Glass morphism",
-      "Design systems",
-      "Portfolio engineering",
-      "No blank spaces",
-      "Professional cleaner",
+      "Security-minded webcraft",
+      "Dark-green design system",
+      "Typography systems",
+      "Accessibility",
+      "Honest engineering content",
+      "SEO & performance",
     ],
     github: "https://github.com/Nyaenya-Devine/devine-nyaenya-portfolio",
     liveUrl: "https://devine-nyaenya-portfolio.vercel.app",

@@ -8,9 +8,9 @@ import { ExternalLink } from "@/components/ExternalLink";
 const project = getProject("portfolio")!;
 
 export const metadata: Metadata = {
-  title: "Portfolio — Obsidian Aurora Redesign — Case Study",
+  title: "Portfolio — Design + Build — Case Study",
   description:
-    "This portfolio itself: Next.js 16 + TypeScript + Tailwind, redesigned from basic dark+teal to stunning Obsidian Aurora editorial — amber #34D96B + violet #10B981, Instrument Serif, glass + noise + aurora, rounded-full pills, no blank spaces, 14/14 static pages.",
+    "This portfolio itself: Next.js 16 + TypeScript + Tailwind. Accessibility-driven dark-green design — luminous gradients, mixed fonts, subtle falling-code background, clickable project windows, strict CSP, 16 routes, 0 CVEs.",
   alternates: { canonical: "/projects/portfolio" },
 };
 
@@ -23,53 +23,73 @@ export default function PortfolioPage() {
         <article className="mx-auto max-w-4xl">
           <CaseSection id="overview" eyebrow="01" title="Overview">
             <p>
-              This site is a project. It started as a common dark charcoal + teal developer portfolio —
-              functional but visually indistinguishable. The brief was: <em>make it stunning, not basic</em>,
-              like a professional cleaner had been through it. The result is Obsidian Aurora Editorial:
-              obsidian #070C09 + warm paper #0D1410 contrast, amber #34D96B signal + violet #10B981 depth,
-              Instrument Serif display + Geist Sans body + Geist Mono technical, glass blur cards with
-              border beams, aurora radial gradients, noise texture, rounded-full pills, editorial whitespace.
+              A security portfolio is judged twice: by what it claims and by how
+              it behaves. So this site is treated like a small security product —
+              every claim is backed by a repo or an authorized-lab write-up, and
+              the design exists to make honest engineering readable, not to
+              distract from it.
+            </p>
+            <p className="mt-4">
+              The build follows the site's own methodology —{" "}
+              <em>build → test → break → learn → secure</em> — including two
+              full design passes after launch: a green-accent rebuild of the
+              five-project catalogue, and an accessibility pass that removed
+              low-contrast gradient words and rebuilt the home page around
+              large clickable project windows.
             </p>
             <ExternalLink href={project.github} className="btn-ghost mt-2">
               Source on GitHub
             </ExternalLink>
           </CaseSection>
 
-          <CaseSection id="before-after" eyebrow="02" title="Before → After">
+          <CaseSection id="principles" eyebrow="02" title="Design principles">
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="panel p-5">
-                <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-ink-low">Before</p>
-                <p className="mt-2 text-[14px] font-medium text-ink-high">Dark + teal common</p>
-                <ul className="mt-3 space-y-1.5 text-[13px] text-ink-med">
-                  <li>• Slate-950 + emerald — every portfolio uses it</li>
-                  <li>• Flat cards, no depth</li>
-                  <li>• Blank spaces on inner pages</li>
-                  <li>• No editorial system</li>
-                </ul>
+                <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-ink-low">Visible by default</p>
+                <p className="mt-2 text-[14px] leading-relaxed text-ink-med">
+                  Content never starts hidden. Scroll animations are
+                  progressive enhancement — text and cards are fully readable
+                  even if JavaScript never runs. An early deployed bug that
+                  blanked the home page drove this rule.
+                </p>
               </div>
-              <div className="panel p-5 border-accent/20 bg-accent/[0.04]">
-                <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-accent">After — Obsidian Aurora</p>
-                <p className="mt-2 text-[14px] font-medium text-ink-high">Editorial stunning</p>
-                <ul className="mt-3 space-y-1.5 text-[13px] text-ink-med">
-                  <li>• Obsidian #070C09 + paper #0D1410 + amber + violet</li>
-                  <li>• Glass blur 20px + top beam + hover -y-2</li>
-                  <li>• No blanks — every space filled intentionally</li>
-                  <li>• Instrument Serif + grid 64px + noise + aurora</li>
-                </ul>
+              <div className="panel p-5">
+                <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-ink-low">Readable on green</p>
+                <p className="mt-2 text-[14px] leading-relaxed text-ink-med">
+                  Green-on-green fails when anchors are dark. Every gradient
+                  stop is luminous (mint → green → teal, ≥8:1), small labels
+                  use bright mint, and meta text sits above WCAG minimums.
+                </p>
+              </div>
+              <div className="panel p-5">
+                <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-ink-low">Animated but calm</p>
+                <p className="mt-2 text-[14px] leading-relaxed text-ink-med">
+                  The falling-code canvas is sparse, low-opacity, fixed behind
+                  content and off for reduced-motion. Decoration never
+                  competes with the words.
+                </p>
+              </div>
+              <div className="panel p-5">
+                <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-ink-low">Honest statuses</p>
+                <p className="mt-2 text-[14px] leading-relaxed text-ink-med">
+                  Every project carries a truthful status — Live demo,
+                  Simulation / lab, or Experimental / WIP — and the copy states
+                  exactly what was and wasn't achieved.
+                </p>
               </div>
             </div>
           </CaseSection>
 
           <CaseSection id="system" eyebrow="03" title="Design system">
-            <p>Tokens that make it consistent across portfolio, chokepoint, device-mgmt, resume:</p>
-            <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            <p>A small, consistent system across the whole site:</p>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {[
-                { k: "Colors", v: "#070C09 obsidian, #0D1410 paper, #34D96B amber, #10B981 violet, #2DD4A7 cyan" },
-                { k: "Typography", v: "Instrument Serif display 400, Inter sans, Geist Mono mono 11px tracking" },
-                { k: "Surfaces", v: "Glass rgba 16,16,18 0.8 blur 20px rounded 16px/20px/999px, border white 6%" },
-                { k: "Effects", v: "Aurora radial 10%/8%/5% blur 40px, grid 64px 2%, noise grain, beam amber 20%" },
-                { k: "Motion", v: "Hover -y-2 to -y-4, translateX 2px, 200ms ease, pulse-dot" },
-                { k: "Layout", v: "Container 1280px, 12-col, editorial whitespace, no blank spaces" },
+                { k: "Colors", v: "#070C09 base, #0D1410 surface, #34D96B accent, mint #74EC9D for small text, teal depth" },
+                { k: "Typography", v: "Fraunces variable serif (display, 400–700), Inter (body), JetBrains Mono (technical)" },
+                { k: "Type roles", v: "Serif only at display sizes; sans for reading; mono for labels, chips, eyebrows" },
+                { k: "Effects", v: "Grain + faint grid + soft glows; film noise overlay kept at 3%" },
+                { k: "Motion", v: "Reveal 700ms ease, hover lifts, ping/ring on status dots; reduced-motion respected" },
+                { k: "Security", v: "Strict CSP, no external assets, self-hosted fonts, canvas-only animation" },
               ].map((s) => (
                 <div key={s.k} className="panel p-4">
                   <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-ink-low">{s.k}</p>
@@ -79,22 +99,20 @@ export default function PortfolioPage() {
             </div>
           </CaseSection>
 
-          <CaseSection id="polish" eyebrow="04" title="Polish — no blank spaces">
-            <p>
-              The second brief was about blank spaces. Every inner page was audited: about, projects,
-              security-lab, contact. Where a space existed for a reason, content was added — trust pills,
-              methodology, callouts with amber beams, glass cards, bottom CTAs with gradient. Where it was
-              accidental, layout was tightened. Result: 14/14 static pages, 0 empty sections.
-            </p>
+          <CaseSection id="polish" eyebrow="04" title="Readability pass — the details">
+            <ul className="mt-2 space-y-2 text-[15px] leading-relaxed text-ink-med">
+              <li>• Gradient display text ships a solid-color fallback — it can never render invisible.</li>
+              <li>• Headings use a variable serif with true weights (no synthetic bold).</li>
+              <li>• The code-rain canvas sits behind a readability scrim at <code className="font-mono text-[13px]">-z-10</code>.</li>
+              <li>• Every route verified 200 locally and in production; audit + CI green.</li>
+            </ul>
           </CaseSection>
 
           <CaseSection id="stack" eyebrow="05" title="Stack & delivery">
             <p>
-              Next.js 16 App Router, TypeScript, Tailwind CSS, Instrument Serif + Inter + Geist Mono,
-              Vercel deploy, 14 static pages, 0 CVEs, PWA manifest. Same theme applied to{" "}
-              <Link href="/projects/chokepoint" className="text-accent hover:underline">chokepoint</Link>,{" "}
-              <Link href="/projects/android-device-management-tool" className="text-accent hover:underline">device-mgmt</Link>,
-              resume Netlify, and github.io — consistent across all properties.
+              Next.js 16 App Router, TypeScript, Tailwind CSS, self-hosted
+              Fraunces + Inter + JetBrains Mono, Vercel deploy with CI, strict
+              CSP via proxy, 16 routes, 0 CVEs.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/" className="btn-primary">

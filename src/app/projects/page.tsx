@@ -5,7 +5,7 @@ import { ProjectsGrid } from "@/components/ProjectsGrid";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "5 projects by Devine Nyaenya — Chokepoint (least-privilege access control & tamper-evident audit, live demo), Android Reset Lab (52 tests, P3 hardened), Android Device Management Tool (experimental, Obsidian Aurora), EndoPima Kenya (bilingual community-first health-tech), and this Portfolio itself (Obsidian Aurora redesign). Built, tested, documented honestly.",
+    "5 projects by Devine Nyaenya — Chokepoint (least-privilege access control & tamper-evident audit, live demo), Android Reset Lab (simulation, 52 tests, 6/6 attacks detected), Android Device Management Tool (experimental dual-mode console — Android Management API integration), EndoPima Kenya (bilingual community-first health-tech), and this Portfolio itself. Built, tested, documented honestly.",
   alternates: { canonical: "/projects" },
 };
 
@@ -36,7 +36,7 @@ export default function ProjectsPage() {
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-surface/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              0 CVEs · Obsidian Aurora
+              0 CVEs · strict CSP
             </span>
           </div>
         </div>

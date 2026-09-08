@@ -48,6 +48,10 @@ export function Footer() {
               <span className="h-px w-0 bg-accent transition-all duration-300 group-hover:w-4" />
               Contact
             </Link>
+            <a href="/resume.pdf" download className="group flex items-center gap-2 font-sans text-[14px] text-ink-med hover:text-ink-high transition-colors">
+              <span className="h-px w-0 bg-accent transition-all duration-300 group-hover:w-4" />
+              Resume (PDF)
+            </a>
           </nav>
 
           <div className="flex flex-col gap-3">
