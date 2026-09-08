@@ -24,14 +24,16 @@ export const site = {
     "ship defensive controls that are implemented and tested — not just described. Self-taught, " +
     "hands-on, and focused on application security, access control, and security engineering.",
 
-  // Canonical origin. Falls back to a placeholder; override via env in production.
+  // Canonical origin. Defaults to the real custom domain; override via env.
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-    "https://your-domain.example.com",
+    "https://devinenyaenya.com",
 
   // Contact / social. Env vars win; empty string => treated as "not configured".
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "",
-  linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL?.trim() || "",
+  linkedin:
+    process.env.NEXT_PUBLIC_LINKEDIN_URL?.trim() ||
+    "https://www.linkedin.com/in/devine-n-b16776173",
   github:
     process.env.NEXT_PUBLIC_GITHUB_URL?.trim() || "https://github.com/Nyaenya-Devine",
 
@@ -70,7 +72,9 @@ export const socialLinks: SocialLink[] = [
   {
     label: "LinkedIn",
     href: site.linkedin,
-    handle: site.linkedin ? "View profile" : "Add your LinkedIn URL in .env.local",
+    handle: site.linkedin
+      ? site.linkedin.replace(/^https?:\/\/(www\.)?/, "")
+      : "Add your LinkedIn URL in .env.local",
     configured: Boolean(site.linkedin),
     external: true,
   },
