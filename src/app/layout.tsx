@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono, Instrument_Serif } from "next/font/google";
+import { Inter, JetBrains_Mono, Fraunces } from "next/font/google";
 import { site } from "@/data/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -13,8 +13,9 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
+const fraunces = Fraunces({
+  // Variable serif (single file): real optical-size + weight range 400–700,
+  // so font-medium/semibold/bold all render true weights — no synthetic bold.
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
@@ -109,7 +110,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable}`}>
       <body className="min-h-screen bg-base font-sans antialiased">
         <AmbientBackground />
         <ScrollChrome />

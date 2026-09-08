@@ -115,7 +115,7 @@ export default function HomePage() {
       <section className="border-t border-line-soft bg-surface/50">
         <div className="container-page py-14 text-center sm:py-16">
           <Reveal className="mx-auto max-w-2xl">
-            <h2 className="text-3xl font-bold text-ink-high sm:text-4xl">
+            <h2 className="font-display text-3xl font-semibold tracking-[-0.01em] text-ink-high sm:text-4xl">
               Security that's <span className="text-gradient">built and proven</span>
             </h2>
             <p className="mx-auto mt-4 text-ink-med">

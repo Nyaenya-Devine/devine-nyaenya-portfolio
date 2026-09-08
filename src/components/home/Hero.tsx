@@ -21,8 +21,9 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="mt-6 text-4xl font-bold leading-[1.04] tracking-tight text-ink-high sm:text-6xl">
-            {site.firstName} <span className="text-gradient">{site.lastName}</span>
+          <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.04] tracking-[-0.01em] text-ink-high sm:text-7xl">
+            {site.firstName}{" "}
+            <span className="text-gradient">{site.lastName}</span>
           </h1>
 
           <p className="mt-3 text-xl font-semibold text-accent sm:text-2xl">

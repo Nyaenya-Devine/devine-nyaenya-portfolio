@@ -61,13 +61,13 @@ const config: Config = {
         ink: {
           high: "#EEF5EF",
           med: "#A9BBAE",
-          low: "#76887A",
-          faint: "#536257",
+          low: "#8CA092",
+          faint: "#6B7F72",
           // Light-mode inks retuned to dark (no light sections)
           "light-high": "#EEF5EF",
           "light-med": "#A9BBAE",
-          "light-low": "#76887A",
-          "light-faint": "#536257",
+          "light-low": "#8CA092",
+          "light-faint": "#6B7F72",
         },
         danger: "#F2784F",
         warn: "#E8C25A",
@@ -88,9 +88,10 @@ const config: Config = {
         ],
         display: [
           "var(--font-display)",
-          "Instrument Serif",
-          "Newsreader",
+          "Fraunces",
           "Georgia",
+          "Cambria",
+          "Times New Roman",
           "serif",
         ],
         mono: [

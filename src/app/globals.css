@@ -39,8 +39,8 @@
   }
 
   ::selection {
-    background: rgba(255, 178, 36, 0.25);
-    color: #0D1410;
+    background: rgba(52, 217, 107, 0.35);
+    color: #070C09;
   }
 
   h1, h2, h3, h4 {
@@ -110,32 +110,37 @@
     box-shadow: 0 20px 60px -20px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.04);
   }
 
-  /* Editorial gradient display */
+  /* Editorial gradient display — luminous green family only, no dark anchors.
+     Glyphs are filled transparent only where clipping is supported; the solid
+     mint `color` below it means the text can never render invisible, even in
+     browsers without background-clip:text (they fall back to solid #8FF2B4). */
   .text-gradient {
     background: linear-gradient(
-      105deg,
-      #0D1410 0%,
-      #0D1410 35%,
-      #34D96B 68%,
-      #10B981 88%,
-      #2DD4A7 100%
+      100deg,
+      #B7F9D0 0%,
+      #8FF2B4 18%,
+      #5CE692 38%,
+      #34D96B 58%,
+      #2DD4A7 82%,
+      #5EEAD4 100%
     );
-    background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
+    color: #8FF2B4;
   }
 
   .text-gradient-amber {
-    background: linear-gradient(100deg, #0D1410 0%, #34D96B 100%);
+    background: linear-gradient(100deg, #B7F9D0 0%, #5CE692 45%, #34D96B 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
+    color: #8FF2B4;
   }
 
-  /* Eyebrow with amber dot + line */
+  /* Eyebrow with dot + line — bright mint so 11px caps read clearly */
   .eyebrow {
-    @apply inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.24em] text-accent;
+    @apply inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.24em] text-accent-soft;
     font-weight: 500;
   }
   .eyebrow::before {
@@ -150,7 +155,7 @@
   }
 
   .eyebrow-violet {
-    @apply text-violet;
+    @apply text-violet-soft;
   }
   .eyebrow-violet::before {
     @apply bg-violet;
@@ -161,7 +166,7 @@
   }
 
   .key-label {
-    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-faint;
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-low;
   }
 
   .chip {
@@ -174,7 +179,7 @@
   }
 
   .chip-accent {
-    @apply border-accent/30 bg-accent/10 text-accent;
+    @apply border-accent/35 bg-accent/10 text-accent-soft;
     box-shadow: 0 0 20px -10px rgba(52,217,107,0.4);
   }
   .chip-violet {
@@ -298,6 +303,12 @@
 @layer utilities {
   .text-balance { text-wrap: balance; }
   .text-pretty { text-wrap: pretty; }
+
+  /* Film-grain overlay (driven by .noise-overlay elements) */
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 160px 160px;
+  }
 
   .mask-fade-x {
     -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);

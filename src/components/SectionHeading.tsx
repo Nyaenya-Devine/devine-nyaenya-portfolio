@@ -21,11 +21,15 @@ export function SectionHeading({
   return (
     <div className={`${align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"} relative`}>
       {eyebrow && (
-        <p className={`eyebrow mb-4 ${accent === "violet" ? "eyebrow-violet" : ""} ${accent === "cyan" ? "text-cyan before:bg-cyan" : ""}`}>
+        <p className={`eyebrow mb-4 ${accent === "violet" ? "eyebrow-violet" : ""} ${accent === "cyan" ? "text-cyan-soft before:bg-cyan" : ""}`}>
           {eyebrow}
         </p>
       )}
-      <Heading className="font-display text-h2 tracking-[-0.02em] text-ink-high">
+      <Heading
+        className={`font-display font-semibold text-balance ${
+          as === "h1" ? "text-h1" : "text-h2"
+        } tracking-[-0.01em] text-ink-high`}
+      >
         {title}
       </Heading>
       {description && (
