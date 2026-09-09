@@ -46,8 +46,8 @@ export const site = {
 export const repos = {
   profile: "https://github.com/Nyaenya-Devine",
   chokepoint:
-    "https://github.com/Nyaenya-Devine/Nyaenya-Devine-chokepoint",
-  chokepointLive: "https://nyaenya-devine-chokepoint.vercel.app",
+    "https://github.com/Nyaenya-Devine/chokepoint",
+  chokepointLive: "https://chokepoint-demo.vercel.app",
   androidResetLab: "https://android-reset-lab.vercel.app",
   androidDeviceManagement:
     "https://github.com/Nyaenya-Devine/android-device-management-tool",

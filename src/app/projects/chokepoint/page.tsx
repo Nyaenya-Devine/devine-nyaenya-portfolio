@@ -70,7 +70,7 @@ export default function ChokepointCasePage() {
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-3">
                 <DownloadDemoButton />
-                <a href="https://nyaenya-devine-chokepoint.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-ghost">
+                <a href="https://chokepoint-demo.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-ghost">
                   Open the live demo
                 </a>
               </div>
