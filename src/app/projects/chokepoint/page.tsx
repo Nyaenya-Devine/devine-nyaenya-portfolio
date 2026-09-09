@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DownloadDemoButton } from "@/components/DownloadDemoButton";
 import { getProject } from "@/data/projects";
 import { CaseHero } from "@/components/case-study/CaseHero";
 import { CaseNav } from "@/components/case-study/CaseNav";
@@ -68,10 +69,7 @@ export default function ChokepointCasePage() {
                 commentary included.
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-3">
-                <a href="/media/chokepoint-demo.mp4" download className="btn-primary">
-                  Download MP4
-                  <span aria-hidden="true">↓</span>
-                </a>
+                <DownloadDemoButton />
                 <a href="https://nyaenya-devine-chokepoint.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-ghost">
                   Open the live demo
                 </a>
