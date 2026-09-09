@@ -17,6 +17,7 @@ export type CaseSection = {
 };
 
 export const caseNav: CaseSection[] = [
+  { id: "demo", navLabel: "Demo video", title: "Walkthrough" },
   { id: "overview", navLabel: "Overview", title: "Overview" },
   { id: "problem", navLabel: "Problem", title: "The problem" },
   { id: "threat-model", navLabel: "Threat model", title: "Threat model" },

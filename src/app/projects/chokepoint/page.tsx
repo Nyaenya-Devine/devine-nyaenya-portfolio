@@ -49,6 +49,35 @@ export default function ChokepointCasePage() {
           </aside>
 
           <article>
+            <CaseSection id="demo" eyebrow="▶" title="Watch the walkthrough">
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster="/media/chokepoint-demo-poster.jpg"
+                className="aspect-video w-full rounded-2xl border border-line-soft bg-base shadow-card"
+              >
+                <source src="/media/chokepoint-demo.mp4" type="video/mp4" />
+                Your browser does not support embedded video — download the
+                MP4 instead.
+              </video>
+              <p className="mt-3 text-sm leading-relaxed text-ink-med">
+                A narrated 1:47 walkthrough of the live demo — signing in as
+                admin, the risk dashboard, tamper-evidence verification,
+                anomaly feeds and the dual-control approval flow. Audio
+                commentary included.
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-3">
+                <a href="/media/chokepoint-demo.mp4" download className="btn-primary">
+                  Download MP4
+                  <span aria-hidden="true">↓</span>
+                </a>
+                <a href="https://nyaenya-devine-chokepoint.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-ghost">
+                  Open the live demo
+                </a>
+              </div>
+            </CaseSection>
+
             <CaseSection id="overview" eyebrow="01" title="Overview">
               <p>
                 Chokepoint is a full-stack security product built to answer one
