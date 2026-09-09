@@ -92,7 +92,7 @@ export const projects: Project[] = [
       "SIEM shipping",
     ],
     github: "https://github.com/Nyaenya-Devine/android-reset-lab",
-    liveUrl: "https://github.com/Nyaenya-Devine/android-reset-lab/releases/tag/v3.0",
+    liveUrl: "https://android-reset-lab.vercel.app",
     caseStudy: true,
     weight: 90,
   },

@@ -48,7 +48,7 @@ export const repos = {
   chokepoint:
     "https://github.com/Nyaenya-Devine/Nyaenya-Devine-chokepoint",
   chokepointLive: "https://nyaenya-devine-chokepoint.vercel.app",
-  androidResetLab: "https://github.com/Nyaenya-Devine/android-reset-lab",
+  androidResetLab: "https://android-reset-lab.vercel.app",
   androidDeviceManagement:
     "https://github.com/Nyaenya-Devine/android-device-management-tool",
 } as const;
