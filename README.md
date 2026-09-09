@@ -23,6 +23,8 @@ center.
 | **Android Reset Lab** | Simulation-only MDM reset lab: RBAC, four-eyes, hash-chained logs, 6/6 attacks detected | [`android-reset-lab`](https://github.com/Nyaenya-Devine/android-reset-lab) |
 | **Android Device Management Tool** | Experimental full-stack Android Enterprise app (honest WIP) | [`android-device-management-tool`](https://github.com/Nyaenya-Devine/android-device-management-tool) |
 
+▶ **Try the Android Reset Lab live console:** <https://android-reset-lab.vercel.app> (simulation, seeded demo accounts `que` / `LabRat!2026`)
+
 ---
 
 ## ✨ What this is
