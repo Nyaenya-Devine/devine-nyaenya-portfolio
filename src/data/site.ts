@@ -45,12 +45,17 @@ export const site = {
 /** Convenience: GitHub profile + repo links (verbatim from the real accounts). */
 export const repos = {
   profile: "https://github.com/Nyaenya-Devine",
-  chokepoint:
-    "https://github.com/Nyaenya-Devine/chokepoint",
+  chokepoint: "https://github.com/Nyaenya-Devine/chokepoint",
   chokepointLive: "https://chokepoint-demo.vercel.app",
-  androidResetLab: "https://android-reset-lab.vercel.app",
+  androidResetLab: "https://github.com/Nyaenya-Devine/android-reset-lab",
+  androidResetLabLive: "https://android-reset-lab.vercel.app",
   androidDeviceManagement:
     "https://github.com/Nyaenya-Devine/android-device-management-tool",
+  androidDeviceManagementLive:
+    "https://android-device-management-tool.vercel.app",
+  endopimaKenya: "https://github.com/Nyaenya-Devine/endopima-kenya",
+  portfolio: "https://github.com/Nyaenya-Devine/devine-nyaenya-portfolio",
+  portfolioLive: "https://devine-nyaenya-portfolio.vercel.app",
 } as const;
 
 export type SocialLink = {
