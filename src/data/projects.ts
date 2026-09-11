@@ -155,6 +155,7 @@ export const projects: Project[] = [
       "Kenya context",
     ],
     github: "https://github.com/Nyaenya-Devine/endopima-kenya",
+    liveUrl: "https://nyaenya-devine.github.io/endopima-kenya/",
     caseStudy: false,
     weight: 50,
   },
