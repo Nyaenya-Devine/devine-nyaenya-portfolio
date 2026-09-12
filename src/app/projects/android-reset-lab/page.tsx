@@ -9,21 +9,22 @@ import { ExternalLink } from "@/components/ExternalLink";
 const project = getProject("android-reset-lab")!;
 
 export const metadata: Metadata = {
-  title: "Android Reset Lab — Case Study",
+  title: "Android Reset Lab P4 Cerberus — Case Study",
   description:
-    "A simulation-only enterprise device-reset security lab: default-deny RBAC, four-eyes dual-control approval, and a hash-chained, HMAC-signed tamper-evident audit log. Python stdlib only, 52 tests, and 6/6 self-run attacks detected. Never touches a real device.",
+    "P4 Cerberus God Mode: Merkle transparency RFC6962 with inclusion/consistency proofs + Rekor checkpoint sim, Cedar ABAC policy-as-code + AuthZEN + risk-adaptive (velocity/impossible travel/device trust), WebAuthn passkeys (AAGUID allowlist, counter clone detection), Play Integrity + StrongBox attestation, WYSIWYS tx signing, DPoP token binding. 68 tests, 6/6 attacks detected. Simulation-only.",
   alternates: { canonical: "/projects/android-reset-lab" },
 };
 
 const flowNodes = [
-  { label: "Login (+ optional TOTP)", sub: "PBKDF2/Argon2id · timing-safe compare" },
-  { label: "Session token", sub: "128-bit · 30m TTL · CSRF token", accent: true },
-  { label: "RBAC check (default-deny)", sub: "viewer / operator / admin / analyst" },
-  { label: "Request reset", sub: "validate device exists in fleet" },
-  { label: "Four-eyes approval", sub: "second admin · requester ≠ approver", accent: true },
-  { label: "SIMULATED wipe", sub: "status field active → wiped only" },
-  { label: "Hash-chained audit log", sub: "prev_hash + entry_hash + HMAC · SIEM ship", accent: true },
-  { label: "Threat detection (6 rules)", sub: "time-windowed · dashboard + metrics" },
+  { label: "Login + Passkey + TOTP", sub: "PBKDF2/Argon2id · WebAuthn origin binding · AAGUID allowlist", accent: true },
+  { label: "Session token + DPoP", sub: "128-bit · 30m TTL · CSRF · jkt binding · proof-of-possession", accent: true },
+  { label: "Risk-adaptive scoring", sub: "velocity, impossible travel, device trust, time anomaly, escalation" },
+  { label: "Device attestation", sub: "Play Integrity BASIC/DEVICE/STRONG · StrongBox/TEE/Software · trust_score" },
+  { label: "Cedar ABAC policy check", sub: "explicit deny, default deny, decision logs, bundle SHA, AuthZEN", accent: true },
+  { label: "Request reset", sub: "validate fleet + attestation ≠ untrusted + risk <80 + policy allow" },
+  { label: "Four-eyes + TX signing", sub: "second admin · WYSIWYS HMAC + passkey txAuthSimple · 5m expiry", accent: true },
+  { label: "SIMULATED wipe + Merkle", sub: "status active→wiped · Merkle root + inclusion/consistency proofs + Rekor checkpoint", accent: true },
+  { label: "Threat detection (23 rules)", sub: "time-windowed + risk factors + attestation + webauthn clone + DPoP + tx tamper" },
 ];
 
 const attackTable = [
@@ -36,15 +37,20 @@ const attackTable = [
 ];
 
 const controls = [
-  ["Default-deny RBAC", "Roles (viewer / operator / admin / security analyst) each get only what they need; anything not explicitly allowed is denied and logged."],
-  ["Four-eyes dual-control", "A reset needs a second, distinct admin approver. Self-approval is blocked in code and proven by a demo and tests."],
-  ["Tamper-evident log", "JSONL audit entries are hash-chained (prev_hash + entry_hash) and HMAC-signed; verification pinpoints the exact line of any edit."],
-  ["Strong credential storage", "PBKDF2 (100k iterations) + salt with an optional Argon2id path (LAB_HASH_ALGO=argon2), timing-safe comparison, role whitelist, password strength checks."],
-  ["MFA (TOTP)", "Stdlib-only RFC 6238 TOTP (base32/HOTP/TOTP, ±1 window) with optional enforcement; QR provisioning URI."],
-  ["Brute-force & abuse defenses", "Account locks for 15 minutes after 3 failures with auto-unlock, plus IP+user rate limiting (5/min auth, 10/min web) and request size/input-length limits."],
-  ["CSRF protection", "CSRF tokens on state-changing requests; missing/invalid token returns 403 and logs CSRF_BLOCKED."],
-  ["Detection", "Six time-windowed rules produce precise alerts (tuned from 14 alerts/5 false positives down to 9 with 1:1 mapping)."],
-  ["SIEM shipping", "HMAC-keyed logs can ship to stdout as JSON or a file for downstream SIEM ingestion."],
+  ["Merkle Transparency Log RFC6962/9162", "Leaf SHA256(0x00||canonical_json), node SHA256(0x01||L||R), inclusion proofs O(log N), consistency proofs, STH HMAC-signed, checkpoint anchoring simulates Sigstore Rekor with rekor_simulated_id."],
+  ["Cedar ABAC Policy-as-Code", "Principal/Action/Resource/Context model, 10 default policies, explicit deny overrides permit, default deny, decision logs with timestamp/version/bundle SHA, AuthZEN-compatible API, safe AST walk (no eval)."],
+  ["Risk-Adaptive Authentication", "8 factors: velocity (req/min), failed_auth/10m, time anomaly (8-18 UTC approved), device trust (trusted 0, compromised 50, emulator 40), MFA (passkey -10 bonus), escalation 40, impossible travel 30 if geo change <10m, session age. Score 0-100 → allow/step_up/tx/deny."],
+  ["WebAuthn Passkeys", "FIDO2 phishing-resistant, origin + RP ID validation, AAGUID allowlist via FIDO MDS (YubiKey 5, Titan M, Windows Hello, Touch ID, Pixel 8 StrongBox), challenge 32B CSPRNG, counter clone detection, backup_eligible flag."],
+  ["Device Attestation", "Play Integrity MEETS_BASIC/DEVICE/STRONG + hardware key attestation Software/TEE/StrongBox (Titan M), keybox.xml validation, patch recent check, bootloader locked, trust_score 0-100 with penalties, GrapheneOS fallback without Play Services."],
+  ["Transaction Signing WYSIWYS", "What You See Is What You Sign HMAC-SHA256, PSD2 dynamic linking, FIDO txAuthSimple extension simulation, explicit display confirmation, 5m expiry, prevents confused deputy and tampering."],
+  ["DPoP Token Binding RFC9449", "Demonstrating Proof-of-Possession JWT with htm/htu/iat/jti/nonce, JWK oct, jkt thumbprint, token bound to key, cannot be replayed without proof, htm/htu binding prevents cross-site replay."],
+  ["Four-eyes + Continuous Verification", "Requester ≠ approver enforced + policy context.requester != approver, state machine requested→approved→executed, attestation re-checked at execution time (continuous verification)."],
+  ["Tamper-evident + Tamper-proof Log", "Hash chain prev_hash + entry_hash + HMAC-SHA256 (0600 key separate) + Merkle tree, verify_all, inclusion proof O(log N), SIEM shipping stdout/file + decision_logs + checkpoints."],
+  ["Strong Credential Storage + MFA", "PBKDF2 100k + salt + Argon2id optional (LAB_HASH_ALGO=argon2), timing-safe compare_digest, role whitelist, password strength, TOTP RFC6238 + passkeys, MFA_REQUIRED flag, recovery codes future."],
+  ["Brute-force & Abuse Defenses", "Account locks 15m after 3 fails auto-unlock, IP+user rate limiting 5/min auth, 10/min web, request size limits, velocity and impossible travel risk factors."],
+  ["CSRF + XSS + Phishing Protection", "CSRF tokens per session, SameSite Strict, HttpOnly, html.escape + CSP frame-ancestors none, WebAuthn origin binding prevents phishing."],
+  ["Detection P4 (23 rules)", "6 base rules + risk factors (velocity, impossible travel, device trust, time anomaly, escalation, failed auth, session age) + attestation (emulator, unlocked, old patch, keybox) + webauthn counter clone + DPoP mismatch + tx tamper + policy forbid."],
+  ["SIEM + Observability", "HMAC-keyed logs ship stdout JSON + file, decision logs with policy SHA, Merkle STH + checkpoints, OTEL tracing + Prometheus metrics optional (observability.py)."],
 ];
 
 const bugsFixed = [
@@ -155,12 +161,13 @@ export default function AndroidResetLabPage() {
             </p>
           </CaseSection>
 
-          <CaseSection id="hardening" eyebrow="06" title="Hardening: finding & fixing real bugs">
+          <CaseSection id="hardening" eyebrow="06" title="Hardening: P0→P4 Cerberus God Mode">
             <p>
-              The project was hardened in iterative passes (P0–P3), growing from 18 to
-              52 tests. Rather than only adding features, I hunted and fixed real
-              security defects — the same bug classes that appear in production
-              software:
+              The project was hardened in iterative passes (P0–P4 Cerberus), growing
+              from 18 to 68 tests (52 P2/P3 + 16 P4). Rather than only adding features,
+              I hunted and fixed real security defects, then invented new architecture
+              that even a machine can applaud — Merkle transparency, Cedar ABAC,
+              risk-adaptive, passkeys, StrongBox attestation, WYSIWYS tx signing, DPoP:
             </p>
             <ul className="mt-3 grid gap-2 sm:grid-cols-2">
               {bugsFixed.map((b) => (
@@ -180,28 +187,37 @@ export default function AndroidResetLabPage() {
             </p>
           </CaseSection>
 
-          <CaseSection id="results" eyebrow="07" title="Results & takeaways">
-            <Callout variant="ok" title="Verified outcomes">
-              52 tests pass on both JSON and SQLite backends; 6/6 attack categories
-              detected with precise 1:1 alerts; log integrity verifies INTACT; the
-              four-eyes rule cannot be bypassed by self-approval.
+          <CaseSection id="results" eyebrow="07" title="Results & takeaways P4">
+            <Callout variant="ok" title="Verified outcomes P4 Cerberus">
+              68 tests pass (52 P2/P3 + 16 P4) on both JSON and SQLite; 6/6 attack
+              categories detected plus 17 new P4 detections (velocity, impossible
+              travel, device trust, attestation, webauthn clone, DPoP, tx tamper);
+              Merkle root verified with inclusion/consistency proofs + Rekor
+              checkpoint anchoring; Cedar policy 10 policies with bundle SHA + AuthZEN;
+              risk-adaptive step-up 30/tx 60/deny 80; passkeys YubiKey 5 + Titan M +
+              Touch ID + StrongBox; attestation Pixel 8 Pro trusted vs Emulator
+              untrusted; WYSIWYS tx signing + DPoP binding; four-eyes cannot be bypassed.
             </Callout>
             <p>
-              This was the project where I learned to think as both attacker and
-              defender: write a control, write the test that tries to defeat it, read
-              the alert, and remove the false positive. It also established the
-              tamper-evident ledger and dual-control patterns that I then productized
-              in Chokepoint.
+              P4 is God Mode: it takes the lab from linear hash chain to Merkle
+              transparency log, from static RBAC to Cedar ABAC with decision logs,
+              from password+MFA to phishing-resistant passkeys + transaction signing,
+              from blind device trust to hardware-backed StrongBox attestation, from
+              bearer tokens to DPoP-bound tokens. This is Zero Trust beyond BeyondCorp
+              — continuous verification, device as trust input, per-session least
+              privilege, assume breach, policy-as-code, short-lived tokens.
             </p>
           </CaseSection>
 
-          <CaseSection id="limitations" eyebrow="08" title="Limitations & next steps">
+          <CaseSection id="limitations" eyebrow="08" title="Limitations & next steps P4">
             <p>
-              It is a lab, not an MDM product: there is no real-device integration (an
-              explicit, documented, flag-gated future step), TOTP secrets are stored
-              plainly in the simulation, HMAC key management is file-based rather than a
-              KMS, and SIEM shipping is best-effort. These are documented as honest
-              limitations rather than hidden.
+              It is still a lab, not an MDM product: Merkle rebuild O(N log N) for
+              simulation (production needs incremental), policy engine is safe AST walk
+              subset of Cedar (production needs Cedar WASM), risk stores in-memory
+              (production needs Redis), WebAuthn/DPoP/TX signing use HMAC sim not real
+              ECDSA/RSA, attestation fleet static JSON not real Android Keystore parsing,
+              TOTP secrets plaintext, HMAC/tx keys file-based not KMS/HSM, SIEM best-effort.
+              23 honest limitations documented in THREAT_MODEL.md P4 — not hidden.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/projects/chokepoint" className="btn-primary">
