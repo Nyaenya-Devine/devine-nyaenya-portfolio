@@ -27,8 +27,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "orbitdesk",
-    name: "OrbitDesk v2.0",
-    kicker: "Modern Workplace Operations Lab — Real Voice Calls + Desktop Installable",
+    name: "OrbitDesk v2.0.1",
+    kicker: "Modern Workplace Operations Lab — Real Voice Calls + Desktop Installable + UX Polish",
     status: "Live demo",
     featured: true,
     summary:
@@ -51,8 +51,9 @@ export const projects: Project[] = [
       "5 Simulated Agents (Skills 1-10, 44h/week, SLA/CSAT/QA/FRT/MTTR, Conflicts SBI + GROW)",
       "6 Mock Admin Portals (Entra Sign-in logs CA tab, Intune Compliance, Exchange Trace + Quarantine, Service Health, What If, Audit Logs)",
       "Security Headers CSP+HSTS+X-Frame in next.config.ts + LICENSE MIT + SECURITY.md + THREAT_MODEL.md",
+      "UX Polish v2.0.1 — Disclaimer moved from scary top amber banner to friendly bottom footer — Top banner now dark friendly with 5 Voices PWA+Electron badges, no warning, footer has subtle legal with Terms Privacy Legal & Disclaimer normal weight + Educational Simulated data badge",
       "Vercel Deployment + PWA + Electron Builder dist .exe .dmg .AppImage 87-98MB",
-      "0 vulns, 7 static routes, 9 audio MP3, 5 voices, PWA + Electron, Production-grade Masterpiece Final",
+      "0 vulns, 7 static routes, 9 audio MP3, 5 voices, PWA + Electron, Production-grade Masterpiece Final v2.0.1",
     ],
     concepts: [
       "Modern Workplace Support",
