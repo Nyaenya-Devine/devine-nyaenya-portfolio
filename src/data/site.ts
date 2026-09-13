@@ -45,6 +45,8 @@ export const site = {
 /** Convenience: GitHub profile + repo links (verbatim from the real accounts). */
 export const repos = {
   profile: "https://github.com/Nyaenya-Devine",
+  orbitdesk: "https://github.com/Nyaenya-Devine/orbitdesk",
+  orbitdeskLive: "https://orbitdesk.vercel.app",
   chokepoint: "https://github.com/Nyaenya-Devine/chokepoint",
   chokepointLive: "https://chokepoint-demo.vercel.app",
   androidResetLab: "https://github.com/Nyaenya-Devine/android-reset-lab",
