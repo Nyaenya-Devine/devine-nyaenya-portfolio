@@ -42,13 +42,14 @@ export const site = {
   contactFormEndpoint: process.env.CONTACT_FORM_ENDPOINT?.trim() || "",
 } as const;
 
-/** Convenience: GitHub profile + repo links (verbatim from the real accounts). */
+/** Convenience: GitHub profile + repo links (verbatim from the real accounts). v5.1 permanent URLs */
 export const repos = {
   profile: "https://github.com/Nyaenya-Devine",
   orbitdesk: "https://github.com/Nyaenya-Devine/orbitdesk",
-  orbitdeskLive: "https://orbitdesk.vercel.app",
+  orbitdeskLive: "https://orbitdesk-gamma.vercel.app",
+  orbitdeskLiveAlt: "https://temporary-rapid-nova-4v5bqt9.vercel.app",
   chokepoint: "https://github.com/Nyaenya-Devine/chokepoint",
-  chokepointLive: "https://chokepoint-demo.vercel.app",
+  chokepointLive: "https://nyaenya-devine-chokepoint.vercel.app",
   androidResetLab: "https://github.com/Nyaenya-Devine/android-reset-lab",
   androidResetLabLive: "https://android-reset-lab.vercel.app",
   androidDeviceManagement:
