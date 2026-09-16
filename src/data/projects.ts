@@ -1,5 +1,5 @@
 /**
- * Project catalogue — P4 updated with all repos, honest statuses — v2.0 OrbitDesk Voice + Desktop
+ * Project catalogue — v6.7.2 OrbitDesk + v3.1 Chokepoint — Updated for world-class portfolio
  */
 
 export type ProjectStatus =
@@ -27,43 +27,48 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "orbitdesk",
-    name: "OrbitDesk v5.1",
-    kicker: "Modern Workplace Operations Lab — Flowing Conversation Fix + Student Mode + Real Voice + Desktop",
+    name: "OrbitDesk v6.7.2",
+    kicker: "Modern Workplace Operations Lab — LinkedIn Chat Dock + Electron 32 Auto-Update + SLSA + Signed Commits",
     status: "Live demo",
     featured: true,
     summary:
-      "v5.1 Flowing Conversation FIX — The finest MSP Team Lead Simulator: REAL HUMAN PHONE FLOW — you pick up → hear 'Hello? Is this IT support?' waiting for YOUR greeting (not dumping P1 with Correlation ID instantly), you say 'Hello, how may I help you today?' → client introduces 'Hi, this is Priya from Finance at NovaTech...' → you acknowledge → problem stated → back-and-forth troubleshooting where client DOES actions when asked (dsregcmd /status → AzureAdJoined YES Compliance NO, Company Portal Sync → Last sync 2 min ago BitLocker failing, BitLocker → Protection Off 0%) + asks questions back (Will I lose files? ETA? Audit trail?) + follow-up auto 4s, phases tracked waiting_greeting→waiting_intro→problem_stated→troubleshooting→resolution with badge + dynamic placeholder + quick replies per phase, TTS speaks each turn, scored empathy/clarity/technical/fluency/clientLang. v5.0 Student Mode: balanced queue max 1 P1 in 5, P1 3% student 15% expert, RemoteDesktopV2 portal→RDP real linkage BitLocker Fixed green, Student Guide 7-step tutorials, Expert toggle. Real voice both sides Web Speech TTS+STT mic 🎙️ + 9 MP3, 5 voices men & women, tech experts conference different voices, PWA+Electron desktop installable, 16 ticket templates, per-client policies NovaTech strict CA → P1 50 users Bloom relaxed Apex SEC-2024-07, 5 agents 44h/week, 6 admin portals, SLA/CSAT/QA dashboard, training lab.",
+      "v6.7.2 — The most polished MSP Team Lead Simulator: LinkedIn-style messaging dock bottom-right 320px white rounded-t-xl (like screenshot), chat windows 320x400 MONDAY bubbles white/violet ✓✓ typing blue info #f4f2ee input, modern toast bottom-left blur-2xl max2 not covering guide, restored orbit animation rotating rings 6s/8s/12s, pause-when-away auto-pause SLA push-forward welcome-back tickets, Electron 32.3.3 auto-update via GitHub Releases signed, SBOM CycloneDX, SLSA L3 provenance, signed commits Verified, assetlinks.json TWA Play Store, MSIX Windows Store. 100% real feel, not AI-basic — Linear + Vercel + Stripe + LinkedIn inspired.",
     overview:
-      "OrbitDesk v5.1 is the flowing conversation fix — previously, picking up call dumped entire P1 'Hi I'm Priya from Finance at NovaTech blocked by CA error 53000 Correlation ID... Payroll 45 mins P1' instantly, no chance to greet, not human. Now 100% real human flow: Phone rings 800Hz → Accept → Short 'Hello? Is this IT support?' waiting_greeting phase, placeholder 'Say hello first: Hello, how may I help you today?', you greet → client introduces flowing 'Hi thank you, this is Priya from Finance at NovaTech...' waiting_intro, placeholder 'Acknowledge: Thank you, I can help...' → you acknowledge → problem_stated conversational but detailed → troubleshooting back-and-forth where client does actions NOW when you ask dsregcmd /status, Company Portal Sync, BitLocker, with output box AzureAdJoined YES Compliance NO, asks follow-up questions 'What is ETA? Correlation ID... Will I lose my work?' auto 4s, sentiment changes, typing dots, speaking indicator, TTS speaks each turn, quick replies change per phase, scoring empathy/clarity/technical/fluency/clientLang live 0-100, resolution 'Perfect, enabled BitLocker, Compliant YES, Teams working!'. v5.0 additions: Student Mode vs Expert toggle, studentMode=true default, ticketEngine P1 3% student 15% expert, generateInitialTickets 5 max 1 P1 loop attempts<10 fixes overwhelming queue 18 total 9 P1 → balanced, RemoteDesktopV2 fixes overflow break-words truncate min-w-0 responsive + real linkage portal→RDP bitLockerFixed syncDone props, StudentModeGuide 7-step tutorial modal progressive disclosure, protection+viral+earning docs, build 7 routes, Vercel permanent orbitdesk-gamma.vercel.app. Inspired by Linear dark-first violet accent, Stripe gradients, Slack channels, Intercom human chat, Superhuman speed, Notion warmth, Vercel restraint — not basic AI, human premium masterpiece.",
+      "OrbitDesk v6.7.2 is the final polished lab for Modern Workplace Support Team Lead interviews. v6.6 added LinkedIn-style messaging dock like screenshot: bottom-right 320px white rounded-t-xl shadow-2xl, Messaging header avatar online dot unread red badge ••• ✎ ⌃, search #edf3f8 rounded-full Focused emerald pill / Other, conversation list avatar+name+snippet+role+time+unread dot, footer OrbitDesk — Real MSP chat, chat windows 320x400 white header avatar status MONDAY separator bubbles white border client rounded-bl-sm violet you rounded-br-sm name time ✓✓ typing dots blue info You haven't received a response yet Learn more input #f4f2ee rounded-full + Send pill max 2 windows auto-open live ticket spring animation. Modern toast bottom-left z-45 w-340 blur-2xl max2 progress gradient swipe dismiss grouped not covering StudentModeGuide z-100. Restored orbit animation around Logo full variant when animated true — rotating rings 6s 8s 12s dots glow blur pulse Lab • v6.1 • Real Voice • Human ◍. Layout fix flex-1 min-h-0 footer mt-auto pb-80px dock no calc overlap z hierarchy toast 45 < dock 65 < guide 100. v6.5 pause-when-away visibilitychange auto-pause SLA push-forward welcome-back 0-3 tickets ShiftStatus manual Pause/Resume. v6.7 GitHub essentials: Electron 32.3.3 from 28 CVE fixes, electron-updater 6.6.2 + electron-log auto-update via GitHub Releases signed user consent zero-trust, sandbox true contextIsolation true nodeIntegration false permission handler mic only singleInstanceLock CSP session header external nav blocked preload whitelist only, publish github, asar true hardenedRuntime entitlements mac plist network.client audio-input, SBOM CycloneDX JSON+XML, Dependabot weekly, CODEOWNERS, workflows CI Security Electron Release SBOM SLSA, issue templates bug/feature/security private advisory, PR template security checklist, SECURITY.md enhanced, docs PACKAGING TWA Play Store + MSIX Windows Store + Electron auto-update + SIGNED_COMMITS SSH ed25519 Verified badge branch protection, assetlinks.json public/.well-known/ TWA verification, README badges CI Security CodeQL Electron Release SBOM SLSA Signed Verified Electron PWA Play Store MIT. Build verified 9/9 routes, repo cleaned 68M→36M lean polished world-class. Interview ready: Entra ID sign-in logs CA tab 53000 DeviceNotCompliant What If Report-Only Audit Logs Break Glass, Intune enrollment 0x80180024 dsregcmd Company Portal Sync Get-BitLockerVolume, Exchange quarantine Release Allow Report Not Junk, Teams Service Health FIRST, real voice calls TTS/STT mic scoring empathy clarity technical fluency client lang, remote PC Win11 encrypted Session ID audit logs BitLocker escrow, per-client policies NovaTech strict Bloom relaxed Apex SEC-2024-07, 5 agents 44h/week SLA CSAT QA FRT MTTR SBI GROW RBAC.",
     tech: [
-      "Next.js 15 App Router + TypeScript 5 + Tailwind 4",
-      "v5.1 Flowing Conversation Fix — Phases waiting_greeting→waiting_intro→problem_stated→troubleshooting→resolution, YOU greet first, client introduces, not info dump",
-      "v5.0 Student Mode — Balanced queue max 1 P1 in 5, P1 3% student 15% expert, RemoteDesktopV2 portal→RDP real linkage BitLocker Fixed green, Student Guide 7-step",
-      "Real Voice Both Sides — Web Speech TTS+STT mic 🎙️ + 9 MP3, 5 voices men & women, TTS each turn, speaking indicator, typing dots",
-      "Flowing Engine — Client says 'Hello? Is this IT support?' → YOU 'Hello how may I help?' → 'Hi this is Priya from Finance...' → actions on other side dsregcmd/status Company Portal Sync BitLocker",
-      "Dynamic UX — Phase badge, placeholder changes per phase, quick replies per phase, follow-up auto 4s, client asks Will I lose files? ETA? Audit trail?",
-      "Tech Experts Conference — Alex Entra male formal, Priya Intune female friendly, David Exchange calm, Lisa Teams empathetic, MS Support — different voices",
-      "PWA + Electron Desktop — Manifest 192/512 maskable shortcuts file handlers share target sw.js offline cache InstallPrompt + Electron 28 native P1 notifications global shortcuts tray",
+      "Next.js 16.3.5 Turbopack + React 19.2.1 + Framer Motion 13.2.0 + Tailwind 4",
+      "v6.7.2 — LinkedIn Chat Dock bottom-right 320px white rounded-t-xl + windows 320x400 MONDAY bubbles + modern toast bottom-left blur-2xl max2 + restored orbit animation 6s/8s/12s + layout flex-1 min-h-0 footer mt-auto + pause auto-pause SLA push-forward",
+      "v6.7 — Electron 32.3.3 from 28 + electron-updater 6.6.2 + electron-log 5.2.1 auto-update via GitHub Releases signed user consent zero-trust",
+      "Security Hardening — sandbox true contextIsolation true nodeIntegration false webSecurity true permission mic only singleInstanceLock CSP session header external nav blocked preload whitelist",
+      "Supply Chain — SBOM CycloneDX JSON+XML, npm ci integrity, Dependabot weekly groups electron, CodeQL SAST, Dependency Review fail high, TruffleHog secret scan, npm audit high, SLSA L3 provenance slsa-verifier",
+      "GitHub Essentials — CODEOWNERS, workflows CI Security Electron Release SBOM SLSA, issue templates bug/feature/security private advisory, PR template security checklist, SECURITY.md enhanced, branch protection signed commits",
+      "PWA + Stores — TWA Play Store via PWABuilder assetlinks.json public/.well-known/ + MSIX Windows Store + Electron appx, manifest icons 192/512 maskable shortcuts file handlers",
+      "Real Voice Both Sides — Web Speech TTS+STT mic + 9 MP3, 5 voices men & women, TTS each turn, speaking indicator, typing dots, scoring empathy clarity technical fluency client lang",
+      "Remote PC Win11 — Encrypted Session ID recording indicator, Quick Assist consent, File Explorer, dsregcmd real output, live portal↔RDP linkage BitLocker Fixed green",
       "16 Ticket Templates — Entra 53000/53003/500121, Intune 0x80180024/DeviceCapReached/BitLocker/Autopilot, Exchange Quarantine/Message Trace, Teams, Windows, Defender",
-      "Per-Client Policies — NovaTech 24/7 strict CA without Report-Only → P1 50 users, Bloom SMB relaxed 9-5, Apex SEC-2024-07 Strict + DLP + Tamper",
-      "5 Agents Skills 1-10 44h/week SLA/CSAT/QA/FRT/MTTR SBI+GROW conflicts + 6 Admin Portals Entra Sign-in CA tab Intune Exchange Service Health What If Audit Logs",
-      "Security — Encrypted RDP Session ID Recording Audit, RBAC, Break Glass excluded CA, Zero Trust CA+MFA+Trusted locations, Compliance per-client, Defender Quarantine+DLP, CSP+HSTS headers, No real data, Threat model 8 vectors",
-      "Design — Linear dark-first violet accent bento rounded-2xl ⌘K Inter Geist Mono Stripe gradients Slack Intercom Superhuman Notion Vercel — human premium not AI basic",
-      "Build 7 routes, 0 vulns prod, LICENSE MIT, Vercel permanent orbitdesk-gamma.vercel.app + PWA + Electron .exe/.dmg/.AppImage",
+      "Per-Client Policies — NovaTech 24/7 strict CA → P1 50 users, Bloom SMB relaxed 9-5, Apex SEC-2024-07 Strict + DLP + Tamper",
+      "Team & Operations — 5 agents skills 1-10 44h/week SLA/CSAT/QA/FRT/MTTR SBI+GROW conflicts + 6 Admin Portals Entra Sign-in CA tab Intune Exchange Service Health What If Audit Logs",
+      "Security — Encrypted RDP Session ID Recording Audit, RBAC Senior/Junior/Lead max tickets skills, Break Glass excluded CA, Zero Trust CA+MFA+Trusted locations, Compliance BitLocker escrowed Defender, Email Defender Quarantine+DLP, Headers CSP HSTS DENY nosniff Permissions-Policy mic=self, Threat Model 12 vectors",
+      "Design — Linear dark-first violet accent bento rounded-2xl ⌘K + Vercel + Stripe + Slack + LinkedIn messaging dock + Intercom + Superhuman — human premium not AI basic — 60fps spring 400/25",
+      "Build 9/9 routes, 0 vulns prod, LICENSE MIT, Vercel orbitdesk-gamma.vercel.app + PWA + Electron 32 .exe/.dmg/.AppImage + yml yaml auto-update + sbom.json + provenance intoto.jsonl",
     ],
     concepts: [
-      "v5.1 Flowing Conversation — YOU greet first, not client dumping P1 with Correlation ID",
-      "Phases waiting_greeting→waiting_intro→problem_stated→troubleshooting→resolution + badge + dynamic placeholder",
-      "Student Mode vs Expert — Balanced queue max 1 P1 in 5, P1 3% student, progressive disclosure tutorials",
-      "Real Voice Both Sides — TTS speaks each turn, STT mic, 5 voices men & women, speaking indicator",
-      "Client Does Actions On Other Side — dsregcmd /status → AzureAdJoined YES Compliance NO, Company Portal Sync, BitLocker Off",
-      "Client Asks Questions Back — Will I lose files? What does 53000 mean? ETA? Audit trail? Follow-up auto 4s",
-      "RemoteDesktopV2 — Portal actions affect RDP real state BitLocker Fixed green, no text cut break-words",
+      "LinkedIn Chat Dock — bottom-right 320px white rounded-t-xl like screenshot, max 2 windows auto-open live ticket",
+      "Modern Toast — bottom-left blur-2xl max2 progress gradient swipe grouped not covering guide z hierarchy",
+      "Restored Orbit Animation — rotating rings 6s/8s/12s dots glow blur pulse Lab • v6.1 • Real Voice • Human",
+      "Layout Fix — flex-1 min-h-0 footer mt-auto pb-80px dock no calc overlap clean modern classy",
+      "Pause-When-Away — visibilitychange auto-pause SLA push-forward welcome-back tickets ShiftStatus",
+      "Electron 32 Auto-Update — GitHub Releases signed user consent zero-trust via electron-updater",
+      "Security Hardening — sandbox contextIsolation singleInstance permission mic only CSP preload whitelist",
+      "Supply Chain — SBOM CycloneDX SLSA L3 provenance signed commits Verified badge Dependabot CodeQL",
+      "PWA + Stores — TWA Play Store assetlinks.json + MSIX Windows Store + Electron auto-update",
+      "Real Voice Both Sides — YOU greet first waiting_greeting→waiting_intro→problem→troubleshooting→resolution",
+      "Remote PC Win11 — Portal actions affect RDP real state BitLocker Fixed green",
       "Modern Workplace Support — MSP Multi-Client Team Lead M365 Entra ID Intune Exchange Teams Windows",
       "Per-Client Policies + Expectations Tech vs Non-Tech + Voice Per Client + 24/7 vs 9-5",
       "SLA 95% + CSAT 4.5 + FRT + MTTR + QA + Roster 44h/week + Problem Management ITIL + KB",
-      "Security — Encrypted Sessions + Audit Everywhere + RBAC + Break Glass + Zero Trust + Compliance + Defender + Headers + Threat Model",
-      "Design — Linear + Stripe + Slack + Intercom + Superhuman + Notion + Vercel — human premium masterpiece",
+      "Security — Encrypted Sessions + Audit Everywhere + RBAC + Break Glass + Zero Trust + Compliance + Defender + Headers + Threat Model 12 vectors",
+      "Design — Linear + Vercel + Stripe + Slack + LinkedIn + Intercom + Superhuman + Notion — human premium masterpiece",
     ],
     github: "https://github.com/Nyaenya-Devine/orbitdesk",
     liveUrl: "https://orbitdesk-gamma.vercel.app",
@@ -72,34 +77,42 @@ export const projects: Project[] = [
   },
   {
     slug: "chokepoint",
-    name: "Chokepoint",
-    kicker: "Security control plane",
+    name: "Chokepoint v3.1",
+    kicker: "Least-Privilege Dual-Control Tamper-Evident — Electron 32 Auto-Update + SLSA + Signed Commits",
     status: "Live demo",
     featured: true,
     summary:
-      "A least-privilege access-control and tamper-evident audit platform for high-impact operations — for both humans and AI agents. Real role-based auth, a two-person approval workflow, a hash-chained HMAC audit log, and explainable anomaly detection, with 26 tests that prove the security properties.",
+      "v3.1 — World-class expert: least-privilege access control & tamper-evident audit for sensitive ops — humans and AI agents. Dual-control 4-eyes distinct approver, SHA-256 hash-chained HMAC-signed ledger detects alteration/deletion/reorder, anomaly detection, RBAC, policy simulator, SIEM export, compliance mapper, risk engine, 26 tests proving security properties. OWASP ASI03. Electron 32.3.3 auto-update via GitHub Releases signed, SBOM CycloneDX, SLSA L3 provenance, signed commits Verified, assetlinks.json TWA. No OrbitDesk mixing — pure security product.",
     overview:
-      "Chokepoint answers a specific question: how do you let people — and increasingly, AI agents — " +
-      "perform high-impact actions without giving any single actor enough authority to abuse it? It is a " +
-      "full-stack security product with real role-based authentication, a working dual-control (two-person) " +
-      "approval workflow, a SHA-256 hash-chained and HMAC-signed tamper-evident audit ledger, and " +
-      "explainable anomaly detection. It is framed around the OWASP Agentic AI failure class " +
-      "ASI03 — Identity & Privilege Abuse. The security logic lives in reviewed library modules and is " +
-      "backed by a Vitest suite that tests the controls themselves. P3: 52 tests in reset-lab inform this productized version.",
-    tech: ["Next.js 16 (App Router)", "TypeScript", "React", "Vitest 26 tests", "Web Crypto / PBKDF2", "HMAC-SHA256", "Vercel", "PWA"],
+      "Chokepoint v3.1 answers: how do you let people — and increasingly AI agents — perform high-impact actions without giving anyone enough authority to abuse it? Full-stack security product with real RBAC, working dual-control two-person approval distinct approver + authorized approver, SHA-256 hash-chained HMAC-signed tamper-evident ledger with verifyChain() detecting altered/deleted/reordered/re-signed, explainable anomaly detection risk index severity distribution. OWASP Agentic AI ASI03 Identity & Privilege Abuse. v3.1 GitHub essentials: Electron 32.3.3 from old CVE fixes, electron-updater 6.6.2 + electron-log auto-update via GitHub Releases signed user consent zero-trust, sandbox true contextIsolation true nodeIntegration false permission handler singleInstanceLock CSP session header, publish github, asar true hardenedRuntime entitlements, SBOM CycloneDX, Dependabot weekly, CODEOWNERS owns SECURITY THREAT_MODEL electron.js lib/ledger.ts lib/dualControl.ts, workflows CI Security SBOM Electron Release SLSA, issue templates, PR template security checklist, SECURITY.md enhanced, docs PACKAGING TWA Play Store + MSIX Windows Store + Electron auto-update + SIGNED_COMMITS SSH ed25519 Verified badge branch protection, assetlinks.json TWA verification, README badges CI Security CodeQL Electron Release SBOM SLSA Signed Verified Electron MIT. Tests 26 proving security properties: ledger detects altered/deleted/reordered/re-signed, authz policy matrix dual-control distinct+authorized, crypto PBKDF2 salted timing-safe HMAC, anomaly signals. Merged Android Reset Lab Python simulation 68 tests 6/6 attacks + 17 P4 detections Merkle RFC6962 Cedar ABAC risk-adaptive WebAuthn Play Integrity StrongBox WYSIWYS DPoP as simulation engine. Vercel cleaned 7→5 projects single source chokepoint-demo.vercel.app. Build verified, 0 vulns prod, LICENSE MIT.",
+    tech: [
+      "Next.js 16 App Router + TypeScript + React + Vitest 26 tests + Web Crypto PBKDF2 HMAC-SHA256",
+      "v3.1 — Electron 32.3.3 + electron-updater 6.6.2 + electron-log auto-update via GitHub Releases signed",
+      "Security Hardening — sandbox true contextIsolation true nodeIntegration false permission handler singleInstanceLock CSP",
+      "Supply Chain — SBOM CycloneDX, SLSA L3 provenance slsa-verifier, signed commits Verified, Dependabot weekly, CodeQL, Dependency Review, TruffleHog",
+      "Tamper-Evident Ledger — SHA-256 hash-chained HMAC-signed verifyChain() detects alteration/deletion/reorder/re-signed",
+      "Dual-Control — Two-person rule distinct approver + authorized approver, separation of duties, 15min expiry, Break Glass excluded CA",
+      "Anomaly Detection — Failed logins, after-hours privilege, unknown sources, privilege escalation, automation with human-readable reasons",
+      "RBAC — viewer/auditor/operator/admin least privilege by default single policy gate",
+      "PWA + Stores — TWA Play Store assetlinks.json + MSIX Windows Store + Electron auto-update",
+      "Tests 26 — ledger detects altered/deleted/reordered/re-signed, authz policy matrix dual-control, crypto PBKDF2 HMAC, anomaly signals",
+      "Build 0 vulns prod, LICENSE MIT, Vercel chokepoint-demo.vercel.app + PWA + Electron 32 .exe/.dmg/.AppImage + yml yaml auto-update + sbom.json + provenance",
+    ],
     concepts: [
-      "Least privilege",
+      "Least Privilege",
+      "Dual-Control 4-Eyes",
+      "Tamper-Evident Audit Log",
+      "Hash Chaining SHA-256",
+      "HMAC-SHA256 Integrity",
+      "Anomaly Detection",
       "RBAC",
-      "Separation of duties",
-      "Dual-control approval",
-      "Tamper-evident audit log",
-      "Hash chaining",
-      "HMAC integrity",
-      "Anomaly detection",
-      "Session security",
-      "Security headers / CSP",
-      "Human & AI actors",
+      "Separation of Duties",
+      "Break Glass",
       "OWASP Agentic AI ASI03",
+      "Electron 32 Auto-Update Signed",
+      "SBOM CycloneDX SLSA L3 Signed Commits",
+      "PWA TWA AssetLinks",
+      "Security Headers CSP HSTS",
     ],
     github: "https://github.com/Nyaenya-Devine/chokepoint",
     liveUrl: "https://chokepoint-demo.vercel.app",
@@ -109,32 +122,27 @@ export const projects: Project[] = [
   {
     slug: "android-reset-lab",
     name: "Android Reset Lab P4 Cerberus",
-    kicker: "Security simulation · God Mode",
+    kicker: "Security simulation · God Mode — Merkle + Cedar ABAC + WebAuthn + SLSA",
     status: "Simulation / lab",
     featured: true,
     summary:
-      "P4 Cerberus God Mode: Merkle transparency RFC6962 (inclusion/consistency proofs + Rekor checkpoint sim) + Cedar ABAC policy-as-code (10 policies, AuthZEN, bundle SHA) + risk-adaptive (velocity, impossible travel, device trust, time anomaly) + WebAuthn passkeys (AAGUID allowlist, counter clone detection) + Play Integrity + StrongBox attestation + WYSIWYS tx signing + DPoP token binding. 68 tests, 6/6 attacks + 17 P4 detections. Simulation-only.",
+      "P4 Cerberus God Mode: Merkle transparency RFC6962 inclusion/consistency proofs + Rekor checkpoint + Cedar ABAC policy-as-code 10 policies AuthZEN bundle SHA + risk-adaptive 8 factors + WebAuthn passkeys AAGUID allowlist counter clone detection + Play Integrity StrongBox + WYSIWYS tx signing + DPoP token binding + SLSA L3 provenance + signed commits. 68 tests, 6/6 attacks + 17 P4 detections. Simulation-only, now simulation engine for Chokepoint.",
     overview:
-      "Android Reset Lab P4 Cerberus is God Mode: it steps up from linear hash chain to Merkle transparency log with inclusion/consistency proofs and Rekor checkpoint anchoring, from static RBAC to Cedar ABAC with explicit deny, decision logs, bundle SHA, and AuthZEN API, from password+MFA to phishing-resistant WebAuthn passkeys (YubiKey 5, Titan M, Touch ID, Pixel StrongBox) with AAGUID allowlist and counter clone detection, from blind device trust to Play Integrity BASIC/DEVICE/STRONG + StrongBox/TEE/Software attestationSecurityLevel + trust_score, from bearer tokens to DPoP proof-of-possession binding, from blind approval to WYSIWYS transaction signing with passkey txAuthSimple. Risk engine scores 0-100 across 8 factors (velocity, failed auth, time anomaly, device trust, MFA strength, escalation, impossible travel, session age) → allow/step_up/tx/deny. Cerberus workflow orchestrates all: request checks attestation + risk + policy + DPoP, approve checks four-eyes + step-up + tx + webauthn + policy, execute re-checks attestation continuously. Deliberately simulation-only — device state active→wiped in local data. Hardened P0→P4, 18→68 tests, 23 threat controls, honest limits 23, demos P2/P3/P4 proving tamper detection, self-approval block, Merkle proofs, policy deny, risk step-up, passkey, attestation, tx, DPoP.",
-    tech: ["Python stdlib + argon2-cffi", "pytest 68 tests (52+16 P4)", "Merkle RFC6962 transparency", "Cedar ABAC + AuthZEN", "Risk-adaptive 8 factors", "WebAuthn passkeys + AAGUID", "Play Integrity + StrongBox", "WYSIWYS tx signing + DPoP RFC9449", "PBKDF2/Argon2id + HMAC + TOTP", "SQLite WAL + JSON + decision_logs + checkpoints"],
+      "Android Reset Lab P4 Cerberus is God Mode: Merkle transparency log inclusion/consistency proofs Rekor checkpoint anchoring, Cedar ABAC explicit deny decision logs bundle SHA AuthZEN API, WebAuthn passkeys YubiKey 5 Titan M Touch ID Pixel StrongBox AAGUID allowlist counter clone detection, Play Integrity BASIC/DEVICE/STRONG + StrongBox/TEE/Software attestationSecurityLevel trust_score, DPoP proof-of-possession binding, WYSIWYS transaction signing with passkey txAuthSimple. Risk engine 0-100 8 factors velocity failed auth time anomaly device trust MFA strength escalation impossible travel session age → allow/step_up/tx/deny. Cerberus workflow: request checks attestation + risk + policy + DPoP, approve checks four-eyes + step-up + tx + webauthn + policy, execute re-checks attestation continuously. Simulation-only device state active→wiped local data. Hardened P0→P4 18→68 tests 23 threat controls honest limits 23 demos P2/P3/P4 proving tamper detection self-approval block Merkle proofs policy deny risk step-up passkey attestation tx DPoP. Now merged as simulation engine for Chokepoint — same core dual-control + tamper-evident audit. GitHub essentials: dependabot weekly, CODEOWNERS, workflows CI Security SBOM, SECURITY.md, SLSA provenance.",
+    tech: [
+      "Python stdlib + argon2-cffi + pytest 68 tests (52+16 P4) + Merkle RFC6962 + Cedar ABAC + AuthZEN + Risk-adaptive 8 factors + WebAuthn + Play Integrity + StrongBox + WYSIWYS + DPoP RFC9449 + SLSA L3",
+      "GitHub Essentials — dependabot weekly, CODEOWNERS, workflows CI Security SBOM, SECURITY.md enhanced",
+    ],
     concepts: [
-      "Merkle Transparency RFC6962/9162",
-      "Certificate Transparency",
-      "Sigstore Rekor anchoring",
-      "Policy-as-Code Cedar ABAC",
-      "AuthZEN",
+      "Merkle Transparency RFC6962",
+      "Cedar ABAC Policy-as-Code",
       "Risk-Adaptive Authentication",
-      "BeyondCorp Zero Trust",
       "WebAuthn Passkeys FIDO2",
-      "Phishing-resistant MFA",
-      "Device Attestation Play Integrity",
-      "StrongBox Titan M",
+      "Play Integrity StrongBox",
       "WYSIWYS Transaction Signing",
-      "DPoP Token Binding RFC9449",
-      "Four-eyes + Continuous Verification",
-      "Tamper-evident + Tamper-proof + Transparency",
-      "Threat modeling STRIDE",
-      "Attack simulation + Detection",
+      "DPoP Token Binding",
+      "SLSA L3 Provenance",
+      "Signed Commits Verified",
     ],
     github: "https://github.com/Nyaenya-Devine/android-reset-lab",
     liveUrl: "https://android-reset-lab.vercel.app",
@@ -144,31 +152,15 @@ export const projects: Project[] = [
   {
     slug: "android-device-management-tool",
     name: "Android Device Management Tool",
-    kicker: "Full-stack experiment",
+    kicker: "Full-stack experiment — Android Enterprise + SLSA + Security Hardening",
     status: "Experimental / WIP",
     featured: true,
     summary:
-      "Evolving the reset-lab into a dual-mode Android Enterprise console: a local simulator plus live Google Android Management API integration (OAuth2 service account, CloudDPC QR enrollment, policies, WIPE/LOCK/REBOOT commands, deprovision). Experimental — the live path is implemented and documented with a go-live runbook, but not yet exercised on real hardware.",
+      "Evolving reset-lab into dual-mode Android Enterprise console: local simulator + live Google Android Management API integration (OAuth2 service account, CloudDPC QR enrollment, policies, WIPE/LOCK/REBOOT commands, deprovision). Experimental — live path implemented documented go-live runbook but not yet exercised on real hardware. GitHub essentials: dependabot + security workflows + CODEOWNERS + SBOM.",
     overview:
-      "The reset lab proved the controls in isolation; this project carries them into a product "
-      + "surface: a Next.js/TypeScript console (PostgreSQL + Drizzle) for Android Enterprise device "
-      + "management with two modes. Simulator manages synthetic devices locally; live mode calls the "
-      + "real Android Management API — service-account JWT auth, encrypted keys at rest, CloudDPC QR "
-      + "provisioning bundles, policies, enrollment tokens, issueCommand (LOCK / WIPE / REBOOT / "
-      + "RELINQUISH_OWNERSHIP / lost mode / RESET_PASSWORD) and enterprises.devices.delete deprovision. "
-      + "Wipe semantics follow the real API: the device must acknowledge before it wipes. Honest status: "
-      + "experimental / WIP — the live path is not yet proven on a real enrolled device; a precise "
-      + "go-live runbook and web+Python CI live in the repo.",
-    tech: ["Next.js 16", "TypeScript", "React", "PostgreSQL + Drizzle", "Android Management API", "OAuth2 service-account JWT", "CloudDPC QR provisioning", "CI: web + Python"],
-    concepts: [
-      "Full-stack development",
-      "Android Enterprise concepts",
-      "Security-focused architecture",
-      "API development",
-      "Authentication / authorization",
-      "Integration challenges",
-      "Learning from an incomplete build",
-    ],
+      "The reset lab proved controls in isolation; this project carries them into product surface: Next.js/TypeScript console PostgreSQL + Drizzle for Android Enterprise device management two modes. Simulator manages synthetic devices locally; live mode calls real Android Management API — service-account JWT auth encrypted keys at rest CloudDPC QR provisioning bundles policies enrollment tokens issueCommand LOCK/WIPE/REBOOT/RELINQUISH_OWNERSHIP/lost mode/RESET_PASSWORD and enterprises.devices.delete deprovision. Wipe semantics follow real API: device must acknowledge before wipes. Honest status: experimental / WIP — live path not yet proven on real enrolled device; precise go-live runbook and web+Python CI live in repo. GitHub essentials added: dependabot weekly, CODEOWNERS, workflows CI Security SBOM.",
+    tech: ["Next.js 16 + TypeScript + PostgreSQL + Drizzle + Android Management API + OAuth2 service-account JWT + CloudDPC QR + CI web+Python + GitHub Essentials dependabot security"],
+    concepts: ["Full-stack", "Android Enterprise", "Security-focused", "API development", "GitHub Essentials"],
     github: "https://github.com/Nyaenya-Devine/android-device-management-tool",
     liveUrl: "https://android-device-management-tool.vercel.app",
     caseStudy: true,
@@ -177,63 +169,18 @@ export const projects: Project[] = [
   {
     slug: "endopima-kenya",
     name: "EndoPima Kenya",
-    kicker: "Health-tech · Community-first",
+    kicker: "Health-tech · Community-first — Bilingual EN/SW + Privacy-Conscious",
     status: "Experimental / WIP",
     featured: false,
     summary:
-      "Bilingual, community-first endometriosis early-recognition and care-navigation prototype for Kenya. Guided symptom exploration, health timeline, clinician handoff, care navigation, cost/financing guidance — privacy-conscious, local-first design. Built to learn health-tech product thinking beyond security.",
+      "Bilingual community-first endometriosis early-recognition and care-navigation prototype for Kenya. Guided symptom exploration, health timeline, clinician handoff, care navigation, cost/financing guidance — privacy-conscious local-first design. Built to learn health-tech product thinking beyond security. GitHub essentials: dependabot + security workflows.",
     overview:
-      "EndoPima Kenya is a bilingual (English/Kiswahili), community-first prototype for endometriosis " +
-      "early-recognition and care-navigation in Kenya. It explores how to guide users through symptom " +
-      "exploration without diagnosing, build a health timeline they can hand to a clinician, navigate care " +
-      "options, and understand cost/financing — with a privacy-conscious, local-first design. It is not a " +
-      "medical device and does not provide diagnosis. It taught product thinking in a sensitive domain, " +
-      "bilingual UX, and community health navigation — complementary to the security-focused builds.",
-    tech: ["HTML", "CSS", "JavaScript", "Bilingual UX", "Privacy-conscious design", "Community health"],
-    concepts: [
-      "Health-tech product design",
-      "Bilingual UX (EN/SW)",
-      "Community-first",
-      "Privacy-conscious",
-      "Care navigation",
-      "Early-recognition prototype",
-      "Kenya context",
-    ],
+      "EndoPima Kenya is bilingual English/Kiswahili community-first prototype for endometriosis early-recognition and care-navigation in Kenya. Guides users through symptom exploration without diagnosing, builds health timeline they can hand to clinician, navigates care options, understands cost/financing — privacy-conscious local-first design. Not medical device and does not provide diagnosis. Taught product thinking in sensitive domain bilingual UX community health navigation — complementary to security-focused builds. GitHub essentials added.",
+    tech: ["HTML CSS JavaScript + Bilingual UX + Privacy-conscious + GitHub Essentials dependabot security"],
+    concepts: ["Health-tech", "Bilingual UX EN/SW", "Community-first", "Privacy-conscious", "Kenya context", "GitHub Essentials"],
     github: "https://github.com/Nyaenya-Devine/endopima-kenya",
-    liveUrl: "https://nyaenya-devine.github.io/endopima-kenya/",
+    liveUrl: "https://endopima-kenya.vercel.app",
     caseStudy: false,
-    weight: 50,
-  },
-  {
-    slug: "portfolio",
-    name: "Portfolio",
-    kicker: "This site · Design + build",
-    status: "Live demo",
-    featured: false,
-    summary:
-      "Professional cybersecurity & security-engineering portfolio — build, test, break, learn, secure. Next.js 16 + TypeScript + Tailwind. Accessibility-driven dark-green design (green #34D96B on green-black), mixed fonts (Fraunces + Inter + JetBrains Mono), luminous gradient text, subtle falling-code background, clickable project windows. Strict CSP, 16 routes, 0 CVEs.",
-    overview:
-      "This portfolio is a security engineer's public face, so it is treated like a security "
-      + "product: content visible without JavaScript, strict CSP headers, no fabricated claims, honest "
-      + "status labels on every project. Design evolved in passes — a green-accent rebuild of the "
-      + "five-project catalogue, then an accessibility pass: luminous gradient text (no dark anchors), "
-      + "mixed fonts (Fraunces display, Inter body, JetBrains Mono technical), a sparse animated "
-      + "falling-code canvas kept behind content, and large clickable project windows that lead "
-      + "straight into each case study.",
-    tech: ["Next.js 16", "TypeScript", "Tailwind CSS", "Fraunces + Inter + JetBrains Mono", "Strict CSP", "Vercel", "16 routes"],
-    concepts: [
-      "Security-minded webcraft",
-      "Dark-green design system",
-      "Typography systems",
-      "Accessibility",
-      "Honest engineering content",
-      "SEO & performance",
-    ],
-    github: "https://github.com/Nyaenya-Devine/devine-nyaenya-portfolio",
-    liveUrl: "https://devine-nyaenya-portfolio.vercel.app",
-    caseStudy: false,
-    weight: 40,
+    weight: 30,
   },
 ];
-
-export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
