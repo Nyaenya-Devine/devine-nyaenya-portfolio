@@ -13,16 +13,14 @@ export const site = {
   name: "Devine Nyaenya",
   firstName: "Devine",
   lastName: "Nyaenya",
-  role: "Cybersecurity Engineer / Security Builder",
-  location: "Kenya",
+  role: "MSP Team Lead • Modern Workplace • Cybersecurity Engineer • Zero Trust • Dual-Control • Tamper-Evident",
+  location: "Nairobi, Kenya",
   // Positioning statement — the thesis of the whole site.
-  tagline: "Building security systems that don't just look secure — they prove it.",
+  tagline: "Building security systems that don't just look secure — they prove it. MSP Team Lead + Modern Workplace Operations Lab.",
   methodology: ["Build", "Test", "Break", "Learn", "Secure"] as const,
   // One-paragraph summary used in the hero and meta descriptions.
   summary:
-    "I build security-focused software, investigate vulnerabilities in authorized labs, and " +
-    "ship defensive controls that are implemented and tested — not just described. Self-taught, " +
-    "hands-on, and focused on application security, access control, and security engineering.",
+    "MSP Team Lead • Modern Workplace • Entra ID • Intune • Zero Trust • Cybersecurity • Least-Privilege Dual-Control • Tamper-Evident Ledger • OWASP ASI03 • I build security-focused software, investigate vulnerabilities in authorized labs, and ship defensive controls that are implemented and tested — not just described. Self-taught, hands-on, focused on application security, access control, and security engineering. OrbitDesk v6.7.2 + Chokepoint v3.1 — Electron 32 auto-update + SLSA L3 + signed commits + SBOM.",
 
   // Canonical origin. The live, working domain is the Vercel deployment URL
   // (no custom domain registered). Override via env if that ever changes.
