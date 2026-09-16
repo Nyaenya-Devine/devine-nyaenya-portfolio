@@ -16,7 +16,7 @@ Plus:
 • Orbit animation 6s/8s/12s + pause-when-away SLA push-forward
 • Electron 32 auto-update + SLSA L3 + SBOM + signed commits + TWA Play Store + MSIX Windows Store
 
-Live: https://orbitdesk.vercel.app
+Live: https://orbitdesk-gamma.vercel.app
 Portfolio: https://devine-nyaenya-portfolio.vercel.app
 GitHub: https://github.com/Nyaenya-Devine/orbitdesk
 
