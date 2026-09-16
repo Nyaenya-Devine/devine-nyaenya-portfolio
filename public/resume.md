@@ -40,10 +40,10 @@ MSP Team Lead + Modern Workplace Operations Lab builder + Cybersecurity Engineer
 - Tech: Next.js 16 App Router TypeScript React Vitest 26 tests Web Crypto PBKDF2 HMAC-SHA256, Electron 32 + electron-updater + electron-log, SBOM CycloneDX SLSA L3 signed commits, PWA TWA
 - Build: 0 vulns prod, 26 routes, LICENSE MIT
 
-### Android Reset Lab P4 Cerberus — Security Simulation God Mode
+### Android Reset Lab P4 Cerberus — Advanced Security Simulation
 **GitHub:** https://github.com/Nyaenya-Devine/android-reset-lab
 
-- P4 Cerberus God Mode: Merkle transparency RFC6962 inclusion/consistency proofs + Rekor checkpoint + Cedar ABAC policy-as-code 10 policies AuthZEN bundle SHA + risk-adaptive 8 factors + WebAuthn passkeys AAGUID allowlist counter clone detection + Play Integrity StrongBox + WYSIWYS tx signing + DPoP token binding + SLSA L3 provenance + signed commits. 68 tests, 6/6 attacks + 17 P4 detections. Simulation-only, now simulation engine for Chokepoint.
+- P4 Cerberus — Advanced Hardening: Merkle transparency RFC6962 inclusion/consistency proofs + Rekor checkpoint + Cedar ABAC policy-as-code 10 policies AuthZEN bundle SHA + risk-adaptive 8 factors + WebAuthn passkeys AAGUID allowlist counter clone detection + Play Integrity StrongBox + WYSIWYS tx signing + DPoP token binding + SLSA L3 provenance + signed commits. 68 tests, 6/6 attacks + 17 P4 detections. Simulation-only, now simulation engine for Chokepoint.
 
 ## GitHub & Vercel — Cleaned & Hardened
 
