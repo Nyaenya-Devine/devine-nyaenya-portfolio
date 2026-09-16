@@ -20,7 +20,7 @@ export const site = {
   methodology: ["Build", "Test", "Break", "Learn", "Secure"] as const,
   // One-paragraph summary used in the hero and meta descriptions.
   summary:
-    "MSP Team Lead • Modern Workplace • Entra ID • Intune • Zero Trust • Cybersecurity • Least-Privilege Dual-Control • Tamper-Evident Ledger • OWASP ASI03 • I build security-focused software, investigate vulnerabilities in authorized labs, and ship defensive controls that are implemented and tested — not just described. Self-taught, hands-on, focused on application security, access control, and security engineering. OrbitDesk v6.7.3 + Chokepoint v3.1 — Electron 32 auto-update + SLSA L3 + signed commits + SBOM.",
+    "MSP Team Lead • Modern Workplace • Entra ID • Intune • Zero Trust • Cybersecurity • Least-Privilege Dual-Control • Tamper-Evident Ledger • OWASP ASI03 • I build security-focused software, investigate vulnerabilities in authorized labs, and ship defensive controls that are implemented and tested — not just described. Self-taught, hands-on, focused on application security, access control, and security engineering. OrbitDesk v6.8.1 + Chokepoint v3.1 — Electron 32 auto-update + SLSA L3 + signed commits + SBOM.",
 
   // Canonical origin. The live, working domain is the Vercel deployment URL
   // (no custom domain registered). Override via env if that ever changes.
