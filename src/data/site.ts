@@ -1,34 +1,22 @@
 /**
- * ─────────────────────────────────────────────────────────────────────────────
- * CENTRAL SITE CONFIGURATION
- *
- * All personal/contact details live here (and can be overridden by environment
- * variables — see .env.example). Nothing is fabricated: if a value such as an
- * email or LinkedIn URL is not provided, the UI hides that link or shows an
- * explicit "configure this" placeholder instead of inventing one.
- * ─────────────────────────────────────────────────────────────────────────────
+ * Central site configuration — all personal and contact details
  */
 
 export const site = {
   name: "Devine Nyaenya",
   firstName: "Devine",
   lastName: "Nyaenya",
-  role: "MSP Team Lead • Modern Workplace • Cybersecurity Engineer • Zero Trust • Dual-Control • Tamper-Evident",
+  role: "Security Engineer • Modern Workplace Operations • Application Security",
   location: "Nairobi, Kenya",
-  // Positioning statement — the thesis of the whole site.
-  tagline: "Building security systems that don't just look secure — they prove it. MSP Team Lead + Modern Workplace Operations Lab.",
+  tagline: "Building security systems that prove their security through implementation and testing.",
   methodology: ["Build", "Test", "Break", "Learn", "Secure"] as const,
-  // One-paragraph summary used in the hero and meta descriptions.
   summary:
-    "MSP Team Lead • Modern Workplace • Entra ID • Intune • Zero Trust • Cybersecurity • Least-Privilege Dual-Control • Tamper-Evident Ledger • OWASP ASI03 • I build security-focused software, investigate vulnerabilities in authorized labs, and ship defensive controls that are implemented and tested — not just described. Self-taught, hands-on, focused on application security, access control, and security engineering. OrbitDesk v6.8.1 + Chokepoint v3.1 — Electron 32 auto-update + SLSA L3 + signed commits + SBOM.",
+    "Security engineer focused on application security, access control, and security engineering. I build security-focused software, investigate vulnerabilities in authorized labs, and ship defensive controls that are implemented and tested. Experience with Modern Workplace operations, least-privilege dual-control, and tamper-evident audit systems.",
 
-  // Canonical origin. The live, working domain is the Vercel deployment URL
-  // (no custom domain registered). Override via env if that ever changes.
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
     "https://devine-nyaenya-portfolio.vercel.app",
 
-  // Contact / social. Env vars win; empty string => treated as "not configured".
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "",
   linkedin:
     process.env.NEXT_PUBLIC_LINKEDIN_URL?.trim() ||
@@ -36,18 +24,15 @@ export const site = {
   github:
     process.env.NEXT_PUBLIC_GITHUB_URL?.trim() || "https://github.com/Nyaenya-Devine",
 
-  // Optional form backend. Empty => the contact form falls back to mailto:.
   contactFormEndpoint: process.env.CONTACT_FORM_ENDPOINT?.trim() || "",
 } as const;
 
-/** Convenience: GitHub profile + repo links (verbatim from the real accounts). v5.1 permanent URLs */
 export const repos = {
   profile: "https://github.com/Nyaenya-Devine",
   orbitdesk: "https://github.com/Nyaenya-Devine/orbitdesk",
   orbitdeskLive: "https://orbitdesk-gamma.vercel.app",
-  orbitdeskLiveAlt: "https://temporary-rapid-nova-4v5bqt9.vercel.app",
   chokepoint: "https://github.com/Nyaenya-Devine/chokepoint",
-  chokepointLive: "https://nyaenya-devine-chokepoint.vercel.app",
+  chokepointLive: "https://chokepoint-demo.vercel.app",
   androidResetLab: "https://github.com/Nyaenya-Devine/android-reset-lab",
   androidResetLabLive: "https://android-reset-lab.vercel.app",
   androidDeviceManagement:
@@ -55,8 +40,7 @@ export const repos = {
   androidDeviceManagementLive:
     "https://android-device-management-tool.vercel.app",
   endopimaKenya: "https://github.com/Nyaenya-Devine/endopima-kenya",
-  endopimaKenyaLive: "https://nyaenya-devine.github.io/endopima-kenya/",
-  endopimaKenyaLiveVercel: "https://endopima-kenya.vercel.app",
+  endopimaKenyaLive: "https://endopima-kenya.vercel.app",
   portfolio: "https://github.com/Nyaenya-Devine/devine-nyaenya-portfolio",
   portfolioLive: "https://devine-nyaenya-portfolio.vercel.app",
 } as const;
@@ -65,7 +49,6 @@ export type SocialLink = {
   label: string;
   href: string;
   handle: string;
-  /** When false, the value is not configured yet and the UI shows a placeholder. */
   configured: boolean;
   external: boolean;
 };
