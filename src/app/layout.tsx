@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AmbientBackground } from "@/components/AmbientBackground";
 import { ScrollChrome } from "@/components/ScrollChrome";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({
@@ -124,6 +125,7 @@ export default function RootLayout({
         <Header />
         <main id="main" className="relative">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
