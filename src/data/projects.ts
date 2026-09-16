@@ -184,3 +184,23 @@ export const projects: Project[] = [
     weight: 30,
   },
 ];
+export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
+
+export const portfolioProject = {
+  slug: "portfolio",
+  name: "Portfolio v6.7.2",
+  kicker: "This site · World-Class Not Basic — MSP Team Lead + Cybersecurity",
+  status: "Live demo" as const,
+  featured: false,
+  summary: "Professional cybersecurity & security-engineering portfolio — build, test, break, learn, secure. Next.js 16 + TypeScript + Tailwind. Dark-green design green #34D96B on green-black, mixed fonts Fraunces + Inter + JetBrains Mono, luminous gradient text, falling-code background, clickable project windows. Strict nonce-based CSP via proxy.ts, 17 routes, 0 CVEs, GitHub essentials dependabot + security workflows + CODEOWNERS + SBOM + SLSA + signed commits. Updated v6.7.2 OrbitDesk + v3.1 Chokepoint.",
+  overview: "This portfolio is a security engineer's public face, treated like security product: content visible without JS, strict CSP headers nonce+strict-dynamic, no fabricated claims, honest status labels. Design evolved green-accent rebuild five-project catalogue, accessibility pass luminous gradient text no dark anchors, mixed fonts Fraunces display Inter body JetBrains Mono technical, sparse animated falling-code canvas behind content, large clickable project windows leading into each case study. v6.7.2 update: OrbitDesk v6.7.2 LinkedIn chat dock + Electron 32 auto-update + SLSA + signed commits, Chokepoint v3.1 Electron 32 auto-update + dual-control tamper-evident, GitHub essentials dependabot security SBOM SLSA signed commits, Vercel team OrbitDesk Lab.",
+  tech: ["Next.js 16 + TypeScript + Tailwind CSS + Fraunces + Inter + JetBrains Mono + Strict nonce CSP via proxy.ts + Vercel + 17 routes + GitHub Essentials dependabot security SBOM SLSA signed commits"],
+  concepts: ["Security-minded webcraft", "Dark-green design", "Typography", "Accessibility", "Honest engineering", "SEO & performance", "MSP Team Lead", "Cybersecurity", "GitHub Essentials"],
+  github: "https://github.com/Nyaenya-Devine/devine-nyaenya-portfolio",
+  liveUrl: "https://devine-nyaenya-portfolio.vercel.app",
+  caseStudy: false,
+  weight: 40,
+};
+
+// Merge portfolio project into projects array for getProject to work
+(projects as any).push(portfolioProject);
