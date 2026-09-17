@@ -3,9 +3,9 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { ProjectsGrid } from "@/components/ProjectsGrid";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Projects — OrbitDesk Flagship",
   description:
-    "5 projects by Devine Nyaenya — Chokepoint (least-privilege access control & tamper-evident audit, live demo), Android Reset Lab (simulation, 52 tests, 6/6 attacks detected), Android Device Management Tool (experimental dual-mode console — Android Management API integration), EndoPima Kenya (bilingual community-first health-tech), and this Portfolio itself. Built, tested, documented honestly.",
+    "6 projects by Devine Nyaenya — OrbitDesk (flagship, Modern Workplace Operations Lab, 16 tickets, voice calls, remote desktop, team collaboration, live demo), Chokepoint (least-privilege dual-control, tamper-evident audit, OWASP ASI03), Android Reset Lab (simulation, 52 tests, 6/6 attacks detected), Android Device Management, EndoPima Kenya, and this Portfolio. Built, tested, documented honestly.",
   alternates: { canonical: "/projects" },
 };
 
@@ -20,8 +20,8 @@ export default function ProjectsPage() {
           <SectionHeading
             as="h1"
             eyebrow="Portfolio"
-            title="Security projects"
-            description="Real implementations over claims. Each project includes the controls, how they were tested, and an honest account of limitations — ordered by depth, starting with Chokepoint. 52 tests, 6/6 attacks detected, P3 hardened."
+            title="Flagship projects"
+            description="Real implementations over claims. Flagship OrbitDesk — Modern Workplace Operations Lab with 16 tickets, voice, remote desktop, team calls. Plus Chokepoint dual-control security plane, Android Reset Lab, and more. Ordered by depth, starting with OrbitDesk."
           />
           
           {/* Trust line */}

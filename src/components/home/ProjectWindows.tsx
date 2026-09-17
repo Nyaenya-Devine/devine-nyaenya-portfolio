@@ -75,12 +75,12 @@ function Window({
 export function ProjectWindows() {
   return (
     <div className="grid gap-5 lg:grid-cols-2">
-      {/* Chokepoint spans full width as the flagship window */}
+      {/* OrbitDesk flagship spans full width */}
       <div className="lg:col-span-2">
-        <Window slug="chokepoint" featured />
+        <Window slug="orbitdesk" featured />
       </div>
+      <Window slug="chokepoint" />
       <Window slug="android-reset-lab" />
-      <Window slug="android-device-management-tool" />
       <div className="lg:col-span-2 grid gap-5 sm:grid-cols-2">
         <Window slug="endopima-kenya" />
         {/* GitHub window — straight to the profile */}

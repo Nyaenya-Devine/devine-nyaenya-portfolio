@@ -7,23 +7,23 @@
 ![Security](https://img.shields.io/badge/CSP-nonce%20%2B%20strict--dynamic-38E1C4)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNyaenya-Devine%2Fdevine-nyaenya-portfolio)
 
-Live portfolio for **Devine Nyaenya**, a Kenya-based cybersecurity /
-security-engineering builder. It presents real, verifiable security work — not
-fabricated achievements — with the flagship **Chokepoint** case study front and
-center.
+Live portfolio for **Devine Nyaenya**, a Kenya-based security engineer building
+verifiable systems — not fabricated achievements — with flagship **OrbitDesk**
+and **Chokepoint** case studies front and center.
 
-> **Positioning:** *Building security systems that don't just look secure — they prove it.*
+> **Positioning:** *Building systems that prove they are secure — with tests, audit logs, and verifiable controls.*
 > Method: **Build → Test → Break → Learn → Secure.**
 
-**Related security projects (case studies in this site):**
+**Flagship projects (case studies in this site):**
 
-| Project | What it is | Repository |
-| --- | --- | --- |
-| **Chokepoint** (flagship) | Least-privilege access control & tamper-evident audit for humans + AI agents | [`chokepoint`](https://github.com/Nyaenya-Devine/chokepoint) |
-| **Android Reset Lab** | Simulation-only MDM reset lab: RBAC, four-eyes, hash-chained logs, 6/6 attacks detected | [`android-reset-lab`](https://github.com/Nyaenya-Devine/android-reset-lab) |
-| **Android Device Management Tool** | Experimental full-stack Android Enterprise app (honest WIP) | [`android-device-management-tool`](https://github.com/Nyaenya-Devine/android-device-management-tool) |
+| Project | What it is | Live | Repository |
+| --- | --- | --- | --- |
+| **OrbitDesk** (flagship) | Modern Workplace Operations Lab — Entra ID, Intune, Exchange, Teams training with 16 tickets, voice calls, remote desktop, team collaboration | [orbitdesk-gamma.vercel.app](https://orbitdesk-gamma.vercel.app) | [`orbitdesk`](https://github.com/Nyaenya-Devine/orbitdesk) |
+| **Chokepoint** | Least-privilege dual-control with tamper-evident audit for humans + AI agents — HMAC-signed hash chain, OWASP ASI03 | [chokepoint-demo.vercel.app](https://chokepoint-demo.vercel.app) | [`chokepoint`](https://github.com/Nyaenya-Devine/chokepoint) |
+| **Android Reset Lab** | Simulation-only MDM reset lab: RBAC, four-eyes, hash-chained logs, 6/6 attacks detected | [demo](https://chokepoint-demo.vercel.app) | [`android-reset-lab`](https://github.com/Nyaenya-Devine/android-reset-lab) |
 
-▶ **Try the Android Reset Lab live console:** <https://chokepoint-demo.vercel.app> (simulation, seeded demo accounts `que` / `LabRat!2026`)
+▶ **Try OrbitDesk live:** <https://orbitdesk-gamma.vercel.app> — Modern Workplace training, no signup, works offline
+▶ **Try Chokepoint live:** <https://chokepoint-demo.vercel.app> (simulation, seeded demo accounts `que` / `LabRat!2026`)
 
 ---
 
