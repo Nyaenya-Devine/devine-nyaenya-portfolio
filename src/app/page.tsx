@@ -124,6 +124,7 @@ export default function HomePage() {
             </p>
             <div className="mt-7 flex flex-wrap justify-center gap-3">
               <Link href="/contact" className="btn-primary">Get in touch</Link>
+              <Link href="/projects/orbitdesk" className="btn-ghost">Explore OrbitDesk — Flagship</Link>
               <Link href="/projects/chokepoint" className="btn-ghost">Explore Chokepoint</Link>
             </div>
           </Reveal>
