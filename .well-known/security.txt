@@ -1,0 +1,6 @@
+Contact: mailto:devinenyaenya@gmail.com
+Expires: 2026-12-31T23:59:59.000Z
+Acknowledgments: https://github.com/Nyaenya-Devine/devine-nyaenya-portfolio/security/advisories
+Preferred-Languages: en
+Canonical: https://devine-nyaenya-portfolio.vercel.app/.well-known/security.txt
+Policy: https://github.com/Nyaenya-Devine/devine-nyaenya-portfolio/blob/main/SECURITY.md
