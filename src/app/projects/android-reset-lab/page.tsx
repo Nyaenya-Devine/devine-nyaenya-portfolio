@@ -11,7 +11,7 @@ const project = getProject("android-reset-lab")!;
 export const metadata: Metadata = {
   title: "Android Reset Lab P4 Cerberus — Case Study",
   description:
-    "P4 Cerberus controls: Merkle transparency RFC6962 with inclusion/consistency proofs + Rekor checkpoint sim, Cedar ABAC policy-as-code + AuthZEN + risk-adaptive (velocity/impossible travel/device trust), WebAuthn passkeys (AAGUID allowlist, counter clone detection), Play Integrity + StrongBox attestation, WYSIWYS tx signing, DPoP token binding. 68 tests, 6/6 attacks detected. Simulation-only.",
+    "P4 Cerberus controls: Merkle transparency RFC6962 with inclusion/consistency proofs + Rekor checkpoint sim, Cedar ABAC policy-as-code + AuthZEN + risk-adaptive (velocity/impossible travel/device trust), WebAuthn passkeys (AAGUID allowlist, counter clone detection), Play Integrity + StrongBox attestation, WYSIWYS tx signing, DPoP token binding. 75 automated tests, including six attack scenarios. Simulation-only.",
   alternates: { canonical: "/projects/android-reset-lab" },
 };
 
@@ -164,7 +164,7 @@ export default function AndroidResetLabPage() {
           <CaseSection id="hardening" eyebrow="06" title="Hardening: P0→P4 Cerberus controls">
             <p>
               The project was hardened in iterative passes (P0–P4 Cerberus), growing
-              from 18 to 68 tests (52 P2/P3 + 16 P4). Rather than only adding features,
+              to 75 tests across workflow, policy, evidence and sanitization controls. Rather than only adding features,
               I hunted and fixed real security defects, then invented new architecture
               that even a machine can applaud — Merkle transparency, Cedar ABAC,
               risk-adaptive, passkeys, StrongBox attestation, WYSIWYS tx signing, DPoP:
@@ -189,7 +189,7 @@ export default function AndroidResetLabPage() {
 
           <CaseSection id="results" eyebrow="07" title="Results & takeaways P4">
             <Callout variant="ok" title="Verified outcomes P4 Cerberus">
-              68 tests pass (52 P2/P3 + 16 P4) on both JSON and SQLite; 6/6 attack
+              75 tests pass across the supported storage paths; all six defined attack
               categories detected plus 17 new P4 detections (velocity, impossible
               travel, device trust, attestation, webauthn clone, DPoP, tx tamper);
               Merkle root verified with inclusion/consistency proofs + Rekor
