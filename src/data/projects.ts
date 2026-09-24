@@ -152,7 +152,7 @@ export const projects: Project[] = [
     tech: ["HTML, CSS, JavaScript + Bilingual UX + Privacy-conscious design"],
     concepts: ["Health-tech", "Bilingual UX", "Community-first", "Privacy-conscious"],
     github: "https://github.com/Nyaenya-Devine/endopima-kenya",
-    liveUrl: "https://endopima-kenya.vercel.app",
+    liveUrl: "https://nyaenya-devine.github.io/endopima-kenya/",
     caseStudy: false,
     weight: 30,
   },

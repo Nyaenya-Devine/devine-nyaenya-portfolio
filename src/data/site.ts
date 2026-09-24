@@ -40,7 +40,7 @@ export const repos = {
   androidDeviceManagementLive:
     "https://android-device-management-tool.vercel.app",
   endopimaKenya: "https://github.com/Nyaenya-Devine/endopima-kenya",
-  endopimaKenyaLive: "https://endopima-kenya.vercel.app",
+  endopimaKenyaLive: "https://nyaenya-devine.github.io/endopima-kenya/",
   portfolio: "https://github.com/Nyaenya-Devine/devine-nyaenya-portfolio",
   portfolioLive: "https://devine-nyaenya-portfolio.vercel.app",
 } as const;
