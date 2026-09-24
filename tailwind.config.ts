@@ -3,7 +3,7 @@ import type { Config } from "tailwindcss";
 /**
  * Design System v2 — Obsidian Aurora Editorial
  * 
- * Aesthetic: Premium security editorial, not basic dark+teal.
+ * Aesthetic: restrained security editorial.
  * - Canvas: true obsidian #070C09 (not charcoal) with subtle noise
  * - Paper: warm paper #0D1410 for light sections (editorial contrast)
  * - Accent: Amber #34D96B (signal, alert) + Violet #10B981 (AI/security depth) gradient

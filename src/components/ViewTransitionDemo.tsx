@@ -34,7 +34,7 @@ export function ViewTransitionDemo() {
         <div className="flex items-center gap-3">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300">✦</span>
           <div>
-            <h3 className="font-medium text-[#F5F3EF]">View Transitions API — God Mode</h3>
+            <h3 className="font-medium text-[#F5F3EF]">View Transitions API — advanced controls</h3>
             <p className="text-xs text-[#6B6A67] font-mono">Progressive enhancement, no-JS fallback</p>
           </div>
         </div>

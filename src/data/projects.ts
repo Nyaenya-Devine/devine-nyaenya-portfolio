@@ -32,9 +32,9 @@ export const projects: Project[] = [
     status: "Live demo",
     featured: true,
     summary:
-      "Professional training environment for Modern Workplace operations — Entra ID, Intune, Exchange, and Teams troubleshooting with realistic tickets, voice communication, remote desktop, and team collaboration. Designed for support engineers and interview preparation.",
+      "Training environment for Modern Workplace operations — Entra ID, Intune, Exchange, and Teams troubleshooting with realistic tickets, voice communication, remote desktop, and team collaboration. Designed for support engineers and interview preparation.",
     overview:
-      "OrbitDesk simulates the daily workflow of a Modern Workplace support team. You triage tickets, investigate sign-in logs with Conditional Access analysis, verify device compliance, handle Exchange quarantine, manage voice calls, and collaborate via team messaging. Features include realistic client profiles with distinct policies and SLAs, secure remote desktop with encrypted sessions and audit logging, voice communication with professional controls, and structured performance assessment with CSAT, QA, and communication quality feedback. Built as PWA with offline support and Electron desktop with security hardening, packagable for Play Store via TWA and Microsoft Store via MSIX. All data simulated locally — no real credentials or external API calls.",
+      "OrbitDesk simulates the daily workflow of a Modern Workplace support team. You triage tickets, investigate sign-in logs with Conditional Access analysis, verify device compliance, handle Exchange quarantine, manage voice calls, and collaborate via team messaging. Features include realistic client profiles with distinct policies and SLAs, secure remote desktop with encrypted sessions and audit logging, voice communication with call controls, and structured performance assessment with CSAT, QA, and communication quality feedback. Built as PWA with offline support and Electron desktop with security hardening, packagable for Play Store via TWA and Microsoft Store via MSIX. All data simulated locally — no real credentials or external API calls.",
     tech: [
       "Next.js 16 + React 19 + TypeScript + Tailwind CSS + Framer Motion",
       "PWA with offline support and installable experience",
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     summary:
       "Simulation of Android device reset operations with security controls — role-based access, four-eyes dual-control, hash-chained audit logging, and attack detection. Built as isolated lab for security engineering learning.",
     overview:
-      "Android Reset Lab simulates sensitive device reset workflows with layered security controls. Includes Merkle transparency log with inclusion and consistency proofs, Cedar ABAC policy-as-code, risk-adaptive authentication, WebAuthn passkeys, Play Integrity attestation, transaction signing, and token binding. Test suite covers tamper detection, self-approval blocking, policy enforcement, and attack scenarios. Simulation-only — no real device operations. Serves as reference implementation for Chokepoint's dual-control and audit patterns.",
+      "Android Reset Lab simulates sensitive device reset workflows with layered security controls. Includes Merkle transparency log with inclusion and consistency proofs, Cedar ABAC policy-as-code, risk-adaptive authentication, WebAuthn passkeys, Play Integrity attestation, transaction signing, and token binding. Test suite covers tamper detection, self-approval blocking, policy enforcement, and attack scenarios. Simulation-only — no real device operations.",
     tech: [
       "Python + pytest + cryptographic controls",
       "Merkle transparency and policy-as-code",

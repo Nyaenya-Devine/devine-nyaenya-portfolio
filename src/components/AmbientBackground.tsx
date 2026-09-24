@@ -1,13 +1,13 @@
 import { CodeRain } from "./CodeRain";
 
 /**
- * Ambient background v5.2 — Full Body Upgrade — Security Livery, Not Basic
+ * Ambient background for the portfolio color system
  * 
  * Theme: Cybersecurity Portfolio — Build, Test, Break, Learn, Secure
  * Livery: Dark green #070C09 base + security green #34D96B, amber #FFB224, violet #8B5CF6, emerald #10B981
  * Inspired by: Linear mesh, Stripe gradients, security control planes, hash chains, Merkle trees
  * Good nasty work: Animated security orbs, hash chain livery stripes, control gates, grain, grid
- * Not basic black — specific to portfolio project
+ * Dark green portfolio base
  */
 export function AmbientBackground() {
   return (
@@ -15,7 +15,7 @@ export function AmbientBackground() {
       aria-hidden="true"
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-base"
     >
-      {/* Solid base — dark green #070C09, not basic black */}
+      {/* Solid base — dark green #070C09, restrained dark palette */}
       <div className="absolute inset-0 bg-base" />
       <div className="absolute inset-0 bg-[#070C09]" />
 

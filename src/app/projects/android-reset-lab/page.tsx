@@ -11,7 +11,7 @@ const project = getProject("android-reset-lab")!;
 export const metadata: Metadata = {
   title: "Android Reset Lab P4 Cerberus — Case Study",
   description:
-    "P4 Cerberus God Mode: Merkle transparency RFC6962 with inclusion/consistency proofs + Rekor checkpoint sim, Cedar ABAC policy-as-code + AuthZEN + risk-adaptive (velocity/impossible travel/device trust), WebAuthn passkeys (AAGUID allowlist, counter clone detection), Play Integrity + StrongBox attestation, WYSIWYS tx signing, DPoP token binding. 68 tests, 6/6 attacks detected. Simulation-only.",
+    "P4 Cerberus controls: Merkle transparency RFC6962 with inclusion/consistency proofs + Rekor checkpoint sim, Cedar ABAC policy-as-code + AuthZEN + risk-adaptive (velocity/impossible travel/device trust), WebAuthn passkeys (AAGUID allowlist, counter clone detection), Play Integrity + StrongBox attestation, WYSIWYS tx signing, DPoP token binding. 68 tests, 6/6 attacks detected. Simulation-only.",
   alternates: { canonical: "/projects/android-reset-lab" },
 };
 
@@ -161,7 +161,7 @@ export default function AndroidResetLabPage() {
             </p>
           </CaseSection>
 
-          <CaseSection id="hardening" eyebrow="06" title="Hardening: P0→P4 Cerberus God Mode">
+          <CaseSection id="hardening" eyebrow="06" title="Hardening: P0→P4 Cerberus controls">
             <p>
               The project was hardened in iterative passes (P0–P4 Cerberus), growing
               from 18 to 68 tests (52 P2/P3 + 16 P4). Rather than only adding features,
@@ -199,7 +199,7 @@ export default function AndroidResetLabPage() {
               untrusted; WYSIWYS tx signing + DPoP binding; four-eyes cannot be bypassed.
             </Callout>
             <p>
-              P4 is God Mode: it takes the lab from linear hash chain to Merkle
+              P4 is Advanced controls: it takes the lab from linear hash chain to Merkle
               transparency log, from static RBAC to Cedar ABAC with decision logs,
               from password+MFA to phishing-resistant passkeys + transaction signing,
               from blind device trust to hardware-backed StrongBox attestation, from

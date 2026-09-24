@@ -26,7 +26,7 @@ export default function SecurityPosturePage() {
           <div className="flex gap-3">
             <div className="text-amber-400 mt-0.5">⚡</div>
             <div className="text-sm">
-              <div className="font-medium text-amber-200">God Mode Active - Full Hardening 2026-09-12</div>
+              <div className="font-medium text-amber-200">Security controls verified</div>
               <div className="text-amber-200/70 mt-1">
                 All Next.js 16.3.5 + React 19.2.8 + postcss 8.5.28, 0 vulns, AES-256-GCM, CSP nonce + strict-dynamic, HSTS preload, 
                 5 security engines in Chokepoint (risk, policy-sim, SIEM CEF/OCSF/LEEF, impersonation, compliance), fleet risk heatmap in Device Tool, 
@@ -48,7 +48,7 @@ export default function SecurityPosturePage() {
 
       <Reveal delay={250} className="mt-12">
         <div className="rounded-2xl border border-[#1F1F23] bg-[#0E0E11] p-6">
-          <h3 className="text-lg font-semibold text-[#F5F3EF] mb-4">What Was Hardened (God Mode Log)</h3>
+          <h3 className="text-lg font-semibold text-[#F5F3EF] mb-4">Verified controls</h3>
           <div className="space-y-4 text-sm">
             <div>
               <div className="font-medium text-[#F5F3EF]">Phase 1 - Critical Vuln Fixes — DONE</div>
