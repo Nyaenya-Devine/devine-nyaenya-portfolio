@@ -79,9 +79,14 @@ jobs:
         run: npm audit --audit-level=high || (echo "::warning::npm audit found high severity — review, run npm audit fix if safe" && exit 0)
       - name: Check Electron version — must be >=32 for security
         run: |
-          ELECTRON_VER=$(node -p "require('./package.json').devDependencies.electron" || echo "not found")
+          set -eu
+          ELECTRON_VER=$(node -p "require('./package.json').devDependencies?.electron || require('./package.json').dependencies?.electron || ''")
+          if [ -z "$ELECTRON_VER" ]; then
+            echo "No Electron dependency — web application, Electron check not applicable"
+            exit 0
+          fi
           echo "Electron version spec: $ELECTRON_VER"
-          node -e "const v=require('./package.json').devDependencies.electron; const major=parseInt(v.match(/\d+/)[0]); if(major<32){console.error('Electron <32 — upgrade required for security'); process.exit(1)} else console.log('Electron >=32 — secure')"
+          node -e 'const v=process.argv[1]; const m=v.match(/\d+/); if(!m){console.error("Unable to determine Electron major version"); process.exit(1)} const major=parseInt(m[0]); if(major<32){console.error("Electron <32 — upgrade required for security"); process.exit(1)} else console.log("Electron >=32 — secure")' "$ELECTRON_VER"
 
   headers-check:
     name: Security Headers — CSP, HSTS
