@@ -43,23 +43,19 @@ export function Hero() {
           </p>
 
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-med text-pretty">
-            I build security-focused software, investigate vulnerabilities in
-            authorized labs, and ship defensive controls that are{" "}
-            <span className="font-semibold text-ink-high relative">
-              implemented and tested
-              <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#34D96B]/50 to-transparent" />
-            </span>{" "}
-            — not just described.{" "}
-            <span className="text-ink-high">{site.tagline}</span>
+            I test web applications and security workflows in systems I own,
+            then document the request, evidence, impact and repair. My current
+            focus is authorization: where identity, role and object boundaries
+            fail under a hostile request.
           </p>
 
           <div className="mt-3 flex flex-wrap gap-2">
             {[
-              "Tamper-evident audit",
-              "Dual-control approval",
-              "Least-privilege RBAC",
-              "Security testing",
-              "Professional engineering",
+              "Authorization testing",
+              "Web and API security",
+              "Attack simulation",
+              "Evidence and reporting",
+              "Python and TypeScript",
             ].map(chip => (
               <span key={chip} className="text-[10px] px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-ink-low font-mono">{chip}</span>
             ))}
@@ -82,7 +78,7 @@ export function Hero() {
 
           <div className="mt-6 p-3 rounded-[12px] bg-[#0D1410]/60 backdrop-blur border border-white/[0.04]">
             <p className="text-[11px] font-mono text-ink-low leading-[1.5]">
-              Each project serves a distinct purpose — Chokepoint for security control plane, Android management for fleet operations, OrbitDesk for workplace operations training, and EndoPima for community health. Focused engineering with verifiable security properties.
+              Chokepoint and Android Reset Lab are my main security-testing projects. OrbitDesk and the Android fleet console supply identity and endpoint scenarios; EndoPima remains a separate health-information prototype.
             </p>
           </div>
         </div>

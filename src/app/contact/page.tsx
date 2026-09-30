@@ -7,7 +7,7 @@ import { site, socialLinks } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Devine Nyaenya — cybersecurity and security engineering, 75 tested security and workflow cases. Open to security engineering and SOC/defensive roles.",
+    "Contact Devine Nyaenya about junior penetration testing, application security and security engineering work.",
   alternates: { canonical: "/contact" },
 };
 
@@ -24,7 +24,7 @@ export default function ContactPage() {
             as="h1"
             eyebrow="Contact"
             title="Let's talk security"
-            description="I'm open to security engineering, application security, authorized security testing, application security, security engineering and detection opportunities — and to collaborating on security tooling. 75 reset-lab tests, six attack simulations and documented limitations."
+            description="I'm looking for junior penetration testing, application-security testing and security-engineering work. I am also open to supervised assessments and collaboration on security tooling."
           />
         </div>
       </div>
@@ -72,11 +72,11 @@ export default function ContactPage() {
               <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-violet-soft mb-4">What I'm looking for</p>
               <ul className="space-y-3">
                 {[
-                  "Security engineering & application security roles",
-                  "SOC / defensive security and detection work",
-                  "Security automation and attack simulation with Python (75 tests)",
-                  "Junior / entry-level where I can build and learn fast",
-                  "Open to Nairobi / Remote roles and supervised security testing work",
+                  "Junior penetration testing and vulnerability assessment",
+                  "Application-security and API-security testing",
+                  "Security engineering and attack simulation",
+                  "Roles with careful reporting and remediation follow-through",
+                  "Nairobi, remote, or supervised security-testing work",
                 ].map((t) => (
                   <li key={t} className="flex gap-3 text-[14px] leading-[1.5] text-ink-med">
                     <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-violet" />

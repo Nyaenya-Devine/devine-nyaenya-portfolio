@@ -152,17 +152,17 @@ export default function AboutPage() {
         <div className="container-page py-12 sm:py-16">
           <SectionHeading
             eyebrow="Methodology"
-            title="Build → Test → Break → Learn → Secure"
-            description="My loop: implement controls, write tests that attack them, fix what breaks, document honest limitations, ship proof alongside code."
+            title="Scope, test, explain, retest"
+            description="I define the boundary first, keep a reproducible record of each request, explain the root cause and impact, and verify the repair against the same case."
             accent="cyan"
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {[
-              { step: "Build", desc: "Implement RBAC, four-eyes, hash chain, HMAC, TOTP", color: "accent" },
-              { step: "Test", desc: "75 tests: authorization, workflow, detection, negative paths", color: "violet" },
-              { step: "Break", desc: "Attacker sim: 6 attacks + ledger tamper + self-approval", color: "cyan" },
-              { step: "Learn", desc: "14 honest limitations, false positives 14→9", color: "emerald" },
-              { step: "Secure", desc: "Ship with CI, demos, threat model, release", color: "amber" },
+              { step: "Scope", desc: "Name the target, permission, exclusions and stop conditions", color: "accent" },
+              { step: "Map", desc: "Record roles, objects, requests, trust boundaries and entry points", color: "violet" },
+              { step: "Verify", desc: "Reproduce the weakness with the smallest safe proof", color: "cyan" },
+              { step: "Report", desc: "Describe evidence, impact, root cause and a practical repair", color: "emerald" },
+              { step: "Retest", desc: "Repeat the original case and check adjacent paths", color: "amber" },
             ].map((m, i) => (
               <div key={m.step} className="rounded-[14px] border border-white/[0.06] bg-surface/60 p-5 backdrop-blur">
                 <div className={`inline-flex h-7 w-7 items-center justify-center rounded-full text-[12px] font-bold ${
