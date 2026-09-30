@@ -5,7 +5,7 @@ import { ProjectsGrid } from "@/components/ProjectsGrid";
 export const metadata: Metadata = {
   title: "Projects — OrbitDesk Flagship",
   description:
-    "6 projects by Devine Nyaenya — OrbitDesk (flagship, Modern Workplace Operations Lab, 16 tickets, voice calls, remote desktop, team collaboration, live demo), Chokepoint (least-privilege dual-control, tamper-evident audit, OWASP ASI03), Android Reset Lab (simulation, 52 tests, 6/6 attacks detected), Android Device Management, EndoPima Kenya, and this Portfolio. Built, tested, documented honestly.",
+    "6 projects by Devine Nyaenya — OrbitDesk (flagship, Modern Workplace Operations Lab, 16 tickets, voice calls, remote desktop, team collaboration, live demo), Chokepoint (least-privilege dual-control, tamper-evident audit, OWASP ASI03), Android Reset Lab (simulation, 75 tests, 6/6 attack cases detected), Android Device Management, EndoPima Kenya, and this Portfolio. Built, tested, documented honestly.",
   alternates: { canonical: "/projects" },
 };
 
@@ -68,7 +68,7 @@ export default function ProjectsPage() {
           <div className="flex flex-wrap items-center justify-between gap-6">
             <div>
               <p className="font-display text-[22px] tracking-[-0.02em] text-ink-high">Want the full story?</p>
-              <p className="mt-2 font-sans text-[15px] text-ink-med">How I fixed 15 bugs and cut false positives 14→9, now 52 tests with Argon2id, HMAC, TOTP, SIEM</p>
+              <p className="mt-2 font-sans text-[15px] text-ink-med">How I fixed 15 bugs and cut false positives 14→9, now 75 tests across authorization, detection, negative paths and workflow safety</p>
             </div>
             <a href="https://github.com/Nyaenya-Devine/android-reset-lab/blob/main/ARTICLE.md" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-surface px-5 py-2.5 text-[13px] font-medium text-ink-high hover:bg-ink-high transition-colors">
               Read article →

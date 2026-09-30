@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Devine Nyaenya is a self-taught, hands-on cybersecurity and security-engineering builder based in Kenya. 52 tests, P3 hardened with Argon2id, HMAC, TOTP, SIEM. Building, testing, breaking in authorized labs, and hardening what survives.",
+    "Devine Nyaenya is a self-taught, hands-on cybersecurity and security-engineering builder based in Kenya. 75 reset-lab tests and six documented attack simulations. Testing only in owned or explicitly authorized environments, with remediation recorded alongside findings.",
   alternates: { canonical: "/about" },
 };
 
@@ -15,7 +15,7 @@ const focus = [
   "Access control: authentication, authorization, RBAC, least privilege, four-eyes",
   "Tamper-evident + HMAC tamper-proof logging and audit integrity",
   "Threat modeling and security testing (6/6 attacks detected, 9 precise alerts)",
-  "Security automation with Python (52 tests json+sqlite, Argon2id, TOTP, SIEM shipping)",
+  "Security automation with Python (75 tests covering authorization, detection, negative paths and sanitization safety)",
   "Linux and network security in authorized labs",
   "AI security — identity and privilege abuse in autonomous agents (OWASP ASI03)",
 ];
@@ -39,7 +39,7 @@ export default function AboutPage() {
               Open to roles — Nairobi / Remote
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-surface/[0.04] px-4 py-2 font-mono text-[11px] text-ink-med">
-              52 tests · P3 hardened · 0 CVEs
+              75 reset-lab tests · 6/6 attack cases detected
             </span>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function AboutPage() {
                 <Link href="/projects/android-reset-lab" className="font-medium text-violet-soft hover:text-violet transition-colors underline decoration-violet/30 underline-offset-4 hover:decoration-violet">
                   security simulation lab
                 </Link>{" "}
-                where I first proved these controls by attacking my own design. 52 tests, 6/6 attacks detected, P3 hardened with Argon2id, HMAC, TOTP, SIEM shipping.
+                where I first proved these controls by attacking my own design. 75 tests cover authorization, negative paths, detection and workflow safety; six attack scenarios are detected.
               </p>
               <p>
                 I care especially about the frontier of{" "}
@@ -84,7 +84,7 @@ export default function AboutPage() {
             {/* Metrics */}
             <div className="mt-12 grid grid-cols-3 gap-6 rounded-[16px] border border-white/[0.06] bg-surface/50 p-6 backdrop-blur">
               <div>
-                <div className="font-display text-[28px] text-accent">52</div>
+                <div className="font-display text-[28px] text-accent">75</div>
                 <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-high mt-1">tests</div>
                 <div className="font-mono text-[10px] text-ink-low">json + sqlite</div>
               </div>
@@ -94,9 +94,9 @@ export default function AboutPage() {
                 <div className="font-mono text-[10px] text-ink-low">9 precise alerts</div>
               </div>
               <div>
-                <div className="font-display text-[28px] text-emerald-400">P3</div>
-                <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-high mt-1">hardened</div>
-                <div className="font-mono text-[10px] text-ink-low">Argon2 HMAC TOTP SIEM</div>
+                <div className="font-display text-[28px] text-emerald-400">34</div>
+                <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-high mt-1">control tests</div>
+                <div className="font-mono text-[10px] text-ink-low">authorization · crypto · ledger</div>
               </div>
             </div>
           </article>
@@ -138,7 +138,7 @@ export default function AboutPage() {
 
             <div className="rounded-[16px] bg-gradient-to-br from-accent/[0.08] to-violet/[0.06] border border-accent/10 p-6">
               <p className="font-display text-[18px] text-ink-high">Open to roles</p>
-              <p className="mt-2 font-sans text-[14px] leading-[1.5] text-ink-med">SOC Analyst, Detection Engineer, AppSec Engineer, Security Engineer (Junior) — Nairobi / Remote</p>
+              <p className="mt-2 font-sans text-[14px] leading-[1.5] text-ink-med">Junior Penetration Tester, Application Security Analyst, Security Engineer or Detection Analyst — Nairobi / Remote</p>
               <Link href="/contact" className="mt-4 inline-flex items-center gap-2 rounded-full bg-surface px-4 py-2 text-[13px] font-medium text-ink-high hover:bg-ink-high transition-colors">
                 Get in touch →
               </Link>
@@ -159,7 +159,7 @@ export default function AboutPage() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {[
               { step: "Build", desc: "Implement RBAC, four-eyes, hash chain, HMAC, TOTP", color: "accent" },
-              { step: "Test", desc: "52 tests: workflow, detection, negative, P3", color: "violet" },
+              { step: "Test", desc: "75 tests: authorization, workflow, detection, negative paths", color: "violet" },
               { step: "Break", desc: "Attacker sim: 6 attacks + ledger tamper + self-approval", color: "cyan" },
               { step: "Learn", desc: "14 honest limitations, false positives 14→9", color: "emerald" },
               { step: "Secure", desc: "Ship with CI, demos, threat model, release", color: "amber" },

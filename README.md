@@ -2,7 +2,7 @@
 
 The source for [devine-nyaenya-portfolio.vercel.app](https://devine-nyaenya-portfolio.vercel.app).
 
-This portfolio presents work in application security, access control, Android Enterprise and Modern Workplace operations. Each project page states whether the work is a live product, an experimental integration or a simulation.
+This portfolio presents work in application security, authorized security testing, access control and attack simulation. Operational projects remain included where they provide evidence of identity, endpoint and audit-control work. Each case study states whether the implementation is a live product, an experimental integration or a simulation.
 
 ## Featured work
 

@@ -6,7 +6,7 @@ import { labs } from "@/data/labs";
 export const metadata: Metadata = {
   title: "Security Lab",
   description:
-    "Hands-on cybersecurity exercises by Devine Nyaenya — 52 tests P3 hardened lab, exploitation, network security, Linux privilege escalation, detection. Authorized isolated environments.",
+    "Hands-on cybersecurity exercises by Devine Nyaenya — 75 tested security and workflow cases lab, exploitation, network security, Linux privilege escalation, detection. Authorized isolated environments.",
   alternates: { canonical: "/security-lab" },
 };
 
@@ -36,7 +36,7 @@ export default function SecurityLabPage() {
             as="h1"
             eyebrow="Hands-on security"
             title="Security Lab"
-            description="Practical exercises from authorized, intentionally-vulnerable lab environments. Each write-up follows the full chain — scenario, recon, vulnerability, exploitation, privilege escalation, lessons, and mitigation — so the defensive takeaway is the point, not the exploit. 52 tests, P3 hardened."
+            description="Practical exercises from authorized, intentionally-vulnerable lab environments. Each write-up follows the full chain — scenario, recon, vulnerability, exploitation, privilege escalation, lessons, and mitigation — so the defensive takeaway is the point, not the exploit. 75 tests and six attack simulations."
             accent="cyan"
           />
           <div className="mt-8 flex flex-wrap gap-3">
@@ -111,7 +111,7 @@ export default function SecurityLabPage() {
 
           <div className="mx-auto mt-16 max-w-3xl rounded-[16px] border border-white/[0.06] bg-surface/60 p-6 text-center backdrop-blur">
             <p className="font-mono text-[12px] leading-[1.6] text-ink-low">
-              More write-ups are being added. All activity shown was conducted in legal, isolated training environments with explicit authorization. P3: 52 tests, Argon2id, HMAC, TOTP, SIEM shipping — honest limitations documented.
+              More write-ups are being added. All activity shown was conducted in legal, isolated training environments with explicit authorization. The reset lab has 75 tests and documented limitations; every exercise is restricted to owned or explicitly authorized systems.
             </p>
           </div>
         </div>

@@ -6,12 +6,12 @@ export const site = {
   name: "Devine Nyaenya",
   firstName: "Devine",
   lastName: "Nyaenya",
-  role: "Security Engineer • Modern Workplace Operations • Application Security",
+  role: "Cybersecurity • Application Security • Authorized Security Testing",
   location: "Nairobi, Kenya",
-  tagline: "Building security systems that prove their security through implementation and testing.",
-  methodology: ["Build", "Test", "Break", "Learn", "Secure"] as const,
+  tagline: "Testing security assumptions in authorized labs, then fixing what fails.",
+  methodology: ["Scope", "Map", "Test", "Verify", "Report"] as const,
   summary:
-    "Security engineer focused on application security, access control, and security engineering. I build security-focused software, investigate vulnerabilities in authorized labs, and ship defensive controls that are implemented and tested. Experience with Modern Workplace operations, least-privilege dual-control, and tamper-evident audit systems.",
+    "Cybersecurity practitioner focused on application security and authorized security testing. I build small systems, examine their attack surface, test access-control and workflow assumptions, and document both findings and remediation. My work includes web security, Linux and network labs, attack simulation, least-privilege design and tamper-evident audit evidence.",
 
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||

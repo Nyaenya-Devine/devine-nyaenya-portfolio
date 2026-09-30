@@ -7,7 +7,7 @@ import { site, socialLinks } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Devine Nyaenya — cybersecurity and security engineering, 52 tests P3 hardened. Open to security engineering and SOC/defensive roles.",
+    "Get in touch with Devine Nyaenya — cybersecurity and security engineering, 75 tested security and workflow cases. Open to security engineering and SOC/defensive roles.",
   alternates: { canonical: "/contact" },
 };
 
@@ -24,7 +24,7 @@ export default function ContactPage() {
             as="h1"
             eyebrow="Contact"
             title="Let's talk security"
-            description="I'm open to security engineering, application security, SOC/defensive, and security-automation opportunities — and to collaborating on security tooling. 52 tests, P3 hardened, honest limitations documented."
+            description="I'm open to security engineering, application security, authorized security testing, application security, security engineering and detection opportunities — and to collaborating on security tooling. 75 reset-lab tests, six attack simulations and documented limitations."
           />
         </div>
       </div>
@@ -74,9 +74,9 @@ export default function ContactPage() {
                 {[
                   "Security engineering & application security roles",
                   "SOC / defensive security and detection work",
-                  "Security automation and tooling with Python (52 tests)",
+                  "Security automation and attack simulation with Python (75 tests)",
                   "Junior / entry-level where I can build and learn fast",
-                  "Open to Nairobi / Remote, P3 hardened portfolio",
+                  "Open to Nairobi / Remote roles and supervised security testing work",
                 ].map((t) => (
                   <li key={t} className="flex gap-3 text-[14px] leading-[1.5] text-ink-med">
                     <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-violet" />
@@ -88,7 +88,7 @@ export default function ContactPage() {
 
             <div className="rounded-[16px] bg-gradient-to-br from-accent/[0.08] to-violet/[0.08] border border-accent/10 p-6">
               <p className="font-display text-[18px] text-ink-high">Response time</p>
-              <p className="mt-2 font-sans text-[14px] leading-[1.5] text-ink-med">I usually respond within 24 hours. For urgent security roles, LinkedIn DM is fastest. All code is public: 52 tests, 6/6 detection, honest limitations.</p>
+              <p className="mt-2 font-sans text-[14px] leading-[1.5] text-ink-med">I usually respond within 24 hours. For urgent security roles, LinkedIn DM is fastest. Project code, test evidence and documented limitations are available on GitHub.</p>
             </div>
           </div>
 
