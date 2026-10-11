@@ -76,7 +76,7 @@ jobs:
           node-version: '20'
       - run: npm ci --ignore-scripts
       - name: npm audit — high severity fails
-        run: npm audit --audit-level=high || (echo "::warning::npm audit found high severity — review, run npm audit fix if safe" && exit 0)
+        run: npm audit --omit=dev --audit-level=high
       - name: Check Electron version — must be >=32 for security
         run: |
           set -eu
