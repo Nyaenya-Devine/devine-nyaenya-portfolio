@@ -30,3 +30,7 @@ npm audit --audit-level=high
 ```
 
 Personal and project content is maintained in `src/data`. Security reports should follow [SECURITY.md](SECURITY.md).
+
+## License
+
+MIT — see [LICENSE](LICENSE). Report vulnerabilities through [SECURITY.md](SECURITY.md) rather than a public issue.

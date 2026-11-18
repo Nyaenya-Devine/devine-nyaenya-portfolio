@@ -354,6 +354,17 @@
     opacity: 0.5;
     mix-blend-mode: soft-light;
   }
+
+  /* Quieter sibling of .card: flat surface for dense content blocks
+     that should not compete with the primary cards around them. */
+  .panel {
+    @apply rounded-[14px] border border-line-soft bg-surface/60;
+  }
+
+  /* Technical grid backdrop behind case-study heroes and the 404 page. */
+  .bg-tech {
+    @apply bg-base bg-grid-dark bg-[size:64px_64px];
+  }
 }
 
 @layer utilities {

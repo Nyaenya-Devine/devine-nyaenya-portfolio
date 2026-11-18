@@ -186,6 +186,14 @@ const config: Config = {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
+        "ring-ping": {
+          "0%": { opacity: "0.7", transform: "scale(1)" },
+          "75%, 100%": { opacity: "0", transform: "scale(2.1)" },
+        },
+        "rise-in": {
+          "0%": { opacity: "0", transform: "translateY(10px) scale(0.98)" },
+          "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.8s cubic-bezier(0.16,1,0.3,1) both",
@@ -201,6 +209,8 @@ const config: Config = {
         "border-beam": "border-beam 2s ease-in-out infinite",
         "grain": "grain 8s steps(10) infinite",
         "shimmer": "shimmer 2s linear infinite",
+        "ring-ping": "ring-ping 1.8s cubic-bezier(0,0,0.2,1) infinite",
+        "rise-in": "rise-in 0.7s cubic-bezier(0.16,1,0.3,1) both",
       },
       backgroundImage: {
         "grid-dark": "linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)",

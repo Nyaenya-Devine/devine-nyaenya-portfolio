@@ -3,6 +3,25 @@
   "version": "1.0.0",
   "private": true,
   "description": "Professional cybersecurity & security-engineering portfolio for Devine Nyaenya.",
+  "author": "Devine Nyaenya <devinenyaenya@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://devine-nyaenya-portfolio.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nyaenya-Devine/devine-nyaenya-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nyaenya-Devine/devine-nyaenya-portfolio/issues"
+  },
+  "keywords": [
+    "cybersecurity",
+    "security-engineering",
+    "portfolio",
+    "nextjs",
+    "typescript",
+    "least-privilege",
+    "identity-security"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
